@@ -1,0 +1,122 @@
+#mod-tools{background-color:#fff; width:520px; margin:0 auto; padding:20px}
+#mod-tools p.intro{font-size:13px; line-height:16px; color:#666; text-align:center}
+
+
+#mod-tools div.search{width:500px; margin: 20px auto 20px auto; background-color:#f6f0dc; padding:10px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px}
+#mod-tools div.search span{width:360px; height:26px; display:block}
+#mod-tools div.search span input{font-size: 16px; color: #666}
+#mod-tools div.search p{float:right}
+#mod-tools div.search p a{display:block; width:117px; height:31px; background:transparent url(../images/friend-search-btn.png); text-indent:-9999px}
+#mod-tools div.search p a:hover{background-position:center left}
+#mod-tools div.search p a:active{background-position:bottom left}
+
+#mod-tools div.right{float: right;}
+
+/* Mod Nav */
+#mod-tools ul.mod-nav{float:right; margin:8px 0; display:table}
+#mod-tools ul.mod-nav li{float:left; padding-left:20px; text-transform:uppercase; font-size:14px}
+
+/* Select Buttons */
+#mod-tools div.selectBtns{width:84px; left: 264px; top: 280px; position:absolute}
+#mod-tools div.selectBtns ul {margin-left: 15px;}
+#mod-tools div.selectBtns ul li{margin-bottom:30px}
+#mod-tools div.selectBtns ul li a.addBtn{width:34px; height:34px; display:block; background:#fff url(../images/mod-arrows-right.jpg) top left no-repeat; text-indent:-9999px}
+#mod-tools div.selectBtns ul li a.addBtn:hover{background-position:center left}
+#mod-tools div.selectBtns ul li a.addBtn:active{background-position:bottom left}
+#mod-tools div.selectBtns ul li a.rmvBtn{width:34px; height:34px; display:block; background:#fff url(../images/mod-arrows-left.jpg) top left no-repeat; text-indent:-9999px}
+#mod-tools div.selectBtns ul li a.rmvBtn:hover{background-position:center left}
+#mod-tools div.selectBtns ul li a.rmvBtn:active{background-position:bottom left}
+
+/* Lists */
+#mod-tools ul.checkList{ list-style:none;  overflow:auto;  width:220px;  height:220px;  border:1px solid #ccc}
+#mod-tools div span{color:#333; margin-bottom:2px}
+#mod-tools ul.checkList li{font-size:12px;  display:block;  background:#fff url(../images/mod-list-bg.png) bottom left repeat-x;  padding:3px 0 6px 4px}
+#mod-tools ul.checkList li:hover{background-color:#f8f5ec}
+#mod-tools ul.checkList li.active{background-color:#f8f5ec}
+#mod-tools ul.checkList li span{display: block; font-size:12px; padding-left:26px; line-height:14px}
+#mod-tools ul.checkList li input{float:left; width:12px}
+#mod-tools ul.checkList li label{display:block; cursor:pointer}
+
+/* Master List */
+#mod-tools div.merge-master{margin: 20px auto;width: 300px;}
+#mod-tools div.merge-master ul.checkList{width: 300px;}
+
+/* Creaete Merge List */
+#mod-tools p.create-list{text-align: center;}
+#mod-tools p.create-list a.go{display:block; width:177px; height:31px; background:transparent url(../images/mod-create-merge.jpg) top left no-repeat; text-indent:-9999px; margin:30px auto 12px auto}
+#mod-tools p.create-list a.go:hover{background-position:center left}
+#mod-tools p.create-list a.go:active{background-position:bottom left}
+
+#mod-tools p.create-list a.back{display: inline; background: none; font-size: 16px;}
+
+
+/* Submit Merge List */
+#mod-tools p.create-list a{display:block; width:177px; height:31px; background:transparent url(../images/mod-submit-merge.jpg) top left no-repeat; text-indent:-9999px; margin:30px auto 10px auto}
+#mod-tools p.create-list a:hover{background-position:center left}
+#mod-tools p.create-list a:active{background-position:bottom left}
+
+/* Flag Delete List */
+#mod-tools p.flag-delete{text-align: center;}
+#mod-tools p.flag-delete a.go{display:block; width:177px; height:31px; background:transparent url(../images/mod-flag-delete.jpg) top left no-repeat; text-indent:-9999px; margin:30px auto 12px auto}
+#mod-tools p.flag-delete a.go:hover{background-position:center left}
+#mod-tools p.flag-delete a.go:active{background-position:bottom left}
+#mod-tools p.flag-delete a.back{display: inline; background: none; font-size: 16px;}
+
+/* Brewery Edit */
+#mod-tools div.brewery-edit{width:240px; float:right;font-size: 14px}
+#mod-tools div.brewery-edit ul.checkList{width:240px; height: 264px;}
+#mod-tools div.brewery-edit ul.checkList li{
+	padding: 8px 0;
+}
+#mod-tools div.brewery-edit ul.checkList li span{
+	padding-left: 5px;
+	font-size: 13px;
+}
+#mod-tools div.brewery-edit div.search{width:230px; margin:5px auto; padding:5px;}
+#mod-tools div.brewery-edit div.search span{width:190px; height:20px}
+#mod-tools div.brewery-edit div.search span input{font-size:13px; color:#666}
+#mod-tools div.brewery-edit div.search p a{display:block; width:30px; height:24px; background:transparent url(../images/mod-brewery-search.png); text-indent:-9999px}
+#mod-tools div.brewery-edit div.search p a:hover{background-position:center left}
+#mod-tools div.brewery-edit div.search p a:active{background-position:bottom left}
+#mod-tools ul.details{width:250px}
+#mod-tools ul.details li{margin-bottom:8px}
+#mod-tools ul.details li label{display:block; margin-bottom:2px; color:#333; font-size: 14px;}
+#mod-tools ul.details li span{display:block; width:240px}
+#mod-tools ul.details li span.brewery{text-align: left;font-size:13px; color:#666; padding: 7px 0 7px 6px;}
+#mod-tools ul.details li span input{font-size:13px; color:#666}
+#mod-tools ul.details li span textarea{height:100px}
+#mod-tools ul.details li span select{width:100px}
+#mod-tools ul.details li label span.desc-counter{float: right;display: inline;width: 100px;text-align: right; padding: 2px 10px 0 0; font-size: 12px;}
+#mod-tools ul.details li label span.desc-counter span{display: inline;}
+
+/* Submit Edit */
+#mod-tools p.submit-edit a{display:block; width:177px; height:31px; background:transparent url(../images/mod-submit-edit.jpg) top left no-repeat; text-indent:-9999px; margin:30px auto 10px auto}
+#mod-tools p.submit-edit a:hover{background-position:center left}
+#mod-tools p.submit-edit a:active{background-position:bottom left}
+
+/* Mod Log */
+#mod-log{height: 500px; overflow: auto; margin: 0 auto; font-size: 12px;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+#mod-log table tr td {padding: 8px;}
+#mod-log table tr td.log-text {width: 300px;}
+#mod-log table tr:nth-child(even){background-color: #f7f2e0;}
+
+/* Suggested Edit */
+#suggested_edit{width:600px; margin:20px auto 0}
+#suggested_edit h2{margin-bottom:10px; font-size:18px}
+#suggested_edit li input, #suggested_edit li textarea{width:100%; padding:4px; font-size:14px; border:1px solid #ccc; -webkit-border-radius:4px; -moz-border-radius:4px; border-radius:4px; -webkit-box-shadow:inset 0px 1px 1px 0px rgba(0,0,0,0.2);  box-shadow:inset 0px 1px 1px 0px rgba(0,0,0,0.2)}
+#suggested_edit li textarea{height:100px}
+#suggested_edit li{margin-bottom:10px}
+#suggested_edit li label{display:block}
+#suggested_edit li label .desc-counter{float:right; font-size:14px}
+#suggested_edit .editable{width:250px}
+#suggested_edit .suggestion{float:right; width:250px}
+#suggested_edit .suggestion label a{font-weight:bold}
+#suggested_edit .suggestion label strong{padding-left:4px}
+#suggested_edit .yellow_btn{ border:1px solid #d09400;  -moz-box-shadow:0 1px 0 rgba(255,255,255,0.6) inset;  -webkit-box-shadow:0 1px 0 rgba(255,255,255,0.6) inset;  -o-box-shadow:0 1px 0 rgba(255,255,255,0.6) inset;  box-shadow:0 1px 0 rgba(255,255,255,0.6) inset;  background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0%,#f5d401),color-stop(50%,#e9a700),color-stop(100%,#cd9200));  background-image:-webkit-linear-gradient(#f5d401 0%,#e9a700 50%,#cd9200 100%);  background-image:-moz-linear-gradient(#f5d401 0%,#e9a700 50%,#cd9200 100%);  background-image:-o-linear-gradient(#f5d401 0%,#e9a700 50%,#cd9200 100%);  background-image:-ms-linear-gradient(#f5d401 0%,#e9a700 50%,#cd9200 100%);  background-image:linear-gradient(#f5d401 0%,#e9a700 50%,#cd9200 100%);  -moz-border-radius:4px;  -webkit-border-radius:4px;  -o-border-radius:4px;  -ms-border-radius:4px;  -khtml-border-radius:4px;  border-radius:4px;  color:#fff;  font-weight:600;  text-shadow:0 1px 0 rgba(0,0,0,0.4);  text-transform:uppercase;  text-align:center;  margin:10px auto !important}
+#suggested_edit .yellow_btn:hover{ color:#fff;  background-image:none;  background-color:#e9a700}
+#suggested_edit .yellow_btn:active{ background-image:none;  background-color:#e9a700;  -moz-box-shadow:0 2px 2px rgba(0,0,0,0.4) inset;  -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.4) inset;  -o-box-shadow:0 2px 2px rgba(0,0,0,0.4) inset;  box-shadow:0 2px 2px rgba(0,0,0,0.4) inset;  text-shadow:0 -1px 0 rgba(0,0,0,0.4)}
+#suggested_edit .grey_btn{ border:1px solid #7b7b7b;  -moz-box-shadow:0 1px 0 rgba(255,255,255,0.6) inset;  -webkit-box-shadow:0 1px 0 rgba(255,255,255,0.6) inset;  -o-box-shadow:0 1px 0 rgba(255,255,255,0.6) inset;  box-shadow:0 1px 0 rgba(255,255,255,0.6) inset;  background-image:-webkit-gradient(linear,50% 0%,50% 100%,color-stop(0%,#979797),color-stop(50%,#c2c2c2),color-stop(100%,#f2f2f2));  background-image:-webkit-linear-gradient(#979797 0%,#c2c2c2 50%,#f2f2f2 100%);  background-image:-moz-linear-gradient(#979797 0%,#c2c2c2 50%,#f2f2f2 100%);  background-image:-o-linear-gradient(#979797 0%,#c2c2c2 50%,#f2f2f2 100%);  background-image:-ms-linear-gradient(#979797 0%,#c2c2c2 50%,#f2f2f2 100%);  background-image:linear-gradient(#979797 0%,#c2c2c2 50%,#f2f2f2 100%);  -moz-border-radius:4px;  -webkit-border-radius:4px;  -o-border-radius:4px;  -ms-border-radius:4px;  -khtml-border-radius:4px;  border-radius:4px;  color:#fff;  font-weight:600;  text-shadow:0 1px 0 rgba(0,0,0,0.4);  text-transform:uppercase;  text-align:center;  margin:10px auto !important}
+#suggested_edit .grey_btn:hover{ color:#fff;  background-image:none;  background-color:#979797}
+#suggested_edit .grey_btn:active{ background-image:none;  background-color:#979797;  -moz-box-shadow:0 2px 2px rgba(0,0,0,0.4) inset;  -webkit-box-shadow:0 2px 2px rgba(0,0,0,0.4) inset;  -o-box-shadow:0 2px 2px rgba(0,0,0,0.4) inset;  box-shadow:0 2px 2px rgba(0,0,0,0.4) inset;  text-shadow:0 -1px 0 rgba(0,0,0,0.4)}
+#suggested_edit .actions{width:200px; margin:20px auto 0}
+#suggested_edit .actions a{padding:10px 0; display:block}

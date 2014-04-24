@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-semibold-webfont.eot');
+  src: url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-semibold-webfont.woff') format('woff'),
+       url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-semibold-webfont.ttf') format('truetype'),
+       url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-semibold-webfont.svg#ProximaNovaSemibold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-bold-webfont.eot');
+  src: url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-bold-webfont.woff') format('woff'),
+       url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-bold-webfont.ttf') format('truetype'),
+       url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-bold-webfont.svg#ProximaNovaBold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-regular-webfont.eot');
+  src: url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-regular-webfont.woff') format('woff'),
+       url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-regular-webfont.ttf') format('truetype'),
+       url('https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/fonts/proximanova-regular-webfont.svg#ProximaNovaRegular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}

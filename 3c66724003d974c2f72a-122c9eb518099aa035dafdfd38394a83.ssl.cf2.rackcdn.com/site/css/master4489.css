@@ -1,0 +1,244 @@
+@import url("reset.css");
+@import url("sidebar.css");
+@import url("content.css");
+@import url("mod-tools.css");
+
+body{
+	background-color: #f7f5ef;
+	font-family: "ProximaNova", Helvetica Neue, Helvetica;
+}
+
+/* Global ------ */
+a{color: #cc6600; text-decoration: none}
+a:focus {outline: none; }
+a:hover{color: #ff9933}
+a.current{color: #663300;}
+.clear{clear: both;}
+
+
+.alert-good{display:block; padding:10px; margin:20px 0; background-color:#b2e485; font-size:13px; line-height:16px; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; font-weight: bold}
+.alert-bad{display:block; padding:10px; margin:20px 0; background-color:#e4a785; font-size:13px; line-height:16px; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; font-weight: bold}
+.alert-medium{display:block; padding:10px; margin:20px 0; background-color:#FDF7AF; font-size:13px; line-height:16px; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; font-weight: bold}
+
+/* Structure ------ */
+#container{width:878px; margin:0 auto; padding-top: 40px}
+/*#container div.top{background:transparent url(../images/bg-top.png) top left no-repeat; height:16px}
+#container div.content{background:transparent url(../images/bg-repeat.png) top left repeat-y; padding:10px 26px}
+#container div.bottom{background:transparent url(../images/bg-bottom.png) top left no-repeat; height:16px}*/
+
+#container div.top{ display: none; }
+#container div.content{
+	background-color: #fff;
+	padding: 24px 24px;
+	-webkit-box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow:  0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#container div.bottom{ display: none; }
+
+#login{width:534px; margin:0 auto; padding-top: 40px}
+#login div.top{background:transparent url(../images/login-top.png) top left no-repeat; height:16px}
+#login div.content{background:transparent url(../images/login-repeat.png) top left repeat-y; padding:10px 26px}
+#login div.bottom{background:transparent url(../images/login-bottom.png) top left no-repeat; height:16px}
+
+/* Notice ----- */
+.notice {background: #CC6600; padding: 10px; color: #fff; margin-bottom: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;}
+.notice h2 {font-size: 20px; font-weight: bold; margin-top: 10px; margin-bottom: 10px;}
+.notice p {margin-top:10px; margin-bottom: 15px;}
+.notice p a{color: #fff;}
+.notice p a:hover{text-decoration: none;}
+.notice .close {float: right; margin-right:5px;}
+.notice .close a {color: #fff;}
+.notice .close a:hover {text-decoration: none;}
+
+/* Header ------ */
+#header{margin-bottom:20px}
+#header h1 a{display:block; width:181px; height:78px; background:transparent url(../images/ut-logo.png) top left no-repeat; text-indent:-9999px}
+#nav{float:right; margin-top:14px}
+#nav ul.btns{height:31px; margin-bottom:16px}
+#nav ul.btns li{float:right; margin-left:20px}
+#nav ul.btns li a.join{display:block; width:97px; height:31px; text-indent:-9999px; background:transparent url(../images/btn-join.png) top left no-repeat}
+#nav ul.btns li a.join:hover{background-position:center left}
+#nav ul.btns li a.join:active{background-position:bottom left}
+#nav ul.btns li a.signin{display:block; width:97px; height:31px; text-indent:-9999px; background:transparent url(../images/btn-signin.png) top left no-repeat}
+#nav ul.btns li a.signin:hover{background-position:center left}
+#nav ul.btns li a.signin:active{background-position:bottom left}
+#nav ul.main-nav{height:20px; float: right;}
+#nav ul.main-nav li{float:left; margin-left:24px}
+#nav ul.main-nav li a{text-transform:uppercase; text-decoration:none; font-weight:bold}
+#nav div.user{width: 600px;height: 30px; margin: 10px 0 8px 0;}
+#nav div.user ul{float: right;}
+#nav div.user ul li{float: left; margin-left:10px; font-size: 12px; color: #666; border-left: 1px solid #999; padding-left: 10px}
+#nav div.user ul li.first{border: none;}
+
+/* Footer ------ */
+#footer{
+	width: 100%;
+	max-width: 1048px;
+	padding: 12px;
+	font-size: 0.875em;
+	margin: 0 auto 30px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#footer ul li{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 12px;
+}
+#footer a{text-decoration:none; font-weight:bold}
+#footer a:hover{color:#c60; text-decoration:underline}
+#footer p.copyright{float:right; color:#666; text-align:right}
+
+@media screen and (max-width: 460px) {
+	#footer ul li{
+		display: block;
+		margin-right: 0;
+		margin-bottom: 8px;
+	}
+	#footer p.copyright{
+		float:none;
+		text-align: left;
+	}
+}
+
+/* Forms ------ */
+.input-box{padding:2px 0; border:1px solid #d8d8d8; background-color:#fff; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px; -moz-box-shadow:0px -1px 1px #ccc; -webkit-box-shadow:0px -1px 1px #ccc; box-shadow:0px -1px 1px #eee;  text-align:center}
+.input-box input, .input-box textarea{width:95%; font-size:13px; color:#333; border:0; -webkit-appearance:none}
+
+#mod-merge-tool{background-color:#fff; width:560px; padding:20px; margin:0 auto; position:relative}
+
+#mod-merge-tool div.search{width:400px; margin:30px auto; background-color:#f6f0dc; padding:10px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px}
+
+#mod-merge-tool div.right{float:right}
+
+/* Horiz Beer List */
+#beer-list-horiz{margin-top: 20px;}
+#beer-list-horiz div.beer-header{border-bottom:1px solid #ccc; margin-bottom:14px; padding-bottom:8px; height: 30px;}
+#beer-list-horiz div.beer-header div.filter{float:right; font-size:13px; height: 30px;}
+#beer-list-horiz div.beer-header div.sort{float:left; font-size:13px; height: 30px;}
+#beer-list-horiz div.beer-item{margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid #ccc}
+#beer-list-horiz div.beer-item ul.beer-tools{float:right; width:144px; height:24px; margin:0 0 15px 15px}
+#beer-list-horiz div.beer-item ul.beer-tools li{float:left}
+#beer-list-horiz div.beer-item ul.beer-tools li.edit{margin:0 6px 0 0}
+#beer-list-horiz div.beer-item ul.beer-tools li.edit a{display:block; width:60px; height:24px; background:transparent url(../images/btn-beer-edit.png) top left no-repeat; text-indent:-9999px}
+#beer-list-horiz div.beer-item ul.beer-tools li.edit a:hover{background-position:center left}
+#beer-list-horiz div.beer-item ul.beer-tools li.edit a:active{background-position:bottom left}
+#beer-list-horiz div.beer-item ul.beer-tools li.merge a{display:block; width:76px; height:24px; background:transparent url(../images/btn-beer-merge.png) top left no-repeat; text-indent:-9999px}
+#beer-list-horiz div.beer-item ul.beer-tools li.merge a:hover{background-position:center left}
+#beer-list-horiz div.beer-item ul.beer-tools li.merge a:active{background-position:bottom left}
+#beer-list-horiz div.beer-item div.beer-rating{float: right;}
+#beer-list-horiz div.beer-item div{margin-bottom:12px}
+#beer-list-horiz div.beer-item div img{float:left}
+#beer-list-horiz div.beer-item div ul{padding-left:70px}
+#beer-list-horiz div.beer-item div ul li{font-size:12px; margin-bottom:3px}
+#beer-list-horiz div.beer-item div ul li.beer-name{font-size:15px; margin-bottom:6px}
+#beer-list-horiz div.beer-item div ul li.details{line-height:14px}
+#beer-list-horiz div.beer-item div ul li.description{margin: 8px 0 0 0;}
+#beer-list-horiz div.beer-item div.stats ul{background-color:#f6f0dc; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; padding:0; margin:0; width:520px; height:56px}
+#beer-list-horiz div.beer-item div.stats ul li{float:left; height:40px; width:112px; padding:8px; border-right:1px solid #fff; border-left:1px solid #ddd}
+#beer-list-horiz div.beer-item div.stats ul li.last{border-right:none}
+#beer-list-horiz div.beer-item div.stats ul li.first{border-left:none}
+#beer-list-horiz div.beer-item div.stats ul li p{font-size:12px}
+#beer-list-horiz div.beer-item div.stats ul li span{font-size:30px; color:#666}
+
+/* RP Landing */
+#rp{
+	background: transparent url(../images/rp-bg.png) top left no-repeat;
+	width: 749px;
+	height: 523px;
+	margin: 40px auto 0 auto;	
+	padding: 30px 0 0 0;
+}
+#rp h1{
+	width: 477px;
+	height: 141px;
+	display: block;
+	text-indent: -9999px;
+	margin: 0 auto 60px auto;
+	background: #fff url(../images/ut-rp.jpg) top left no-repeat;	
+}
+#rp h2{
+	color: #4a2710;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 26px;
+	margin-bottom: 34px;
+}
+#rp p{
+	text-align: center;
+	width: 580px;
+	margin: 0 auto 66px auto;
+	line-height: 26px;
+	color: #666;
+}
+#rp h3{
+	text-align: center;
+	font-size: 20px;	
+}
+
+/* Friends */
+ul.friends-tools{float:right; height:24px; margin:0 0 15px 15px}
+ul.friends-tools li{float:left}
+
+ul.friends-tools li.friend-remove{margin:0 6px 0 0}
+ul.friends-tools li.friend-remove a{display:block; width:99px; height:27px; background:transparent url(../images/friendlist-remove-btn.png) top left no-repeat; text-indent:-9999px}
+ul.friends-tools li.friend-remove a:hover{background-position:center left}
+ul.friends-tools li.friend-remove a:active{background-position:bottom left}
+
+ul.friends-tools li.friend-follow{margin:0 6px 0 0}
+ul.friends-tools li.friend-follow a{display:block; width: 130px; height:30px; background:transparent url(../../../untappd.s3.amazonaws.com/site/assets/images/follow-list-btn.png) top left no-repeat; text-indent:-9999px}
+ul.friends-tools li.friend-follow a:hover{background-position:center left}
+ul.friends-tools li.friend-follow a:active{background-position:bottom left}
+
+ul.friends-tools li.friend-unfollow{margin:0 6px 0 0}
+ul.friends-tools li.friend-unfollow a{display:block; width:130px; height:30px; background:transparent url(../../../untappd.s3.amazonaws.com/site/assets/images/follow-list-unbtn.png) top left no-repeat; text-indent:-9999px}
+ul.friends-tools li.friend-unfollow a:hover{background-position:bottom left}
+ul.friends-tools li.friend-unfollow a:active{background-position:bottom left}
+
+ul.friends-tools li.friend-add{margin:0 6px 0 0}
+ul.friends-tools li.friend-add a{display:block; width:99px; height:27px; background:transparent url(../images/friendlist-add-btn.png) top left no-repeat; text-indent:-9999px}
+ul.friends-tools li.friend-add a:hover{background-position:center left}
+ul.friends-tools li.friend-add a:active{background-position:bottom left}
+
+ul.friends-tools li.friend-pending{margin:0 6px 0 0}
+ul.friends-tools li.friend-pending a{display:block; width:99px; height:27px; background:transparent url(../images/friendlist-pending-btn.png) top left no-repeat; text-indent:-9999px}
+
+/**
+  Ratings
+  */
+.rating_bar{
+
+}
+.rating_bar .rating{
+  display: inline-block;
+}
+.rating_bar .rating.small{
+  height: 24px;
+  width: 137px;
+  background-image: url(../images/ratings_small_v2.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: 137px 266px;
+          background-size: 137px 266px;
+}
+.rating_bar .rating.small.r00{ background-position: 0 0; }
+.rating_bar .rating.small.r05{ background-position: 0 -24px; }
+.rating_bar .rating.small.r10{ background-position: 0 -49px; }
+.rating_bar .rating.small.r15{ background-position: 0 -73px; }
+.rating_bar .rating.small.r20{ background-position: 0 -97px; }
+.rating_bar .rating.small.r25{ background-position: 0 -121px; }
+.rating_bar .rating.small.r30{ background-position: 0 -145px; }
+.rating_bar .rating.small.r35{ background-position: 0 -169px; }
+.rating_bar .rating.small.r40{ background-position: 0 -193px; }
+.rating_bar .rating.small.r45{ background-position: 0 -217px; }
+.rating_bar .rating.small.r50{ background-position: 0 -241px; }
+.rating_bar .average{
+	vertical-align: top;
+	font-size: 12px;
+	color: #666;
+	display: inline-block;
+	padding: 5px 0 0 2px;
+}

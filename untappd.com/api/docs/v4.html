@@ -1,0 +1,3924 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<!-- Mirrored from untappd.com/api/docs/v4 by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 24 Apr 2014 07:40:28 GMT -->
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+			<title>API Documentation | Untappd</title>
+		
+	<meta property="og:site_name" content="Untappd" />
+	
+	<!-- meta block -->
+			<meta name="description" content="Untappd is a new mobile web app that allows you to socially share the brew you're currently enjoying, as well as where you're enjoying it, with your friends!" />
+		
+	
+	<meta name="author" content="The Untappd Team" />
+	<meta name="Copyright" content="Copyright Untappd 2014. All Rights Reserved." />
+	<meta name="DC.title" content="Untappd" />
+	<meta name="DC.subject" content="Untappd is a new mobile web app that allows you to socially share the brew you're currently enjoying, as well as where you're enjoying it, with your friends!" />
+	<meta name="DC.creator" content="The Untappd Team" />
+	
+	<meta name="google-site-verification" content="EnR7QavTgiLCzZCCOv_OARCHsHhFwkwnJdG0Sti9Amg" />
+	<meta name="bitly-verification" content="b3080898518a"/>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/favicon_v2.ico"/>
+
+	<link id="canonical" rel="canonical" href="v4.html">
+
+	<!-- icon for touch devices -->
+	<link rel="apple-touch-icon" href="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/images/ut-touch-icon.png"/>
+
+	<!--<link href="https://untappd.s3.amazonaws.com/site/assets/v2/css/fonts.css" rel="stylesheet" type="text/css" />-->
+	<link href="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/css/fonts.css" rel="stylesheet" type="text/css" />
+
+			<link rel="stylesheet" href="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/css/master4489.css?v=1.8.5" />
+		<link rel="stylesheet" href="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v3/css/style4489.css?v=1.8.5" />
+			<script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	if (typeof jQuery == 'undefined') {
+	    document.write(unescape("%3Cscript src='https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v3/js/jquery.1.10.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+	</script>
+
+	<script src="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v3/js/jquery-migrate-1.2.1.js"></script>
+	
+
+
+	<!--[if lte IE 7]><script src="https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/js/ie6.js?4272033"></script><![endif]-->
+
+
+
+			<!---<script src="https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/js/jquery.cuteTime.min.js"></script>-->
+		<script src="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/js/moment.js" defer></script>
+		<script src="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/js/gregtime.js" defer></script>
+		<script src="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/js/jquery.notifyBar.js" defer></script>
+		<script src="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/js/jquery.tipsy.js" defer></script>
+		<script src="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/js/facybox.js" defer></script>
+		<script src="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/js/site.js" defer></script>
+		<link rel="stylesheet" href="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/css/facybox4489.css?v=1.8.5" />
+
+		
+		<link rel="stylesheet" href="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/css/jquery.notifyBar4489.css?v=1.8.5" />
+		<link rel="stylesheet" href="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/css/tipsy4489.css?v=1.8.5" type="text/css" media="screen" title="no title" charset="utf-8">
+		
+		<script type="text/javascript" language="Javascript">
+			$(document).ready(function(){
+				$(".tip").tipsy({fade: true});
+				$('.badge_hint').tipsy({gravity: 's', fade: true});
+				$('.disabled').tipsy({gravity: 'n', fade: true});
+
+				refreshTime(".timezoner", "D MMM YY", true);
+				
+				$(".tab").click(function(){
+					$(".tab-area li").removeClass('active');
+					$(this).parent().addClass('active');
+					$(".list").hide();
+					$($(this).attr("href")).show();
+					return false;
+				});
+			});
+
+			$(window).bind("unload", function(){});
+	
+		</script>
+			<!-- For IE -->
+	<script type="text/javascript" language="Javascript">
+	if(!(window.console && console.log)) {
+	  console = {
+	    log: function(){},
+	    debug: function(){},
+	    info: function(){},
+	    warn: function(){},
+	    error: function(){}
+	  };
+	}
+	</script>
+			<script src="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/js/prettify69df.js?31283092"></script>
+		<link rel="stylesheet" href="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/css/prettify4489.css?v=1.8.5" />
+		</head>
+<body onunload="">
+<div class="header out">
+  <div class="nav">
+    <div class="inner">
+      <h1 class="logo"><a class="track-click" data-track="desktop_header" data-href=":root" href="https://untappd.com/">Untappd</a></h1>
+
+      <ul class="desktop_nav">
+        <li><a class="track-click" data-track="desktop_menu" data-href=":thepub" href="https://untappd.com/thepub">The Pub</a></li>
+        <li><a class="track-click" data-track="desktop_menu" data-href=":beer/top_rated" href="https://untappd.com/beer/top_rated">Top Rated</a></li>
+        <li><a class="track-click" data-track="desktop_menu" data-href=":external/blog" target="_blank" href="http://blog.untappd.com/">Blog</a></li>
+        <li><a class="track-click" data-track="desktop_menu" data-href=":external/help" target="_blank" href="http://help.untappd.com/">Help</a></li>
+      </ul>
+
+      <form id="desktop_search" class="search_box" method="get" action="https://untappd.com/search">
+        <input type="text" class="track-focus search-input-desktop" autocomplete="off" data-track="desktop_search" placeholder="Find a beer, brewery or bar..." name="q" />
+        <input type="submit" value="Submit the form!" style="position: absolute; top: 0; left: 0; z-index: 0; width: 1px; height: 1px; visibility: hidden;" />
+        <div class="autocomplete" data-text="">
+        </div>
+      </form>
+      <p onclick="trackMobileEvent('menu');" class="mobile_menu_btn">Menu</p>
+      <div class="mobile_menu">
+        <form id="sbSearch" class="search_box" method="get" action="https://untappd.com/search">
+          <input type="text" class="track-focus" data-track="mobile_search" autocomplete="off" placeholder="" name="q" />
+          <input type="submit" value="Submit the form!" style="position: absolute; top: 0; left: 0; z-index: 0; width: 1px; height: 1px; visibility: hidden;" />
+        </form>
+        <ul>
+        <li><a class="track-click" data-track="mobile_menu" data-href=":thepub" href="https://untappd.com/thepub">The Pub</a></li>
+        <li><a class="track-click" data-track="mobile_menu" data-href=":beer/top_rated"href="https://untappd.com/beer/top_rated">Top Rated</a></li>
+        <li><a class="track-click" data-track="mobile_menu" data-href=":external/blog" target="_blank" href="http://blog.untappd.com/">Blog</a></li>
+        <li><a class="track-click" data-track="mobile_menu" data-href=":external/help" target="_blank" href="http://help.untappd.com/">Help</a></li>
+        </ul>
+      </div>
+              <div class="join">
+          <a class="track-click button blue" data-track="desktop_header" data-href=":create" href="https://untappd.com/create">Join Now</a>
+        </div>
+        <div class="user_action">
+          <div class="login">
+            <a class="track-click" data-track="desktop_header" data-href=":login" href="https://untappd.com/login?go_to=http://untappd.com/api/docs/v4">Sign In</a>
+          </div>
+        </div>
+        
+        <div class="mobile_join">
+          <p>Discover &amp; share your favorite beers!</p>
+          <p><a class="track-click" data-track="mobile_header" data-href=":login" href="https://untappd.com/login?go_to=http://untappd.com/api/docs/v4">Sign In</a> or <a href="https://untappd.com/create" class="track_click" data-track="mobile_header" data-href=":create">Join Now</a></p>
+        </div>
+          </div>
+  </div>
+</div>
+<script type="text/javascript" src="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v3/js/navigationcdae.js?v=1.2.2" defer></script>
+<script type="text/javascript" src="../../../3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v2/js/handlebarscdae.js?v=1.2.2"></script>
+<script id="auto-complete-template" type="text/x-handlebars-template">
+  {{#if beers.items}}
+      <div class="ac_section">
+          <p class="ac_header">Beers ({{beers.found}})</p>
+          {{#each beers.items}}
+              <a href="/beer/{{this.beer.bid}}" class="ac_item track-click" data-track="search_autocomplete" data-href=":beerlink">
+                  <p class="label">
+                      <img src="{{this.beer.beer_label}}">
+                  </p>
+                  <p class="info">
+                      <span class="title">{{this.beer.beer_name}}</span>
+                      <span class="sub_title">{{this.beer.brewery_name}}</span>
+                  </p>
+              </a>
+          {{/each}}
+      </div>
+  {{/if}}
+
+  {{#if breweries.items}}
+      <div class="ac_section">
+          <p class="ac_header">Breweries ({{breweries.found}})</p>
+          {{#each breweries.items}}
+              <a href="/brewery/{{this.brewery.brewery_id}}" class="ac_item track-click" data-track="search_autocomplete" data-href=":brewerylink">
+                  <p class="label">
+                      <img src="{{this.brewery.brewery_label}}">
+                  </p>
+                  <p class="info">
+                      <span class="title">{{this.brewery.brewery_name}}</span>
+                      <span class="sub_title">{{this.brewery.country_name}}</span>
+                  </p>
+              </a>
+          {{/each}}
+      </div>
+  {{/if}}
+
+  {{#if venues.items}}
+      <div class="ac_section">
+          <p class="ac_header">Venues ({{venues.found}})</p>
+          {{#each venues.items}}
+              <a href="/venue/{{this.venue.venue_id}}" class="ac_item track-click" data-track="search_autocomplete" data-href=":venuelink">
+                  <p class="label">
+                      <img src="{{this.venue.venue_icon.md}}">
+                  </p>
+                  <p class="info">
+                      <span class="title">{{this.venue.venue_name}}</span>
+                      <span class="sub_title">{{this.venue.location}}</span>
+                  </p>
+              </a>
+          {{/each}}
+      </div>
+  {{/if}}
+
+  {{#if is_result}}
+  <div class="see-more-results">
+      <a href="/search?q={{search}}" class="track-click" data-track="search_autocomplete" data-href=":seemore">See More</a>
+  </div> 
+  {{/if}}
+</script>
+<style type="text/css">
+    .ac-selected {
+        background-color: #f8f8f8;
+    }
+</style>
+<script type="text/javascript">
+  var onChangeInterval;
+  var currentValue;
+  var ajaxStatment;
+
+  var autoComplete = {
+      hightLight: function(direction) {
+
+        //console.log("highlight called");
+
+        var sel = $('a.ac-selected');
+
+        //console.log(sel.length);
+
+        if (sel.length == 0) {
+            $('.autocomplete .ac_section a:first').addClass("ac-selected");
+        }
+        else {
+
+            var elementArray = new Array();
+
+            $('.autocomplete .ac_section a').each(function() {
+                elementArray.push($(this));
+            });
+
+            var currentIndex = -1;
+
+            for (i = 0; i < elementArray.length; i++) {
+                var _this = elementArray[i];
+
+                if ($(_this).hasClass("ac-selected")) {
+                    //console.log("has class");
+                    $(_this).removeClass("ac-selected");
+                    //console.log("removing class")
+
+                    if (direction == "up") {
+                        //console.log("direction up is " + i);
+                        currentIndex = i - 1;
+                        //console.log("next index is " +currentIndex);
+                    }
+                    else {
+                        //console.log("direction down");
+                        currentIndex = i + 1;
+                        //console.log("next index is " +currentIndex);
+                    }
+
+                    break;
+                }
+                
+            }
+
+            //console.log("current Index is => " + i);
+
+            if (currentIndex != -1) {
+                if (elementArray[currentIndex]) {
+                    var selectedIndex = elementArray[currentIndex];
+                    $(selectedIndex).addClass("ac-selected");
+                }
+            }
+        }
+      },
+      checkKey: function(keynum) {
+        var UP = 38;
+        var DOWN = 40;
+        var ENTER = 13;
+
+        if (keynum === UP || keynum === DOWN) {
+            return false;
+        }
+        else {
+            return true;
+        }
+      },
+      moveSelection: function(keynum, event) {
+        var UP = 38;
+        var DOWN = 40;
+        var ENTER = 13;
+
+        if(keynum === UP) {
+           event.preventDefault();
+           autoComplete.hightLight("up");
+           _gaq.push(['_trackEvent', 'AutcompleteArrow', 'Click', "arrow-up"]);
+        }
+
+        if(keynum === DOWN) {
+          event.preventDefault();  
+          autoComplete.hightLight("down");
+          _gaq.push(['_trackEvent', 'AutcompleteArrow', 'Click', "arrow-down"]);
+        }
+
+        if(keynum === ENTER) {
+          if ($(".ac-selected").length != 0) {
+            event.preventDefault();
+            event.stopPropagation();
+            _gaq.push(['_trackEvent', 'AutcompleteArrow', 'Click', "arrow-select"]);
+            window.location.href = $(".ac-selected").attr('href');
+          }
+        }
+      },
+      checkValue: function(searchVal) {
+          currentValue = searchVal;
+      
+          clearInterval(onChangeInterval);
+
+          if (currentValue === '' || currentValue.length <= 3) {
+              //$(".brewery-complete").hide();
+          } else {
+              autoComplete.search(currentValue);
+          }
+      },
+      validate: function(str) {
+          return /^[a-z\d\-_\s]+$/i.test(str);
+      },
+      search: function(currentValue) {
+          var d ="q="+currentValue;
+
+          $(".autocomplete").attr('data-text', currentValue);
+
+          /*if (ajaxStatment) {
+              ajaxStatment.abort();
+          }*/
+
+          ajaxStatment = $.ajax({
+              url: "/apireqs/autosearch",
+              type: "GET",
+              data: d,
+              dataType: "json",
+              error: function(xhr,ajaxOptions, thrownError)
+              {
+                  $(".autocomplete").removeClass("active");
+              },
+              success: function(data)
+              {
+                  if (data.error) {
+                      $(".autocomplete").removeClass("active");
+                  }
+                  else {
+                      if ($(".autocomplete").attr('data-text').length <= currentValue.length) {
+                        var source   = $("#auto-complete-template").html();
+                        var template = Handlebars.compile(source);
+                        var searchResults = template(data.response);
+
+                        $(".autocomplete").html(searchResults);
+                        $(".autocomplete").addClass("active");
+                      }
+                  }
+                  
+              }
+          });
+      }
+  }
+
+
+ $(document).ready(function() {
+
+    $("body").on("click", function(event) {
+        if ($(".autocomplete").hasClass('active')) {
+            if (event.currentTarget.className != "autocomplete") {
+                $(".autocomplete").html('');
+                $(".autocomplete").removeClass("active");
+                $('.autocomplete .ac_section').removeClass(".ac-selected");
+            }
+        }
+
+    });
+
+    $(".search-input-desktop").on("keydown paste", function(event) {
+
+        var searchVal = $(this).val();
+
+        var keyCode = "";
+
+        if (event.keyCode) { 
+            keyCode = event.keyCode;
+            autoComplete.moveSelection(event.keyCode, event);
+        }  // IE
+        else if(event.which) { 
+            keyCode = event.which;
+            autoComplete.moveSelection(event.which, event);
+        }
+
+        if (autoComplete.validate(searchVal)) {
+            
+            if (autoComplete.checkKey(keyCode)) {
+                if (searchVal == "") {
+                    $(".autocomplete").html('');
+                    $(".autocomplete").removeClass("active");
+                }
+
+                clearInterval(onChangeInterval);
+
+                if (currentValue !== searchVal);
+                {
+                    onChangeInterval = setInterval(function() { autoComplete.checkValue(searchVal); }, 25);
+                }    
+            }
+        } 
+    });
+
+    $(".track-focus").click(function() {
+      var d = $(this).attr("data-track") + ":" + $(this).attr("placeholder");
+      _gaq.push(['_trackEvent', 'Search Focus', 'Click', d]);
+    });
+
+    $(document).on("click", ".track-click", function() {
+      var d = $(this).attr("data-track");
+      if ($(this).attr("data-href")) {
+        d = d + $(this).attr("data-href");
+      }
+      _gaq.push(['_trackEvent', 'Click', 'Click', d]);
+    });
+   });
+
+  function trackMobileEvent(label) {
+    _gaq.push(['_trackEvent', 'Mobile Menu', 'Click', label]);
+  }
+</script>
+
+
+
+<div id="container">
+
+	<div class="top"></div>
+	
+	<div class="content">
+		
+			<style type="text/css" media="screen">
+				#terms h1 {
+					margin-bottom: 5px;
+				}
+				
+				#terms ul {
+					margin-bottom: 10px;
+				}
+				
+				#terms ul li em{
+					font-weight: bold;
+				}
+				
+				#terms ul li {
+					font-size: 12px;
+					margin-bottom: 5px;
+				}
+				
+				code {
+					padding: 10px;
+					background: #f6f0dc;
+					margin-top: 5px;
+					margin-bottom: 5px;
+					display: block;
+				}
+				
+				.word {
+					word-wrap: break-word;
+				}
+
+				.apiarea { 
+					display: none;
+				}
+				
+				.gist {
+					font-size: 12px;
+				}
+				
+				#notice {
+					padding: 10px;
+					background: #f6f0dc;
+					margin-top: 5px;
+					margin-bottom: 5px;
+				}
+
+				.word {
+				white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */ 
+				word-wrap: break-word; /* Internet Explorer 5.5+ */ 
+				margin: 0px 0px 0px 0px;
+				padding:5px 5px 3px 5px; 
+				white-space : normal; /* crucial for IE 6, maybe 7? */
+				}
+			</style>
+			<div id="body">
+				
+				<!-- right sidebar -->
+				<div class="right-side">
+		
+	<div class="business api">
+
+		<h3>API DOCUMENTATION</h3>
+
+		<p><a href="#introduction">Introduction</a></p>
+		<p><a href="#authentication">Authentication</a></p>
+		<p style="display: block; margin-top: 5px; margin-bottom: 5px;"></p>
+		<p style="display: block; margin-top: 5px; margin-bottom: 5px;"></p>
+		<p><a href="#feed">Friend Feed</a></p>
+		<p><a href="#user_feed">User Feed</a></p>
+		<p><a href="#thepublocal">The Pub Feed (Local)</a></p>
+		<p><a href="#venue_checkins">Venue Feed</a></p>
+		<p><a href="#beer_checkins">Beer Feed</a></p>
+		<p><a href="#brewery_checkins">Brewery Checkins</a></p>
+		<p style="display: block; margin-top: 5px; margin-bottom: 5px;"></p>
+		<p><a href="#brewery_info">Brewery Info</a></p>
+		<p><a href="#beer_info">Beer Info</a></p>
+		<p><a href="#venue_info">Venue Info</a></p>
+		<p><a href="#details">Checkin Info</a></p>
+		<p style="display: block; margin-top: 5px; margin-bottom: 5px;"></p>
+		<p><a href="#user_info">User Info</a></p>
+		<p><a href="#badges">User Badges</a></p>
+		<p><a href="#friends">User Friends</a></p>
+		<p><a href="#wish_list">User Wish List</a></p>
+		<p><a href="#user_distinct">User Distinct Beers</a></p>
+		<p style="display: block; margin-top: 5px; margin-bottom: 5px;"></p>
+		<p><a href="#brewery_search">Brewery Search</a></p>
+		<p><a href="#beer_search">Beer Search</a></p>
+		<p><a href="#trending">Trending</a></p>
+		<p style="display: block; margin-top: 5px; margin-bottom: 5px;"></p>
+		<p><a href="#checkin">Checkin</a></p>
+		<p><a href="#add_comment">Add Comment</a></p>
+		<p><a href="#delete_comment">Remove Comment</a></p>
+		<p><a href="#toast">Toast / Remove Toast</a></p>
+		<p style="display: block; margin-top: 5px; margin-bottom: 5px;"></p>
+		<p><a href="#add_to_wish">Add To Wish List</a></p>
+		<p><a href="#remove_from_wish">Remove from Wish List</a></p>
+		<p style="display: block; margin-top: 5px; margin-bottom: 5px;"></p>
+		<p><a href="#friend_pending">Pending Friends</a></p>
+		<p><a href="#friend_accept">Accept Friends</a></p>
+		<p><a href="#friend_reject">Reject Friends</a></p>
+		<p><a href="#friend_revoke">Remove Friends</a></p>
+		<p><a href="#friend_request">Request Friends</a></p>
+		<p style="display: block; margin-top: 5px; margin-bottom: 5px;"></p>
+		<p><a href="#activity_on_you">Notifications</a></p>
+		<p style="display: block; margin-top: 5px; margin-bottom: 5px;"></p>
+		<p><a href="#foursquare_lookup">Foursquare Venue Lookup</a></p>
+	</div>
+	
+	<div class="business">
+		
+		<h3>API TOOLS</h3>
+		<p><a href="https://untappd.com/api/explorer?v=4">API Explorer </a></p>
+		<p><a href="https://untappd.com/api/dashboard">API Dashboard</a></p>
+	</div>
+	
+	<div class="help">
+		
+		<h3>Help and Support</h3>
+
+		<ul>
+
+			<li>
+				<p><strong><a href="http://help.untappd.com/faqs/getting-started">How to Use Untappd</a></strong></p>
+				<span>First time? Not sure what you’re doing? Check out our FAQ for help!</span>
+			</li>
+			<li>
+				<p><strong><a href="http://help.untappd.com/discussions">Report a Bug</a></strong></p>
+				<span>Find a bug or something wrong? Report it to us and we’ll get it fixed!</span>
+			</li>
+			<li class="last">
+				<p><strong><a href="http://help.untappd.com/discussions/feature-requests">Comments &amp; Requests</a></strong></p>
+				<span>Have an idea for an awesome feature?<br />Or a comment on an existing one?</span>
+			</li>
+
+		</ul>
+
+	</div>
+
+
+
+</div>				<!-- /right sidebar -->
+			
+				<!-- main left side content -->
+				<div class="main">
+				
+					<div class="feed-header"><strong>API Documentation (V4) </strong></div>
+					
+					<div id="terms">
+					
+						<div class="apiarea" id="introduction">
+		
+							<h1><strong>API Endpoints</strong></h1>
+					
+							<p>The end point for all Untappd API is <br /><code>http://api.untappd.com/v4</code></p>
+					
+							<h1><strong>Client ID / Client Secret</strong></h1>
+
+							<p>In V4 of the API, we have added Client ID and Client Secrets. You can find them on your Dashboard <a href="https://untappd.com/api">page</a>. You Client ID is your old API Key, while the Client Secret has been added. Whenever you are making a call to the API, you MUST pass both your Client ID and Client Secret as GET params like below:
+								<br />
+								<code>
+									http://api.untappd.com/v4/method_name?client_id=CLIENTID&client_secret=CLIENTSECRET
+								</code>
+							</p>
+
+							<p>When making Authenticated requests, you will append the access token to the URL below. 
+								<br />
+								<code>
+									http://api.untappd.com/v4/method_name?access_token=ACESSTOKENHERE
+								</code>
+								See the Authentication section for more details.
+							</p>
+							
+							<h1><strong>Response</strong></h1>
+
+							<p>The responses in V4 has completely been re-written to match other APIs to make parsing easier. Responses are in the format below: </p>
+
+							<pre class="word prettyprint">
+"meta":{
+      "code":200,
+      "response_time":{
+         "time": X.XXX,
+         "measure":"seconds"
+      }
+   },
+   "notifications":{
+      "type":"notifications",
+      "unread_count":{
+         "comments":0,
+         "toasts":0,
+         "friends":0,
+         "news":0
+      }
+   },
+   "response":{  ... }}
+							</pre>
+
+							<p>In the header packet, we pass 2 special attributes that can help you track the usage of your API key:</p>
+							<pre class="word prettyprint">
+								X-Ratelimit-Limit: XXXX
+								X-Ratelimit-Remaining: XXX
+							</pre>
+							
+							<p>In the event of an error, the format looks like this:</p>
+
+							<pre class="word prettyprint">
+"meta":{
+      "code":500,
+      "error_detail":"The user has not authorized this application or the token is invalid.",
+      "error_type":"invalid_auth",
+      "response_time":{
+         "time":0.002,
+         "measure":"seconds"
+      }
+   },
+   "response":[]
+							</pre>
+
+							<h1 style="margin-top: 10px;"><strong>Additonal Information</strong></h1>
+			
+							<p>In every beer attribtue, you will see the following values <em>auth_rating</em> and <em>wish_list</em>. These values refer to the authenticated user's rating and if they have added this beer to their wish list.</p>
+
+							<div id="notice" class="checkin_test special">
+								Note: By using the API, you state that your application is in accordance with our <a href="https://untappd.com/terms/api">Terms of Use</a> for our API.
+							</div>
+							
+							
+						</div>
+
+						<div class="apiarea" id="authentication">
+					
+							<h1><strong>Authentication</strong></h1>
+	
+							<p>Authentication is handled via OAuth Authentication. You must edit your app and add in a redirect URL that Untappd will callback after the authorization has taken place. You will receive an accesss token to make an authenticated calls. At this time, tokens do not expire.</p>
+						
+							<h1><strong>Server Side Authentication (Recommended)</strong></h1>
+
+							<p><strong>NOTE:</strong> You must use HTTPS, and not HTTP when making authentication calls. All API level calls must be done with HTTP, however this authentication process must be sent over HTTPS</p>
+							<p>Direct the user to the following URL:
+								<br />
+								<code class="word">
+								https://untappd.com/oauth/authenticate/?client_id=CLIENTID&response_type=code&redirect_url=REDIRECT_URL
+								</code>
+							</p>
+
+							<p>After the user has authenticated and authorized the application, we will redirect back to the following address:
+								<br />
+								<code class="word">
+								http://REDIRECT_URL?code=CODE
+								</code>
+							</p>
+
+							<p>Take the <em>code</em> paramater and then pass it back to the following address via GET (pass parameters via the Query String). Ensure that the REDIRECT_URL you supply in this call, is the same that was supplied in the authenticate call:
+								<br />
+								<code class="word">
+								https://untappd.com/oauth/authorize/?client_id=CLIENTID&client_secret=CLIENTSECRET&response_type=code&redirect_url=REDIRECT_URL&code=CODE
+								</code>
+							</p>
+
+							<p>Finally, we will send back the <em>access_token</em> that will you use for future requests:
+								<br />
+								<code class="word">
+									"meta":{
+      "http_code":200
+   },
+   "response" : { "access_token":{ "TOKENHERE" }
+}
+								</code>
+							</p>
+
+							<h1><strong>Client Side Authentication </strong></h1>
+
+							<p>Direct the user to the following URL:
+								<br />
+								<code class="word">
+								http://untappd.com/oauth/authenticate/?client_id=CLIENTID&response_type=token&redirect_url=REDIRECT_URL
+								</code>
+							</p>
+
+							<p>After the user has logged in  we will redirect back to the following address:
+								<br />
+								<code class="word">
+								http://REDIRECT_URL#access_token=TOKENHERE
+								</code>
+							</p>
+
+							
+
+						</div>
+
+						
+						<div class="apiarea" id="feed">
+					
+							<h1><strong>Friend Feed</strong></h1>
+							
+							<p><strong>Authentication:</strong> Required</p>
+							
+							<p><strong>HTTP Method:</strong> GET</p>
+
+							<p><code>/v4/checkin/recent</code></p>
+
+							<p>This method allows you the obtain all the friend check-in feed of the authenticated user. This includes  only beer checkin-ins from Friends. By default it will return at max 25 records.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>access_token (required)</em> - The access token of the authenicated user</li>
+								<!--<li><em>since (optional)</em> - The numeric ID of the most recent check-in. This provided to you in the next_query attribute.</li>-->
+								<li><em>max_id (int, optional)</em> - The checkin ID that you want the results to start with</li>
+								<li><em>limit (int, optional)</em> - The number of results to return, max of 50, default is 25</li>
+							</ul>
+
+							<pre class="word prettyprint">
+"checkins":{
+	"count":25,
+	"items":[
+	{
+	   "checkin_id":10608945,
+	   "created_at":"Sun, 29 Jul 2012 22:19:16 +0000",
+	   "checkin_comment":"",
+	   "rating_score":3,
+	   "user":{
+	      "uid":1,
+	      "user_name":"gregavola",
+	      "first_name":"Greg",
+	      "last_name":"Avola",
+	      "location":"New York, NY",
+	      "url":"http:\/\/gregavola.me",
+	      "bio":"Co-Founder and CTO of Untappd, Web Developer, Beer Drinker, Community Guy",
+	      "relationship":"self",
+	      "user_avatar":"http:\/\/gravatar.com\/avatar\/0c6922e238dae5cccce96a32889fc911?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+	      "is_private":0,
+	      "contact":{
+	         "gowalla":"gregavola",
+	         "foursquare":195741,
+	         "facebook":18603076,
+	         "twitter":"gregavola"
+	      }
+	   },
+	   "beer":{
+	      "bid":3916,
+	      "beer_name":"Samuel Adams Summer Ale",
+	      "beer_label":"https:\/\/untappd.s3.amazonaws.com\/site\/beer_logos\/beer-SamAdamsSummerAle.jpg",
+	      "beer_style":"American Pale Wheat Ale",
+	      "beer_abv":5.2,
+	      "auth_rating":3,
+	      "wish_list":false
+	   },
+	   "brewery":{
+	      "brewery_id":157,
+	      "brewery_name":"Boston Beer Company",
+	      "brewery_label":"https:\/\/untappd.s3.amazonaws.com\/site\/brewery_logos\/brewery-SamuelAdams.jpg",
+	      "country_name":"United States",
+	      "contact":{
+	         "twitter":"SamuelAdamsBeer",
+	         "facebook":"http:\/\/www.facebook.com\/pages\/Samuel-Adams-for-the-love-of-beer\/117341921610",
+	         "url":"http:\/\/www.samueladams.com"
+	      },
+	      "location":{
+	         "brewery_city":"Boston",
+	         "brewery_state":"MA",
+	         "lat":42.3144,
+	         "lng":-71.1034
+	      }
+	   },
+	   "venue":{
+	      "venue_id":1222,
+	      "venue_name":"Untappd HQ - East",
+	      "primary_category":"Residence",
+	      "parent_category_id":"4e67e38e036454776db1fb3a",
+	      "categories":{
+	         "count":2,
+	         "items":[
+	            {
+	               "category_name":"Tech Startup",
+	               "category_id":"4bf58dd8d48988d125941735",
+	               "is_primary":false
+	            },
+	            {
+	               "category_name":"Home (private)",
+	               "category_id":"4bf58dd8d48988d103941735",
+	               "is_primary":true
+	            }
+	         ]
+	      },
+	      "location":{
+	         "venue_address":"",
+	         "venue_city":"",
+	         "venue_state":"",
+	         "lat":40.7559,
+	         "lng":-73.9536
+	      },
+	      "contact":{
+	         "twitter":"@untappd",
+	         "venue_url":"http:\/\/untappd.com"
+	      },
+	      "foursquare":{
+	         "foursquare_id":"4ccf5fec1ac7a1cd6a5c1392",
+	         "foursquare_url":"http:\/\/4sq.com\/boEpZE"
+	      },
+	      "venue_icon":{
+	         "sm":"https:\/\/foursquare.com\/img\/categories\/building\/home_64.png",
+	         "md":"https:\/\/foursquare.com\/img\/categories\/building\/home_88.png",
+	         "lg":"https:\/\/foursquare.com\/img\/categories\/building\/home_256.png"
+	      }
+	   },
+	   "comments":{
+	      "count":0,
+	      "items":[
+
+	      ]
+	   },
+	   "toasts":{
+	      "count":1,
+	      "auth_toast":false,
+	      "items":[
+	         {
+	            "user":{
+	               "uid":42235,
+	               "user_name":"peterepp",
+	               "first_name":"Peter",
+	               "last_name":"Epp",
+	               "user_avatar":"http:\/\/gravatar.com\/avatar\/470b0592970286c93a8b735598c71b87?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+	               "user_link":"http:\/\/untappd.com\/user\/peterepp",
+	               "account_type":"user",
+	               "brewery_details":[
+
+	               ]
+	            },
+	            "like_id":"1225920",
+	            "like_owner":false,
+	            "created_at":"Sun, 29 Jul 2012 22:29:51 +0000"
+	         }
+	      ]
+	   },
+	   "media":{
+	      "count":0,
+	      "items":[
+
+	      ]
+	   },
+	   "source":{
+	      "app_name":"Untappd for Android - (V2)",
+	      "app_website":"http:\/\/untpd.it\/androidapp"
+	   }
+	}, 
+            ...
+							</pre>
+							
+						</div>
+						
+						<div class="apiarea" id="user_feed">
+					
+							<h1><strong>User Feed</strong></h1>
+							
+							<p><strong>Authentication:</strong> Not required</p>
+							
+							<p><strong>HTTP Method:</strong> GET</p>
+
+							<p><code>/v4/user/checkins/USERNAME</code></p>
+
+							<p>This method allows you the obtain all the check-in feed of the selected user. By default it will return at max 25 records.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>USERNAME (optional)</em> - The username that you wish to call the request upon. If you do not provide a username - the feed will return results from the authenticated user (if the access_token is provided)</li>
+								<li><em>max_id (int, optional)</em> - The checkin ID that you want the results to start with</li>
+								<li><em>limit (int, optional)</em> - The number of results to return, max of 50, default is 25</li>
+							</ul>
+
+							<pre class="word prettyprint">
+"checkins":{
+	"count":25,
+	"items":[
+	{
+	   "checkin_id":10608945,
+	   "created_at":"Sun, 29 Jul 2012 22:19:16 +0000",
+	   "checkin_comment":"",
+	   "rating_score":3,
+	   "user":{
+	      "uid":1,
+	      "user_name":"gregavola",
+	      "first_name":"Greg",
+	      "last_name":"Avola",
+	      "location":"New York, NY",
+	      "url":"http:\/\/gregavola.me",
+	      "bio":"Co-Founder and CTO of Untappd, Web Developer, Beer Drinker, Community Guy",
+	      "relationship":"self",
+	      "user_avatar":"http:\/\/gravatar.com\/avatar\/0c6922e238dae5cccce96a32889fc911?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+	      "is_private":0,
+	      "contact":{
+	         "gowalla":"gregavola",
+	         "foursquare":195741,
+	         "facebook":18603076,
+	         "twitter":"gregavola"
+	      }
+	   },
+	   "beer":{
+	      "bid":3916,
+	      "beer_name":"Samuel Adams Summer Ale",
+	      "beer_label":"https:\/\/untappd.s3.amazonaws.com\/site\/beer_logos\/beer-SamAdamsSummerAle.jpg",
+	      "beer_style":"American Pale Wheat Ale",
+	      "beer_abv":5.2,
+	      "auth_rating":3,
+	      "wish_list":false
+	   },
+	   "brewery":{
+	      "brewery_id":157,
+	      "brewery_name":"Boston Beer Company",
+	      "brewery_label":"https:\/\/untappd.s3.amazonaws.com\/site\/brewery_logos\/brewery-SamuelAdams.jpg",
+	      "country_name":"United States",
+	      "contact":{
+	         "twitter":"SamuelAdamsBeer",
+	         "facebook":"http:\/\/www.facebook.com\/pages\/Samuel-Adams-for-the-love-of-beer\/117341921610",
+	         "url":"http:\/\/www.samueladams.com"
+	      },
+	      "location":{
+	         "brewery_city":"Boston",
+	         "brewery_state":"MA",
+	         "lat":42.3144,
+	         "lng":-71.1034
+	      }
+	   },
+	   "venue":{
+	      "venue_id":1222,
+	      "venue_name":"Untappd HQ - East",
+	      "primary_category":"Residence",
+	      "parent_category_id":"4e67e38e036454776db1fb3a",
+	      "categories":{
+	         "count":2,
+	         "items":[
+	            {
+	               "category_name":"Tech Startup",
+	               "category_id":"4bf58dd8d48988d125941735",
+	               "is_primary":false
+	            },
+	            {
+	               "category_name":"Home (private)",
+	               "category_id":"4bf58dd8d48988d103941735",
+	               "is_primary":true
+	            }
+	         ]
+	      },
+	      "location":{
+	         "venue_address":"",
+	         "venue_city":"",
+	         "venue_state":"",
+	         "lat":40.7559,
+	         "lng":-73.9536
+	      },
+	      "contact":{
+	         "twitter":"@untappd",
+	         "venue_url":"http:\/\/untappd.com"
+	      },
+	      "foursquare":{
+	         "foursquare_id":"4ccf5fec1ac7a1cd6a5c1392",
+	         "foursquare_url":"http:\/\/4sq.com\/boEpZE"
+	      },
+	      "venue_icon":{
+	         "sm":"https:\/\/foursquare.com\/img\/categories\/building\/home_64.png",
+	         "md":"https:\/\/foursquare.com\/img\/categories\/building\/home_88.png",
+	         "lg":"https:\/\/foursquare.com\/img\/categories\/building\/home_256.png"
+	      }
+	   },
+	   "comments":{
+	      "count":0,
+	      "items":[
+
+	      ]
+	   },
+	   "toasts":{
+	      "count":1,
+	      "auth_toast":false,
+	      "items":[
+	         {
+	            "user":{
+	               "uid":42235,
+	               "user_name":"peterepp",
+	               "first_name":"Peter",
+	               "last_name":"Epp",
+	               "user_avatar":"http:\/\/gravatar.com\/avatar\/470b0592970286c93a8b735598c71b87?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+	               "user_link":"http:\/\/untappd.com\/user\/peterepp",
+	               "account_type":"user",
+	               "brewery_details":[
+
+	               ]
+	            },
+	            "like_id":"1225920",
+	            "like_owner":false,
+	            "created_at":"Sun, 29 Jul 2012 22:29:51 +0000"
+	         }
+	      ]
+	   },
+	   "media":{
+	      "count":0,
+	      "items":[
+
+	      ]
+	   },
+	   "source":{
+	      "app_name":"Untappd for Android - (V2)",
+	      "app_website":"http:\/\/untpd.it\/androidapp"
+	   }
+	}, 
+            ...
+							</pre>
+							
+						</div>
+						
+						<div class="apiarea" id="thepublocal">
+					
+							<h1><strong>The Public Feed (Local)</strong></h1>
+							
+							<p><strong>Authentication:</strong> Not required</p>
+							
+							<p><strong>HTTP Method:</strong> GET</p>
+
+							<p><code>/v4/thepub/local</code></p>
+
+							<p>This method allows you the obtain all the public feed for Untappd, within a certain location.  By default it will return at max 25 records.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>min_id (int, optional)</em> - The numeric ID of the most recent check-in.</li>
+								<li><em>lng (float, optional)</em> - The numeric Latitude to filter the public feed.</li>
+								<li><em>lat (float, optional)</em> - The numeric Longitude to filter the public feed.</li>
+								<li><em>radius (int, optional)</em> - The max radius you would like the check-ins to start within</li>
+								<li><em>max_id (int, optional)</em> - The checkin ID that you want the results to start with</li>
+								<li><em>limit (int, optional)</em> - The number of results to return, max of 50, default is 25</li>
+							</ul>
+
+							<pre class="word prettyprint">
+"checkins":{
+	"count":25,
+	"items":[
+	{
+	   "checkin_id":10608945,
+	   "created_at":"Sun, 29 Jul 2012 22:19:16 +0000",
+	   "checkin_comment":"",
+	   "rating_score":3,
+	   "user":{
+	      "uid":1,
+	      "user_name":"gregavola",
+	      "first_name":"Greg",
+	      "last_name":"Avola",
+	      "location":"New York, NY",
+	      "url":"http:\/\/gregavola.me",
+	      "bio":"Co-Founder and CTO of Untappd, Web Developer, Beer Drinker, Community Guy",
+	      "relationship":"self",
+	      "user_avatar":"http:\/\/gravatar.com\/avatar\/0c6922e238dae5cccce96a32889fc911?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+	      "is_private":0,
+	      "contact":{
+	         "gowalla":"gregavola",
+	         "foursquare":195741,
+	         "facebook":18603076,
+	         "twitter":"gregavola"
+	      }
+	   },
+	   "beer":{
+	      "bid":3916,
+	      "beer_name":"Samuel Adams Summer Ale",
+	      "beer_label":"https:\/\/untappd.s3.amazonaws.com\/site\/beer_logos\/beer-SamAdamsSummerAle.jpg",
+	      "beer_style":"American Pale Wheat Ale",
+	      "beer_abv":5.2,
+	      "auth_rating":3,
+	      "wish_list":false
+	   },
+	   "brewery":{
+	      "brewery_id":157,
+	      "brewery_name":"Boston Beer Company",
+	      "brewery_label":"https:\/\/untappd.s3.amazonaws.com\/site\/brewery_logos\/brewery-SamuelAdams.jpg",
+	      "country_name":"United States",
+	      "contact":{
+	         "twitter":"SamuelAdamsBeer",
+	         "facebook":"http:\/\/www.facebook.com\/pages\/Samuel-Adams-for-the-love-of-beer\/117341921610",
+	         "url":"http:\/\/www.samueladams.com"
+	      },
+	      "location":{
+	         "brewery_city":"Boston",
+	         "brewery_state":"MA",
+	         "lat":42.3144,
+	         "lng":-71.1034
+	      }
+	   },
+	   "venue":{
+	      "venue_id":1222,
+	      "venue_name":"Untappd HQ - East",
+	      "primary_category":"Residence",
+	      "parent_category_id":"4e67e38e036454776db1fb3a",
+	      "categories":{
+	         "count":2,
+	         "items":[
+	            {
+	               "category_name":"Tech Startup",
+	               "category_id":"4bf58dd8d48988d125941735",
+	               "is_primary":false
+	            },
+	            {
+	               "category_name":"Home (private)",
+	               "category_id":"4bf58dd8d48988d103941735",
+	               "is_primary":true
+	            }
+	         ]
+	      },
+	      "location":{
+	         "venue_address":"",
+	         "venue_city":"",
+	         "venue_state":"",
+	         "lat":40.7559,
+	         "lng":-73.9536
+	      },
+	      "contact":{
+	         "twitter":"@untappd",
+	         "venue_url":"http:\/\/untappd.com"
+	      },
+	      "foursquare":{
+	         "foursquare_id":"4ccf5fec1ac7a1cd6a5c1392",
+	         "foursquare_url":"http:\/\/4sq.com\/boEpZE"
+	      },
+	      "venue_icon":{
+	         "sm":"https:\/\/foursquare.com\/img\/categories\/building\/home_64.png",
+	         "md":"https:\/\/foursquare.com\/img\/categories\/building\/home_88.png",
+	         "lg":"https:\/\/foursquare.com\/img\/categories\/building\/home_256.png"
+	      }
+	   },
+	   "comments":{
+	      "count":0,
+	      "items":[
+
+	      ]
+	   },
+	   "toasts":{
+	      "count":1,
+	      "auth_toast":false,
+	      "items":[
+	         {
+	            "user":{
+	               "uid":42235,
+	               "user_name":"peterepp",
+	               "first_name":"Peter",
+	               "last_name":"Epp",
+	               "user_avatar":"http:\/\/gravatar.com\/avatar\/470b0592970286c93a8b735598c71b87?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+	               "user_link":"http:\/\/untappd.com\/user\/peterepp",
+	               "account_type":"user",
+	               "brewery_details":[
+
+	               ]
+	            },
+	            "like_id":"1225920",
+	            "like_owner":false,
+	            "created_at":"Sun, 29 Jul 2012 22:29:51 +0000"
+	         }
+	      ]
+	   },
+	   "media":{
+	      "count":0,
+	      "items":[
+
+	      ]
+	   },
+	   "source":{
+	      "app_name":"Untappd for Android - (V2)",
+	      "app_website":"http:\/\/untpd.it\/androidapp"
+	   }
+	}, 
+            ...
+							</pre>
+						</div>
+						
+						<div class="apiarea" id="beer_checkins">
+	
+							<h1><strong>Beer Feed</strong></h1>
+							
+							<p><strong>Authentication:</strong> Not required</p>
+							
+							<p><strong>HTTP Method:</strong> GET</p>
+
+							<p><code>/v4/beer/checkins/BID</code></p>
+
+							<p>This method allows you the obtain a feed for a single beer for Untappd. By default it will return at max 25 records.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>BID (required)</em> - The beer ID that you want to display checkins</li>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>min_id (int, optional)</em> - The numeric ID of the most recent check-in. This provided to you in the next_query attribute.</li>
+								<li><em>max_id (int, optional)</em> - The checkin ID that you want the results to start with</li>
+								<li><em>limit (int, optional)</em> - The number of results to return, maximum of 50, default fault is 25</li>
+							</ul>
+
+
+							<pre class="word prettyprint">
+"checkins":{
+	"count":25,
+	"items":[
+	{
+	   "checkin_id":10608945,
+	   "created_at":"Sun, 29 Jul 2012 22:19:16 +0000",
+	   "checkin_comment":"",
+	   "rating_score":3,
+	   "user":{
+	      "uid":1,
+	      "user_name":"gregavola",
+	      "first_name":"Greg",
+	      "last_name":"Avola",
+	      "location":"New York, NY",
+	      "url":"http:\/\/gregavola.me",
+	      "bio":"Co-Founder and CTO of Untappd, Web Developer, Beer Drinker, Community Guy",
+	      "relationship":"self",
+	      "user_avatar":"http:\/\/gravatar.com\/avatar\/0c6922e238dae5cccce96a32889fc911?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+	      "is_private":0,
+	      "contact":{
+	         "gowalla":"gregavola",
+	         "foursquare":195741,
+	         "facebook":18603076,
+	         "twitter":"gregavola"
+	      }
+	   },
+	   "beer":{
+	      "bid":3916,
+	      "beer_name":"Samuel Adams Summer Ale",
+	      "beer_label":"https:\/\/untappd.s3.amazonaws.com\/site\/beer_logos\/beer-SamAdamsSummerAle.jpg",
+	      "beer_style":"American Pale Wheat Ale",
+	      "beer_abv":5.2,
+	      "auth_rating":3,
+	      "wish_list":false
+	   },
+	   "brewery":{
+	      "brewery_id":157,
+	      "brewery_name":"Boston Beer Company",
+	      "brewery_label":"https:\/\/untappd.s3.amazonaws.com\/site\/brewery_logos\/brewery-SamuelAdams.jpg",
+	      "country_name":"United States",
+	      "contact":{
+	         "twitter":"SamuelAdamsBeer",
+	         "facebook":"http:\/\/www.facebook.com\/pages\/Samuel-Adams-for-the-love-of-beer\/117341921610",
+	         "url":"http:\/\/www.samueladams.com"
+	      },
+	      "location":{
+	         "brewery_city":"Boston",
+	         "brewery_state":"MA",
+	         "lat":42.3144,
+	         "lng":-71.1034
+	      }
+	   },
+	   "venue":{
+	      "venue_id":1222,
+	      "venue_name":"Untappd HQ - East",
+	      "primary_category":"Residence",
+	      "parent_category_id":"4e67e38e036454776db1fb3a",
+	      "categories":{
+	         "count":2,
+	         "items":[
+	            {
+	               "category_name":"Tech Startup",
+	               "category_id":"4bf58dd8d48988d125941735",
+	               "is_primary":false
+	            },
+	            {
+	               "category_name":"Home (private)",
+	               "category_id":"4bf58dd8d48988d103941735",
+	               "is_primary":true
+	            }
+	         ]
+	      },
+	      "location":{
+	         "venue_address":"",
+	         "venue_city":"",
+	         "venue_state":"",
+	         "lat":40.7559,
+	         "lng":-73.9536
+	      },
+	      "contact":{
+	         "twitter":"@untappd",
+	         "venue_url":"http:\/\/untappd.com"
+	      },
+	      "foursquare":{
+	         "foursquare_id":"4ccf5fec1ac7a1cd6a5c1392",
+	         "foursquare_url":"http:\/\/4sq.com\/boEpZE"
+	      },
+	      "venue_icon":{
+	         "sm":"https:\/\/foursquare.com\/img\/categories\/building\/home_64.png",
+	         "md":"https:\/\/foursquare.com\/img\/categories\/building\/home_88.png",
+	         "lg":"https:\/\/foursquare.com\/img\/categories\/building\/home_256.png"
+	      }
+	   },
+	   "comments":{
+	      "count":0,
+	      "items":[
+
+	      ]
+	   },
+	   "toasts":{
+	      "count":1,
+	      "auth_toast":false,
+	      "items":[
+	         {
+	            "user":{
+	               "uid":42235,
+	               "user_name":"peterepp",
+	               "first_name":"Peter",
+	               "last_name":"Epp",
+	               "user_avatar":"http:\/\/gravatar.com\/avatar\/470b0592970286c93a8b735598c71b87?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+	               "user_link":"http:\/\/untappd.com\/user\/peterepp",
+	               "account_type":"user",
+	               "brewery_details":[
+
+	               ]
+	            },
+	            "like_id":"1225920",
+	            "like_owner":false,
+	            "created_at":"Sun, 29 Jul 2012 22:29:51 +0000"
+	         }
+	      ]
+	   },
+	   "media":{
+	      "count":0,
+	      "items":[
+
+	      ]
+	   },
+	   "source":{
+	      "app_name":"Untappd for Android - (V2)",
+	      "app_website":"http:\/\/untpd.it\/androidapp"
+	   }
+	}, 
+            ...
+							</pre>
+					
+							
+						</div>
+						
+						<div class="apiarea" id="brewery_checkins">
+							
+							<h1><strong>Brewery Feed</strong></h1>
+							
+							<p><strong>Authentication:</strong> Not required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+							
+							<p><code>/v4/brewery/checkins/BREWERY_ID</code></p>
+
+							<p>This method allows you the obtain a feed for a single brewery for Untappd. This includes only beer checkin-ins non private users by an authenticated user. By default it will return at max 25 records.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>BREWERY_ID (required)</em> - The Brewery ID that you want to display checkins</li>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>min_id (int, optional)</em> - The numeric ID of the most recent check-in. New results will only be shown if there are checkins before this ID</li>
+								<li><em>max_id (int, optional)</em> - The checkin ID that you want the results to start with</li>
+								<li><em>limit (int, optional)</em> - The number of results to return, max of 50, default is 25</li>
+							</ul>
+
+							<pre class="word prettyprint">
+"checkins":{
+	"count":25,
+	"items":[
+	{
+	   "checkin_id":10608945,
+	   "created_at":"Sun, 29 Jul 2012 22:19:16 +0000",
+	   "checkin_comment":"",
+	   "rating_score":3,
+	   "user":{
+	      "uid":1,
+	      "user_name":"gregavola",
+	      "first_name":"Greg",
+	      "last_name":"Avola",
+	      "location":"New York, NY",
+	      "url":"http:\/\/gregavola.me",
+	      "bio":"Co-Founder and CTO of Untappd, Web Developer, Beer Drinker, Community Guy",
+	      "relationship":"self",
+	      "user_avatar":"http:\/\/gravatar.com\/avatar\/0c6922e238dae5cccce96a32889fc911?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+	      "is_private":0,
+	      "contact":{
+	         "gowalla":"gregavola",
+	         "foursquare":195741,
+	         "facebook":18603076,
+	         "twitter":"gregavola"
+	      }
+	   },
+	   "beer":{
+	      "bid":3916,
+	      "beer_name":"Samuel Adams Summer Ale",
+	      "beer_label":"https:\/\/untappd.s3.amazonaws.com\/site\/beer_logos\/beer-SamAdamsSummerAle.jpg",
+	      "beer_style":"American Pale Wheat Ale",
+	      "beer_abv":5.2,
+	      "auth_rating":3,
+	      "wish_list":false
+	   },
+	   "brewery":{
+	      "brewery_id":157,
+	      "brewery_name":"Boston Beer Company",
+	      "brewery_label":"https:\/\/untappd.s3.amazonaws.com\/site\/brewery_logos\/brewery-SamuelAdams.jpg",
+	      "country_name":"United States",
+	      "contact":{
+	         "twitter":"SamuelAdamsBeer",
+	         "facebook":"http:\/\/www.facebook.com\/pages\/Samuel-Adams-for-the-love-of-beer\/117341921610",
+	         "url":"http:\/\/www.samueladams.com"
+	      },
+	      "location":{
+	         "brewery_city":"Boston",
+	         "brewery_state":"MA",
+	         "lat":42.3144,
+	         "lng":-71.1034
+	      }
+	   },
+	   "venue":{
+	      "venue_id":1222,
+	      "venue_name":"Untappd HQ - East",
+	      "primary_category":"Residence",
+	      "parent_category_id":"4e67e38e036454776db1fb3a",
+	      "categories":{
+	         "count":2,
+	         "items":[
+	            {
+	               "category_name":"Tech Startup",
+	               "category_id":"4bf58dd8d48988d125941735",
+	               "is_primary":false
+	            },
+	            {
+	               "category_name":"Home (private)",
+	               "category_id":"4bf58dd8d48988d103941735",
+	               "is_primary":true
+	            }
+	         ]
+	      },
+	      "location":{
+	         "venue_address":"",
+	         "venue_city":"",
+	         "venue_state":"",
+	         "lat":40.7559,
+	         "lng":-73.9536
+	      },
+	      "contact":{
+	         "twitter":"@untappd",
+	         "venue_url":"http:\/\/untappd.com"
+	      },
+	      "foursquare":{
+	         "foursquare_id":"4ccf5fec1ac7a1cd6a5c1392",
+	         "foursquare_url":"http:\/\/4sq.com\/boEpZE"
+	      },
+	      "venue_icon":{
+	         "sm":"https:\/\/foursquare.com\/img\/categories\/building\/home_64.png",
+	         "md":"https:\/\/foursquare.com\/img\/categories\/building\/home_88.png",
+	         "lg":"https:\/\/foursquare.com\/img\/categories\/building\/home_256.png"
+	      }
+	   },
+	   "comments":{
+	      "count":0,
+	      "items":[
+
+	      ]
+	   },
+	   "toasts":{
+	      "count":1,
+	      "auth_toast":false,
+	      "items":[
+	         {
+	            "user":{
+	               "uid":42235,
+	               "user_name":"peterepp",
+	               "first_name":"Peter",
+	               "last_name":"Epp",
+	               "user_avatar":"http:\/\/gravatar.com\/avatar\/470b0592970286c93a8b735598c71b87?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+	               "user_link":"http:\/\/untappd.com\/user\/peterepp",
+	               "account_type":"user",
+	               "brewery_details":[
+
+	               ]
+	            },
+	            "like_id":"1225920",
+	            "like_owner":false,
+	            "created_at":"Sun, 29 Jul 2012 22:29:51 +0000"
+	         }
+	      ]
+	   },
+	   "media":{
+	      "count":0,
+	      "items":[
+
+	      ]
+	   },
+	   "source":{
+	      "app_name":"Untappd for Android - (V2)",
+	      "app_website":"http:\/\/untpd.it\/androidapp"
+	   }
+	}, 
+            ...
+							</pre>
+					
+							
+						</div>
+						
+						<div class="apiarea" id="venue_checkins">
+	
+							<h1><strong>Venue Feed</strong></h1>
+							
+							<p><strong>Authentication:</strong> Not required</p>
+							
+							<p><strong>HTTP Method:</strong> GET</p>
+
+							<p><code>/v4/venue/checkins/VENUE_ID</code></p>
+
+							<p>This method allows you the obtain a feed for a single venue for Untappd. By default it will return at max 25 records.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>VENUE_ID (required)</em> - The Brewery ID that you want to display checkins</li>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>min_id (int, optional)</em> - The numeric ID of the most recent check-in. New results will only be shown if there are checkins before this ID</li>
+								<li><em>max_Id (int, optional)</em> - The checkin ID that you want the results to start with</li>
+								<li><em>limit (int, optional)</em> - The number of results to return, max of 50, default is 25</li>
+							</ul>
+
+							<pre class="word prettyprint">
+"checkins":{
+	"count":25,
+	"items":[
+	{
+	   "checkin_id":10608945,
+	   "created_at":"Sun, 29 Jul 2012 22:19:16 +0000",
+	   "checkin_comment":"",
+	   "rating_score":3,
+	   "user":{
+	      "uid":1,
+	      "user_name":"gregavola",
+	      "first_name":"Greg",
+	      "last_name":"Avola",
+	      "location":"New York, NY",
+	      "url":"http:\/\/gregavola.me",
+	      "bio":"Co-Founder and CTO of Untappd, Web Developer, Beer Drinker, Community Guy",
+	      "relationship":"self",
+	      "user_avatar":"http:\/\/gravatar.com\/avatar\/0c6922e238dae5cccce96a32889fc911?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+	      "is_private":0,
+	      "contact":{
+	         "gowalla":"gregavola",
+	         "foursquare":195741,
+	         "facebook":18603076,
+	         "twitter":"gregavola"
+	      }
+	   },
+	   "beer":{
+	      "bid":3916,
+	      "beer_name":"Samuel Adams Summer Ale",
+	      "beer_label":"https:\/\/untappd.s3.amazonaws.com\/site\/beer_logos\/beer-SamAdamsSummerAle.jpg",
+	      "beer_style":"American Pale Wheat Ale",
+	      "beer_abv":5.2,
+	      "auth_rating":3,
+	      "wish_list":false
+	   },
+	   "brewery":{
+	      "brewery_id":157,
+	      "brewery_name":"Boston Beer Company",
+	      "brewery_label":"https:\/\/untappd.s3.amazonaws.com\/site\/brewery_logos\/brewery-SamuelAdams.jpg",
+	      "country_name":"United States",
+	      "contact":{
+	         "twitter":"SamuelAdamsBeer",
+	         "facebook":"http:\/\/www.facebook.com\/pages\/Samuel-Adams-for-the-love-of-beer\/117341921610",
+	         "url":"http:\/\/www.samueladams.com"
+	      },
+	      "location":{
+	         "brewery_city":"Boston",
+	         "brewery_state":"MA",
+	         "lat":42.3144,
+	         "lng":-71.1034
+	      }
+	   },
+	   "venue":{
+	      "venue_id":1222,
+	      "venue_name":"Untappd HQ - East",
+	      "primary_category":"Residence",
+	      "parent_category_id":"4e67e38e036454776db1fb3a",
+	      "categories":{
+	         "count":2,
+	         "items":[
+	            {
+	               "category_name":"Tech Startup",
+	               "category_id":"4bf58dd8d48988d125941735",
+	               "is_primary":false
+	            },
+	            {
+	               "category_name":"Home (private)",
+	               "category_id":"4bf58dd8d48988d103941735",
+	               "is_primary":true
+	            }
+	         ]
+	      },
+	      "location":{
+	         "venue_address":"",
+	         "venue_city":"",
+	         "venue_state":"",
+	         "lat":40.7559,
+	         "lng":-73.9536
+	      },
+	      "contact":{
+	         "twitter":"@untappd",
+	         "venue_url":"http:\/\/untappd.com"
+	      },
+	      "foursquare":{
+	         "foursquare_id":"4ccf5fec1ac7a1cd6a5c1392",
+	         "foursquare_url":"http:\/\/4sq.com\/boEpZE"
+	      },
+	      "venue_icon":{
+	         "sm":"https:\/\/foursquare.com\/img\/categories\/building\/home_64.png",
+	         "md":"https:\/\/foursquare.com\/img\/categories\/building\/home_88.png",
+	         "lg":"https:\/\/foursquare.com\/img\/categories\/building\/home_256.png"
+	      }
+	   },
+	   "comments":{
+	      "count":0,
+	      "items":[
+
+	      ]
+	   },
+	   "toasts":{
+	      "count":1,
+	      "auth_toast":false,
+	      "items":[
+	         {
+	            "user":{
+	               "uid":42235,
+	               "user_name":"peterepp",
+	               "first_name":"Peter",
+	               "last_name":"Epp",
+	               "user_avatar":"http:\/\/gravatar.com\/avatar\/470b0592970286c93a8b735598c71b87?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+	               "user_link":"http:\/\/untappd.com\/user\/peterepp",
+	               "account_type":"user",
+	               "brewery_details":[
+
+	               ]
+	            },
+	            "like_id":"1225920",
+	            "like_owner":false,
+	            "created_at":"Sun, 29 Jul 2012 22:29:51 +0000"
+	         }
+	      ]
+	   },
+	   "media":{
+	      "count":0,
+	      "items":[
+
+	      ]
+	   },
+	   "source":{
+	      "app_name":"Untappd for Android - (V2)",
+	      "app_website":"http:\/\/untpd.it\/androidapp"
+	   }
+	}, 
+            ...
+							</pre>
+					
+							
+						</div>
+						
+						<div class="apiarea" id="beer_info">
+							
+							<h1><strong>Beer Info</strong></h1>
+							
+							<p><strong>Authentication:</strong> Not required</p>
+							
+							<p><strong>HTTP Method:</strong> GET</p>
+							
+							<p><code>/v4/beer/info/BID</code></p>
+
+							<p>This method will allow you to see extended information about a beer.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>BID (required)</em> - The Beer ID that you want to display information</li>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>compact (optional, string)</em> - Pass 'true' for a compact listing of the beer object that doesn't include checkins, similar or media</li>
+							</ul>
+
+							<pre class="prettyprint word">
+							 "response":{
+      "beer":{
+         "bid":3558,
+         "beer_name":"Brooklyn Lager",
+         "beer_label":"https://untappd.s3.amazonaws.com/site/beer_logos/beer-BrooklynLager_3558.jpeg",
+         "beer_abv":5.2,
+         "beer_description":"Brooklyn Lager is a wonderfully flavorful beer, smooth, refreshing and very versatile with food. It is amber-gold in color and displays a firm malt center supported by a refreshing bitterness and floral hop aroma. Caramel malts show in the finish. The aromatic qualities of the beer are enhanced by “dry-hopping”, the centuries-old practice of steeping the beer with fresh hops as it undergoes a long, cold maturation.",
+         "beer_style":"Vienna Lager",
+         "is_in_production":1,
+         "beer_slug":"brooklyn-brewery-brooklyn-lager",
+         "is_homebrew":0,
+         "created_at":"Sat, 21 Aug 2010 07:26:35 +0000",
+         "rating_count":4757,
+         "rating_score":3.42,
+         "stats":{
+            "total_count":12682,
+            "monthly_count":1333,
+            "user_count":24,
+            "total_user_count":7332
+         },
+         "brewery":{
+            "brewery_id":259,
+            "brewery_name":"Brooklyn Brewery",
+            "brewery_label":"https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-BrooklynBrewery_259.jpeg",
+            "country_name":"United States",
+            "contact":{
+               "twitter":"brooklynbrewery",
+               "facebook":"https://www.facebook.com/thebrooklynbrewery",
+               "url":"http://brooklynbrewery.com"
+            },
+            "location":{
+               "brewery_city":"Brooklyn",
+               "brewery_state":"NY",
+               "lat":40.7215,
+               "lng":-73.9575
+            }
+         },
+         "auth_rating":3,
+         "wish_list":false,
+         "media":{
+            "count":10,
+            "items":[
+               {
+                  "photo_id":738199,
+                  "photo":{
+                     "photo_img_sm":"https://untappd.s3.amazonaws.com/photo/2012_07_29/6520952d6e365dd8d32dda3151a38466_100x100.jpg",
+                     "photo_img_md":"https://untappd.s3.amazonaws.com/photo/2012_07_29/6520952d6e365dd8d32dda3151a38466_320x320.jpg",
+                     "photo_img_lg":"https://untappd.s3.amazonaws.com/photo/2012_07_29/6520952d6e365dd8d32dda3151a38466_640x640.jpg",
+                     "photo_img_og":"https://untappd.s3.amazonaws.com/photo/2012_07_29/6520952d6e365dd8d32dda3151a38466_raw.jpg"
+                  },
+                  ...
+          },
+          "checkins": { ... }
+         }
+
+							</pre>
+						
+						</div>
+						
+						<div class="apiarea" id="brewery_info">
+							
+							<h1><strong>Brewery Info</strong></h1>
+							
+							<p><strong>Authentication:</strong> Not required</p>
+							
+							<p><strong>HTTP Method:</strong> GET</p>
+							
+							<p><code>/v4/brewery/info/BREWERY_ID</code></p>
+
+							<p>This method will allow you to see extended information about a brewery.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>BREWERY_ID (required)</em> - The Brewery ID that you want to display information</li>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>compact (optional, string)</em> - Pass 'true' for a compact listing of the brewery object that doesn't include checkins, beer_list or media</li>
+							</ul>
+
+							<pre class="word prettyprint">
+								"brewery":{
+         "brewery_id":1009,
+         "brewery_name":"Port Brewing Company",
+         "brewery_label":"https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-PortBrewingCompany_1009.jpeg",
+         "country_name":"United States",
+         "brewery_in_production":0,
+         "claimed_status":{
+            "is_claimed":false,
+            "claimed_slug":"",
+            "follow_status":false,
+            "follower_count":0,
+            "uid":0
+         },
+         "beer_count":114,
+         "contact":{
+            "twitter":"lostabbey",
+            "facebook":"http://www.facebook.com/pages/Port-Brewing-The-Lost-abbey/75438839471?ref=nf",
+            "url":"http://www.portbrewing.com/"
+         },
+         "brewery_type":"Micro Brewery",
+         "location":{
+            "brewery_address":"155 Mata Way, Suite 104",
+            "brewery_city":"San Marcos",
+            "brewery_state":"CA",
+            "brewery_lat":33.1413,
+            "brewery_lng":-117.15
+         },
+         "rating":{
+            "count":16828,
+            "rating_score":3.715
+         },
+         "owners": {
+         	"count": 1,
+         	"items": [
+         	{
+         		"brewery_id": 157,
+         		"brewery_name": Brewery name
+         	}]	
+     	},
+         "brewery_description":"",
+         "stats":{
+            "total_count":33062,
+            "unique_count":10170,
+            "monthly_count":41442,
+            "weekly_count":12358,
+            "user_count":17
+         },
+         "media":{
+            …
+         },
+         "checkins":{
+            …
+         },
+         "beer_list":{
+            "count":15,
+            "items":[
+               {
+                  "has_had":false,
+                  "total_count":4176,
+                  "beer":{
+                     "bid":5809,
+                     "beer_name":"Mongo Double IPA",
+                     "beer_label":"https://untappd.s3.amazonaws.com/site/beer_logos/beer-portMongo.jpg",
+                     "beer_style":"Imperial / Double IPA",
+                     "beer_abv":8.5,
+                     "auth_rating":0,
+                     "wish_list":false,
+                     "beer_description":"A Double IPA brewed in memory of the brew cat. In honor of Mongo, Mike Rodriguez made his first Double IPA, as he loved the cat and wanted to honor him with this beer. This 8.5% abv beer was made with Columbus hops (Mongoâ€™s Birthname), Cascade for the Mama cat, and Simocoe because that is Mikeâ€™s favorite hop.",
+                     "rating_score":3.98
+                  },
+                  "brewery":{
+                     "brewery_id":1009,
+                     "brewery_name":"Port Brewing Company",
+                     "brewery_label":"https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-PortBrewingCompany_1009.jpeg",
+                     "country_name":"United States",
+                     "contact":{
+                        "twitter":"lostabbey",
+                        "facebook":"http://www.facebook.com/pages/Port-Brewing-The-Lost-abbey/75438839471?ref=nf",
+                        "url":"http://www.portbrewing.com/"
+                     },
+                     "location":{
+                        "brewery_city":"San Marcos",
+                        "brewery_state":"CA",
+                        "lat":33.1413,
+                        "lng":-117.15
+                     }
+                  },
+                  "friends":{
+                     "count":0,
+                     "items":[
+
+                     ]
+                  }
+               },
+               ...
+            ]
+         }
+      }
+							</pre>
+						
+						</div>
+						
+						<div class="apiarea" id="venue_info">
+							
+							<h1><strong>Venue Info</strong></h1>
+							
+							<p><strong>Authentication:</strong> Not required</p>
+							
+							<p><strong>HTTP Method:</strong> GET</p>
+							
+							<p><code>/v4/venue/info/VENUE_ID</code></p>
+
+							<p>This method will allow you to see extended information about a venue.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>VENUE_ID (required)</em> - The Venue ID that you want to display information</li>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>compact (optional, string)</em> - Pass 'true' for a compact listing of the beer object that doesn't include checkins, top_beers or media</li>
+							</ul>
+
+							<pre class="prettyprint word">
+								"response":{
+								      "venue":{
+								         "venue_id":1222,
+								         "venue_name":"Untappd HQ - East",
+								         "last_updated":"Fri, 03 Aug 2012 14:12:55 +0000",
+								         "primary_category":"Residence",
+								         "categories":{
+								            "count":2,
+								            "items":[
+								               {
+								                  "category_name":"Tech Startup",
+								                  "category_id":"4bf58dd8d48988d125941735",
+								                  "is_primary":false
+								               },
+								               {
+								                  "category_name":"Home (private)",
+								                  "category_id":"4bf58dd8d48988d103941735",
+								                  "is_primary":true
+								               }
+								            ]
+								         },
+								         "stats":{
+								            "total_count":266,
+								            "user_count":0,
+								            "total_user_count":12
+								         },
+								         "venue_icon":{
+								            "sm":"https://foursquare.com/img/categories/building/home_64.png",
+								            "md":"https://foursquare.com/img/categories/building/home_88.png",
+								            "lg":"https://foursquare.com/img/categories/building/home_256.png"
+								         },
+								         "location":{
+								            "venue_address":"",
+								            "venue_city":"",
+								            "venue_state":"",
+								            "lat":40.7559,
+								            "lng":-73.9536
+								         },
+								         "contact":{
+								            "twitter":"@untappd",
+								            "venue_url":"http://untappd.com"
+								         },
+								         "foursquare":{
+								            "foursquare_id":"4ccf5fec1ac7a1cd6a5c1392",
+								            "foursquare_url":"http://4sq.com/boEpZE"
+								         },
+								         "media":{
+								            …
+								         },
+								         "checkins":{
+								            …
+								         },
+								         "top_beers":{
+								            "count":6,
+								            "items":[
+								               {
+								                  "total_count":3,
+								                  "your_count":0,
+								                  "beer":{
+								                     "bid":3916,
+								                     "beer_name":"Samuel Adams Summer Ale",
+								                     "beer_label":"https://untappd.s3.amazonaws.com/site/beer_logos/beer-SamAdamsSummerAle.jpg",
+								                     "beer_style":"American Pale Wheat Ale",
+								                     "beer_abv":5.2,
+								                     "beer_description":"right and citrusy, brewed with mysterious grains of paradise.\nSamuel Adams® Summer Ale is an American wheat ale. This summer seasonal uses malted wheat as well as lemon zest and grains of paradise, a rare pepper from Africa first used as a brewing spice in the 13th Century to create a crisp and spicy flavor and body. The ale fermentation imparts a background tropical fruit note reminiscent of mangos and peaches. All of these come together to create a quenching, clean finishing beer perfect for those warm Summer days",
+								                     "auth_rating":0,
+								                     "wish_list":false
+								                  },
+								                  "brewery":{
+								                     "brewery_id":157,
+								                     "brewery_name":"Boston Beer Company",
+								                     "brewery_label":"https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-SamuelAdams.jpg",
+								                     "country_name":"United States",
+								                     "contact":{
+								                        "twitter":"SamuelAdamsBeer",
+								                        "facebook":"http://www.facebook.com/pages/Samuel-Adams-for-the-love-of-beer/117341921610",
+								                        "url":"http://www.samueladams.com"
+								                     },
+								                     "location":{
+								                        "brewery_city":"Boston",
+								                        "brewery_state":"MA",
+								                        "lat":42.3144,
+								                        "lng":-71.1034
+								                     }
+								                  },
+								                  "friends":{
+								                     "count":0,
+								                     "items":[
+
+								                     ]
+								                  }
+								               },
+								               ...
+								            ]
+								         }
+								      }
+								   }
+							</pre>
+						
+						</div>
+					
+						<div class="apiarea" id="details">
+
+							<h1><strong>Checkin Details</strong></h1>
+
+							<p><strong>Authentication:</strong> Not required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+
+							<p><code>/v4/checkin/view/CHECKIN_ID</code></p>
+
+							<p>This method will allow you to see extended details for a particular checkin, which includes location, comments and toasts.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>CHECKIN_ID (required)</em> - The Checkin ID that you want to display information</li>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+							</ul>
+
+							<pre class="prettyprint word">
+								"response":{
+      "checkin":{
+         "checkin_id":10888893,
+         "created_at":"Sun, 05 Aug 2012 00:48:33 +0000",
+         "rating_score":4,
+         "checkin_comment":"",
+         "user":{
+            "uid":1,
+            "user_name":"gregavola",
+            "first_name":"Greg",
+            "last_name":"A.",
+            "relationship":"none",
+            "location":"New York, NY",
+            "url":"http://gregavola.me",
+            "bio":"Co-Founder and CTO of Untappd, Web Developer, Beer Drinker, Community Guy",
+            "user_avatar":"http://gravatar.com/avatar/0c6922e238dae5cccce96a32889fc911?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+            "is_private":0,
+            "contact":[
+               {
+                  "foursquare":195741,
+                  "facebook":18603076,
+                  "twitter":"gregavola"
+               }
+            ]
+         },
+         "beer":{
+            "bid":3952,
+            "beer_name":"60 Minute IPA",
+            "beer_label":"https://untappd.s3.amazonaws.com/site/beer_logos/beer-dfh60MinIPA.jpg",
+            "beer_style":"American IPA",
+            "beer_abv":6,
+            "auth_rating":0,
+            "wish_list":false
+         },
+         "brewery":{
+            "brewery_id":459,
+            "brewery_name":"Dogfish Head Craft Brewery",
+            "brewery_label":"https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-DogfishHeadCraftBrewery_459.jpeg",
+            "country_name":"United States",
+            "contact":{
+               "twitter":"dogfishbeer",
+               "facebook":"http://www.facebook.com/dogfishheadbeer",
+               "url":"http://www.dogfish.com/"
+            },
+            "location":{
+               "brewery_city":"Milton",
+               "brewery_state":"DE",
+               "lat":38.7776,
+               "lng":-75.3099
+            }
+         },
+         "venue":{
+            "venue_id":6820,
+            "venue_name":"BlackbirdTavern",
+            "primary_category":"Nightlife Spot",
+            "parent_category_id":"4d4b7105d754a06376d81259",
+            "categories":{
+               "count":1,
+               "items":[
+                  {
+                     "category_name":"Bar",
+                     "category_id":"4bf58dd8d48988d116941735",
+                     "is_primary":true
+                  }
+               ]
+            },
+            "location":{
+               "venue_address":"6 Way Rd",
+               "venue_city":"Middlefield",
+               "venue_state":"CT",
+               "lat":41.5127,
+               "lng":-72.7243
+            },
+            "contact":{
+               "twitter":"",
+               "venue_url":""
+            },
+            "foursquare":{
+               "foursquare_id":"4c2e93d13896e21e8094e290",
+               "foursquare_url":"http://4sq.com/9NMvEo"
+            },
+            "venue_icon":{
+               "sm":"https://foursquare.com/img/categories/nightlife/bar_64.png",
+               "md":"https://foursquare.com/img/categories/nightlife/bar_88.png",
+               "lg":"https://foursquare.com/img/categories/nightlife/bar_256.png"
+            }
+         },
+         "comments":{
+            "count":0,
+            "items":[
+
+            ]
+         },
+         "toasts":{
+            "count":1,
+            "auth_toast":false,
+            "items":[
+               {
+                  "user":{
+                     "uid":6637,
+                     "user_name":"andrecharland",
+                     "first_name":"Andre",
+                     "last_name":"C.",
+                     "user_avatar":"http://gravatar.com/avatar/46eb1cc687d40b1d33216f54da74a63f?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+                     "user_link":"http://untappd.com/user/andrecharland",
+                     "account_type":"user",
+                     "brewery_details":[
+
+                     ]
+                  },
+                  "like_id":"1271596",
+                  "like_owner":false,
+                  "created_at":"Sun, 05 Aug 2012 03:41:14 +0000"
+               }
+            ]
+         },
+         "media":{
+            "count":0,
+            "items":[
+
+            ]
+         },
+         "source":{
+            "app_name":"Untappd for iPhone - (V2)",
+            "app_website":"http://untpd.it/iphoneapp"
+         }
+      }
+   }
+
+							</pre>
+
+						</div>
+						
+						<div class="apiarea" id="user_info">
+							
+							<h1><strong>User Info</strong></h1>
+							
+							<p><strong>Authentication:</strong> Not required</p>
+							
+							<p><strong>HTTP Method:</strong> GET</p>
+							
+							<p><code>/v4/user/info/USERNAME</code></p>
+
+							<p>This method will return the user information for a selected user. If you want to obtain the authenticated user's information, you don't need to pass the "user" query string.</p>
+
+							<p>Please note: The <em>settings</em> attribute will only be visible if the user that you are making the call on is authenticated. Unauthenticated calls do not return this attribtue.
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>USERNAME (required)</em> - The Username that you want to display information</li>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>compact (optional, string)</em> - Pass 'true' for a compact listing of the user object that doesn't include recent_brews, media or checkins.</li>
+							</ul>
+
+							<pre class="prettyprint word">
+							"response":{
+      "user":{
+         "id":1,
+         "user_name":"gregavola",
+         "first_name":"Greg",
+         "last_name":"Avola",
+         "user_avatar":"http://gravatar.com/avatar/0c6922e238dae5cccce96a32889fc911?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+         "is_private":0,
+         "location":"New York, NY",
+         "url":"http://gregavola.me",
+         "bio":"Co-Founder and CTO of Untappd, Web Developer, Beer Drinker, Community Guy",
+         "relationship":"self",
+         "untappd_url":"http://untappd.com/user/gregavola",
+         "account_type":"user",
+         "stats":{
+            "total_badges":121,
+            "total_friends":1042,
+            "total_checkins":1260,
+            "total_beers":649,
+            "total_created_beers":54
+         },
+         "recent_brews":{…},
+         "checkins":{…},
+         "media":{…},
+         "contact":{
+            "foursquare":195741,
+            "facebook":18603076,
+            "twitter":"gregavola"
+         },
+         "date_joined":"Wed, 07 Jul 2010 05:51:10 +0000",
+         "settings":{
+            "badge":{
+               "badges_to_facebook":0,
+               "badges_to_twitter":1
+            },
+            "checkin":{
+               "checkin_to_facebook":0,
+               "checkin_to_twitter":0,
+               "checkin_to_foursquare":0
+            },
+            "navigation":{
+               "default_to_checkin":0
+            },
+            "user_birthday":"",
+            "email_address": "",
+         }
+      }
+   }
+							</pre>
+								
+						</div>
+							
+						<div class="apiarea" id="friends">
+
+							<h1><strong>User Friends</strong></h1>
+
+							<p><strong>Authentication:</strong> Not required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+
+							<p><code>/v4/user/friends/USERNAME</code></p>
+
+							<p>This method will return the last 25 friends for a selected. If you want to obtain the authenticated user's information, you don't need to pass the "USERNAME" parameter</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>USERNAME (required)</em> - The Username that you want to display information</li>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>offset (int, optional)</em> - The numeric offset that you what results to start</li>
+								<li><em>limit (optional)</em> - The number of records that you will return (max 25)</li>
+							</ul>
+
+							<pre class="prettyprint word">
+
+								"response":{
+      "count":25,
+      "items":[
+         {
+            "friendship_hash":"68a348378ccf02908bbf89bcf6c45d3d",
+            "created_at":"Sat, 28 Jul 2012 10:41:07 +0000",
+            "user":{
+               "uid":104315,
+               "user_name":"TommBauer",
+               "location":"NJ",
+               "bio":"Host of the upcoming reality show \"Brew York\". I freeze time and play make believe for a living and create human beings ",
+               "first_name":"Tomm",
+               "last_name":"Bauer",
+               "relationship":"friends",
+               "user_avatar":"https://untappd.s3.amazonaws.com/profile/7b553bcff487141b23f7923390704409_thumb.jpg"
+            }
+         },
+         ....
+
+
+							</pre>
+
+						</div>
+						
+						<div class="apiarea" id="badges">
+
+							<h1><strong>User Badges</strong></h1>
+
+							<p><strong>Authentication:</strong> Not required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+
+							<p><code>/v4/user/badges/USERNAME</code></p>
+
+							<p>This method will return a list of the last 50 the user's earned badges. If you want to obtain the authenticated user's information, you don't need to pass the "USERNAME" parameter.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>USERNAME (required)</em> - The Username that you want to display information</li>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>offset (int, optional)</em> - The numeric offset that you what results to start</li>
+							</ul>
+
+
+							<pre class="prettyprint word">
+"response": {
+
+    "type": "earned",
+    "sort": "all",
+    "count": 50,
+    "items": [
+        {
+            "badge_id": 176,
+            "user_badge_id": 1464621,
+            "checkin_id": 10240366,
+            "badge_name": "Summer Squeeze",
+            "badge_description": "Summer Squeeze is a bright, crisp ale that keeps you refreshed all summer long. 10 lucky fans will win Summer Squeeze pint glasses from Bridgeport.",
+            "badge_hint": "Check into a Summer Squeeze by Bridgeport from 6/1 to 7/21!",
+            "badge_active_status": 1,
+            "media": {
+                "badge_image_sm": "https://untappd.s3.amazonaws.com/assets/badges/bdg_summerSqueeze_sm.png",
+                "badge_image_md": "https://untappd.s3.amazonaws.com/assets/badges/bdg_summerSqueeze_md.png",
+                "badge_image_lg": "https://untappd.s3.amazonaws.com/assets/badges/bdg_summerSqueeze_lg.png"
+            },
+            "created_at": "Sat, 21 Jul 2012 20:04:45 +0000",
+            "is_level": false,
+            "levels": [ ]
+        },
+        ...
+
+
+							</pre>
+
+						</div>
+						
+						<div class="apiarea" id="wish_list">
+							
+							<h1><strong>User Wish List</strong></h1>
+
+							<p><strong>Authentication:</strong> Not required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+							
+							<p><code>/v4/user/wishlist/USERNAME</code></p>
+
+							<p>This method will allow you to see all the user's wish listed beers.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>USERNAME (required)</em> - The Username that you want to display information</li>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>sort (string, optional)</em> - Your can sort the results using these values: date - sorts by date (default), checkin - sorted by highest checkin, highest_rated - sorts by global rating descending order, lowest_rated - sorts by global rating ascending order, highest_abv - highest ABV from the wishlist, lowest_abv - lowest ABV from the wishlist</li>
+								<li><em>offset (int, optional)</em> - The numeric offset that you what results to start</li>
+
+							</ul>
+
+							<pre class="prettyprint word">
+							 "response":{
+	  "sort": "",
+      "beers":{
+         "count":22,
+         "items":[
+            {
+               "created_at":"Thu, 19 Jul 2012 17:58:31 +0000",
+               "beer":{
+                  "bid":164941,
+                  "beer_name":"What Is Enlightenment?",
+                  "beer_slug": "hill-farmstead-brewery-what-is-englightment",
+                  "beer_label":"https://untappd.s3.amazonaws.com/site/assets/images/temp/badge-beer-default.png",
+                  "beer_abv":"5.4",
+                  "beer_description":"American Pale Ale brewed in honor of our Second Anniversary. Simcoe and Amarillo hops.",
+                  "beer_style":"American Pale Ale",
+                  "beer_rating":4.23,
+                  "rating_count": 23452,
+                  "created_at":"Fri, 27 Apr 2012 15:08:55 +0000",
+                  "auth_rating":0,
+                  "wish_list":true
+               },
+               "brewery":{
+                  "brewery_id":2562,
+                  "brewery_name":"Hill Farmstead Brewery",
+                  "brewery_label":"https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-HillFarmsteadBrewery_2562.jpeg",
+                  "country_name":"United States",
+                  "contact":{
+                     "twitter":"HillFarmstead",
+                     "facebook":"http://www.facebook.com/hillfarmstead",
+                     "url":"http://www.hillfarmstead.com"
+                  },
+                  "location":{
+                     "brewery_city":"Greensboro",
+                     "brewery_state":"VT",
+                     "lat":44.6072,
+                     "lng":-72.2623
+                  }
+               },
+               "friends":{
+                  "count":10,
+                  "items":[
+                     {
+                        "user":{
+                           "uid":3325,
+                           "user_name":"Clefoodandbrews",
+                           "first_name":"Clefoodandbrews",
+                           "last_name":"",
+                           "user_link":"http://untappd.com/user/Clefoodandbrews",
+                           "user_avatar":"https://untappd.s3.amazonaws.com/profile/025765a9b343adad2bf56d9803f6433f_thumb.jpg"
+                        },
+                        "created_at":"Sat, 28 Jul 2012 17:11:27 +0000"
+                     },
+                     ...
+                }
+                ...
+
+
+							</pre> 
+							
+						</div>
+						
+						<div class="apiarea" id="user_distinct">
+							
+							<h1><strong>User Distinct Beers</strong></h1>
+
+							<p><strong>Authentication:</strong> Not required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+							
+							<p><code>/v4/user/beers/USERNAME</code></p>
+
+							<p>This method will allow you to see all the user's distinct beers.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>USERNAME (required)</em> - The Username that you want to display information</li>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>sort (string, optional)</em> - Your can sort the results using these values: date - sorts by date (default), checkin - sorted by highest checkin, highest_rated - sorts by global rating descending order, lowest_rated - sorts by global rating ascending order, highest_rated_you - the user's highest rated beer, lowest_rated_you - the user's lowest rated beer</li>
+								<li><em>offset (int, optional)</em> - The numeric offset that you what results to start</li>
+							</ul>
+
+												<pre class="prettyprint word">
+								"response":{
+      "beers":{
+         "sort": "date",
+         "count":25,
+         "items":[
+            {
+               "recent_created_at":"Sat, 28 Jul 2012 01:30:25 +0000",
+               "first_had":"Sat, 28 Jul 2012 01:30:25 +0000",
+               "count":1,
+               "beer":{
+                  "bid":18693,
+                  "beer_name":"Shipwrecked",
+                  "beer_label":"https://untappd.s3.amazonaws.com/site/beer_logos/beer-Shipwrecked_18693.jpeg",
+                  "beer_abv":9.25,
+                  "beer_style":"Imperial / Double IPA",
+                  "beer_description":"An amazingly balanced and hoppy beer, yet finishes as smooth as silk with no hint of high alcohol hotness usually associated with strong double IPA’s. Super citrus and grapefruit aromas and flavors from the generous use of Cascade, Magnum, Centennial and CTZ hops.",
+                  "created_at":"Wed, 29 Dec 2010 11:50:22 +0000",
+                  "auth_rating":3,
+                  "wish_list":false,
+                  "rating_score":3.778
+               },
+               "brewery":{
+                  "brewery_id":2228,
+                  "brewery_name":"Mission Brewery",
+                  "brewery_label":"https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-MissionBrewery_2228.jpeg",
+                  "country_name":"United States",
+                  "contact":{
+                     "twitter":"missionbrewery",
+                     "facebook":"http://www.facebook.com/MissionBrewery",
+                     "url":"http://missionbrewery.com"
+                  },
+                  "location":{
+                     "brewery_city":"San Diego",
+                     "brewery_state":"CA",
+                     "lat":32.7073,
+                     "lng":-117.149
+                  }
+               }
+            },
+            ...
+							</pre>
+							
+						</div>
+								
+						<div class="apiarea" id="beer_search">
+							
+							<h1><strong>Beer Search</strong></h1>
+
+							<p><strong>Authentication:</strong> Not required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+							
+							<p><code>/v4/search/beer</code></p>
+
+							<p>This method will allow you to see all to search the Untappd database of beers.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>q (required)</em> - The search term that you want to search.</li>
+								<li><em>sort (optional): "count" or "name" (default)</em> - This can let you choose if you want the results to be returned in Alphabetical order (name) or by checkin count (count). By default the search returns all values in Alphabetical order.</li>
+							</ul>
+
+							         <pre class="prettyprint word">
+                "response":{
+      "message":"",
+      "term":"coor",
+      "breweries":{
+         "items":[
+           "brewery":{
+            "brewery_id":399,
+            "beer_count":92,
+            "brewery_name":"Coors Brewing Company",
+            "brewery_label":"https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-coors.jpg",
+            "country_name":"United States",
+            "location":{
+              "brewery_city":"Golden",
+              "brewery_state":"CO",
+              "lat":39.7591,
+              "lng":-105.217
+            }
+          },
+          ...
+         ],
+         "count":6
+      },
+      "beers":{
+         "count":25,
+         "items":[
+            {
+               "beer":{
+                  "bid":3834,
+                  "beer_name":"Coors Light",
+                  "beer_label":"https://untappd.s3.amazonaws.com/site/beer_logos/beer-coorsLight.jpg",
+                  "beer_abv":4.2,
+                  "beer_style":"American Light Lager",
+                  "beer_description":"Coors Light is Coors Brewing Company's largest-selling brand and the fourth best-selling beer in the U.S. Introduced in 1978, Coors Light has been a favorite in delivering the ultimate in cold refreshment for more than 25 years. The simple, silver-toned can caught people's attention and the brew became nicknamed the \\Silver Bullet\\\" as sales climbed.\"",
+                  "created_at":"Sat, 21 Aug 2010 07:26:35 +0000",
+                  "auth_rating":2,
+                  "wish_list":false
+               },
+               "checkin_count":56863,
+               "have_had":true,
+               "your_count":13,
+               "brewery":{
+                  "brewery_id":399,
+                  "brewery_name":"Coors Brewing Company",
+                  "brewery_label":"https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-coors.jpg",
+                  "country_name":"United States",
+                  "contact":{
+                     "twitter":"",
+                     "facebook":"",
+                     "url":"http://www.coors.com"
+                  },
+                  "location":{
+                     "brewery_city":"Golden",
+                     "brewery_state":"CO",
+                     "lat":39.7591,
+                     "lng":-105.217
+                  }
+               }
+            },
+            ...
+              </pre>
+							
+						</div>
+						
+						<div class="apiarea" id="brewery_search">
+							
+							<h1><strong>Brewery Search</strong></h1>
+
+							<p><strong>Authentication:</strong> Not required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+							
+							<p><code>/v4/search/brewery</code></p>
+
+							<p>This method will allow you to see all to search the Untappd database of breweries.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+								<li><em>q (required)</em> - The search term that you want to search.</li>
+							</ul>
+
+							<pre class="prettyprint word">
+							"response":{
+    "term":"coors",
+    "brewery":{
+      "count":6,
+      "items":[
+  {
+          "brewery":{
+            "brewery_id":399,
+            "beer_count":92,
+            "brewery_name":"Coors Brewing Company",
+            "brewery_label":"https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-coors.jpg",
+            "country_name":"United States",
+            "location":{
+              "brewery_city":"Golden",
+              "brewery_state":"CO",
+              "lat":39.7591,
+              "lng":-105.217
+            }
+          }
+        },
+        ...
+    }]
+							}
+
+							</pre>
+							
+						</div>
+						
+						<div class="apiarea" id="trending">
+							
+							<h1><strong>Trending</strong></h1>
+
+							<p><strong>Authentication:</strong> Not required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+							
+							<p><code>/v4/beer/trending</code></p>
+
+							<p>This method will allow you see trending beers (macro and micro) globally.</p>
+
+							<p><strong>Parameters</strong></p>
+							<ul>
+								<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+							</ul>
+
+							<pre class="prettyprint word">
+							"response":{
+    "macro":{
+      "count":8,
+      "items":[
+  {
+          "total_count":178,
+          "your_count":0,
+          "beer":{
+            "bid":3784,
+            "beer_name":"Bud Light",
+            "style_name":"American Light Lager",
+            "beer_label":"https://untappd.s3.amazonaws.com/site/beer_logos/beer-budLight.jpg",
+            "beer_style":"American Light Lager",
+            "beer_abv":"4.2",
+            "auth_rating":0,
+            "wish_list":false
+          },
+          "brewery":{
+            "brewery_id":44,
+            "brewery_name":"Anheuser-Busch (ABInBev)",
+            "brewery_label":"https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-Anheuser-Busch.jpg",
+            "country_name":"United States",
+            "contact":{
+              "twitter":"",
+              "facebook":"http://www.facebook.com/AnheuserBusch",
+              "url":"http://www.anheuser-busch.com"
+            },
+            "location":{
+              "brewery_city":"St. Louis",
+              "brewery_state":"MO",
+              "lat":38.5985,
+              "lng":-90.2094
+            }
+          }
+        },
+        ...
+    }]
+    "micro":{
+      "count":8,
+      "items":[{
+          "total_count":374,
+          "your_count":0,
+          "beer":{
+            "bid":3942,
+            "beer_name":"Samuel Adams Octoberfest",
+            "style_name":"Oktoberfest/Märzen",
+            "beer_label":"https://untappd.s3.amazonaws.com/site/beer_logos/beer-bostonOctoberfest.jpg",
+            "beer_style":"Oktoberfest/Märzen",
+            "beer_abv":"5.3",
+            "auth_rating":0,
+            "wish_list":false
+          },
+		...
+      }]
+ 
+    }
+  
+							</pre>
+							
+						</div>
+						
+						<div class="apiarea" id="checkin">
+							
+							<h1><strong>Checkin</strong></h1>
+
+							<p><strong>Authentication:</strong> Required</p>
+
+							<p><strong>HTTP Method:</strong> POST</p>
+							
+							<p><code>/v4/checkin/add</code></p>
+
+							<p>This will allow you to perform a live checkin.</p>
+
+							<p><strong>Parameters</strong></p>
+							
+							<ul>
+								<li><em>access_token (required)</em> - The access_token for authorized calls (Note: this must be called via a GET parameter - ?access_token=XXXXXX, everything else is a POST parameter)</li>
+								<li>
+									<em>gmt_offset (required)</em> - The numeric value of hours the user is away from the GMT (Greenwich Mean Time)
+								</li>
+								<li>
+									<em>timezone (required)</em> - The timezone of the user, such as EST or PST.
+								</li>
+								<li>
+									<em>bid (required)</em> - The numeric Beer ID you want to check into.
+								</li>
+								<li>
+									<em>foursquare_id (optional)</em> - The MD5 hash ID of the Venue you want to attach the beer checkin. This HAS TO BE the MD5 non-numeric hash from the foursquare v2.
+								</li>
+								<li>
+									<em>geolat (optional)</em> - The numeric Latitude of the user. This is required if you add a location.</li>
+								<li>
+									<em>geolng (optional)</em> - The numeric Longitude of the user. This is required if you add a location.
+								</li>
+								<li>
+									<em>shout (optional)</em> - The text you would like to include as a comment of the checkin. Max of 140 characters.
+								</li>
+								<li>
+									<em>rating (optional)</em> - The rating score you would like to add for the beer. This can only be 1 to 5 (half ratings are included). You can't rate a beer a 0.
+								</li>
+								<li>
+									<em>facebook (optional)</em> - Default = "off", Pass "on" to post to facebook
+								</li>
+								<li>
+									<em>twitter (optional)</em> - Default = "off", Pass "on" to post to twitter
+								</li>
+								<li>
+									<em>foursquare (optional)</em> - Default = "off", Pass "on" to checkin on foursquare
+								</li>								
+							</ul>
+
+							<p><strong>Please Note</strong> It's possible that you could pass through a foursquare venue ID, and not get back a "venue" object in the response. This can be due to many reasons, but mainly due to a Foursquare connectivity issue. Your app or service should never depending on a one-to-one match on the foursquare ID send, and a venue object returned as part of the response. Always do a "nulL" check to make sure that the object's attributes exists before digging deeper into it.</p>
+
+							<p><strong>Example Response</strong></p>
+							<pre class="prettyprint">
+
+								{
+    ...
+    "response": {
+        "result": "success",
+        "badge_valid": true,
+        "checkin_id": 13076620,
+        "checkin_comment": "Great beer!",
+        "stats": {
+            "beer": "1st",
+            "beer_month": "1st"
+        },
+       "rating": {
+		    "result": "success",
+		    "rating_method": "insert",
+		    "old_score": 0,
+		    "new_score": 4
+		},
+        "user": {
+            "uid": 54194,
+            "user_name": "gregavola",
+            "first_name": "Greg Avola",
+            "last_name": "",
+            "location": "",
+            "url": "",
+            "bio": "",
+            "user_avatar": "http://gravatar.com/avatar/0d8e7b11de5f0f6bea658ed5bd67b253?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+            "account_type": "user",
+            "contact": {
+                "twitter": "gregavola",
+                "foursquare": 5257472,
+                "facebook": 100003555907560
+            }
+        },
+        "beer": {
+            "bid": 3558,
+            "beer_name": "Brooklyn Lager",
+            "beer_label": "https://untappd.s3.amazonaws.com/site/beer_logos/beer-BrooklynLager_3558.jpeg",
+            "beer_abv": 5.2,
+            "beer_ibu": 33,
+            "beer_description": "Brooklyn Lager is a wonderfully flavorful beer, smooth, refreshing and very versatile with food. It is amber-gold in color and displays a firm malt center supported by a refreshing bitterness and floral hop aroma. Caramel malts show in the finish. The aromatic qualities of the beer are enhanced by “dry-hopping”, the centuries-old practice of steeping the beer with fresh hops as it undergoes a long, cold maturation.",
+            "beer_style_id": 50,
+            "beer_style": "Vienna Lager",
+            "auth_rating": 0
+        },
+        "brewery": {
+            "brewery_id": 259,
+            "brewery_name": "Brooklyn Brewery",
+            "brewery_label": "https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-BrooklynBrewery_259.jpeg",
+            "country_name": "United States"
+        },
+        "venue": [],
+        "recommendations": [],
+        "distance": 0,
+        "media": {
+            "is_photo": true,
+            "photo_data": false,
+            "photo_key": "4b5ebfb70806ab7608805c1c6aca7b47"
+        },
+        "media_allowed": true,
+        "social_settings": {
+            "facebook": "off",
+            "twitter": "off",
+            "foursquare": "off"
+        },
+        "source": {
+            "app_name": "Untappd for iPhone - (V2)",
+            "app_website": "http://untpd.it/iphoneapp"
+        },
+        "follow_status": {
+            "is_follow": true,
+            "status": false,
+            "hash": "d221db443564f9054700b47f70b5fdff",
+            "uid": 109298
+        },
+        "promotions": {
+            "count": 0,
+            "items": []
+        },
+        "badges": {
+            "count": 0,
+            "items": []
+        },
+        "social": []
+    }
+}
+							</pre>
+							
+						</div>
+						
+						<div class="apiarea" id="add_comment">
+							
+							<h1><strong>Add Comment</strong></h1>
+
+							<p><strong>Authentication:</strong> Required</p>
+
+							<p><strong>HTTP Method:</strong> POST</p>
+							
+							<p><code>/v4/checkin/addcomment/CHECKIN_ID</code></p>
+
+							<p>This method will allow you comment on a checkin.</p>
+
+							<p><strong>Parameters</strong></p>
+							
+							<ul>
+								<li><em>access_token (required)</em> - The access_token for authorized calls</li>
+								<li>
+									<em>CHECKIN_ID (required)</em> - The numeric check-in ID that you wish to add a comment.
+								</li>
+								<li>
+									<em>comment (required)</em> - The comment text that you would like to add. It must be less than 140 characters.
+								</li>
+							
+							</ul>
+							
+							<p><strong>Example Response</strong></p>
+							<p class="prettyprint">
+{
+	...
+    "response": {
+        "result": "success",
+        "comments": {
+            "count": 1,
+            "items": [
+                {
+                    "user": {
+                        "uid": 1,
+                        "user_name": "gregavola",
+                        "first_name": "Greg",
+                        "last_name": "Avola",
+                        "user_avatar": "http://gravatar.com/avatar/0c6922e238dae5cccce96a32889fc911?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+                        "user_link": "http://untappd.com/user/gregavola",
+                        "account_type": "user",
+                    },
+                    "comment_id": "916093",
+                    "comment_owner": true,
+                    "comment": "Nice shot!",
+                    "created_at": "Wed, 19 Sep 2012 11:43:08 +0000",
+                    "comment_source": "mobile"
+                }
+            ]
+        }
+    }
+}
+							</p>
+
+							
+							
+						</div>
+						
+						<div class="apiarea" id="delete_comment">
+							
+							<h1><strong>Remove Comment</strong></h1>
+
+							<p><strong>Authentication:</strong> Required</p>
+
+							<p><strong>HTTP Method:</strong> POST</p>
+							
+							<p><code>/v4/checkin/deletecomment/COMMENT_ID</code></p>
+
+							<p>This method will allow you to delete your comment on a checkin.</p>
+
+							<p><strong>Parameters</strong></p>
+							
+							<ul>
+								<li><em>access_token (required)</em> - The access_token for authorized calls</li>
+								<li>
+									<em>COMMENT_ID (required)</em> - The comment ID you wish to delete.
+								</li>
+							
+							</ul>
+							
+							<p><strong>Example Response</strong></p>
+							<pre class="prettyprint word">
+							<p class="prettyprint">
+{
+	...
+    "response": {
+        "result": "success",
+    }
+}
+							</p>
+							</pre>
+							
+						</div>
+						
+						<div class="apiarea" id="toast">
+							
+							<h1><strong>Toast</strong></h1>
+
+							<p><strong>Authentication:</strong> Required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+							
+							<p><code>/v4/checkin/toast/CHECKIN_ID</code></p>
+
+							<p>This method will allow you to toast a checkin. Please note, if the user has already toasted this check-in, it will delete the toast.</p>
+
+							<p><strong>Parameters</strong></p>
+							
+							<ul>
+								<li><em>access_token (required)</em> - The access_token for authorized calls</li>
+								<li>
+									<em>CHECKIN_ID (required)</em> - The checkin ID you wish you toast.
+								</li>
+							
+							</ul>
+							
+							<p><strong>Like Owner</strong> is the owner of the the toast.</p>
+							<p><strong>Example Response</strong></p>
+							<pre class="prettyprint word">
+{
+    "response": {
+        "result": "success",
+        "like_type": "toast",
+        "toasts": {
+            "count": 1,
+            "auth_toast": true,
+            "items": [
+                {
+                    "user": {
+                        "uid": 1,
+                        "user_name": "gregavola",
+                        "first_name": "Greg",
+                        "last_name": "Avola",
+                        "user_avatar": "http://gravatar.com/avatar/0c6922e238dae5cccce96a32889fc911?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+                        "user_link": "http://untappd.com/user/gregavola",
+                        "account_type": "user",
+                        "brewery_details": [ ]
+                    },
+                    "like_id": 1610306,
+                    "like_owner": true,
+                    "created_at": "Wed, 19 Sep 2012 03:08:46 +0000"
+                }
+            ]
+        }
+    }
+
+}
+							</pre>
+							
+							
+						</div>
+						
+						
+						<div class="apiarea" id="friend_pending">
+							
+							<h1><strong>Pending Friends</strong></h1>
+
+							<p><strong>Authentication:</strong> Required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+							
+							<p><code>/v4/user/pending</code></p>
+
+							<p>This will allow you to return your pending friends requests</p>
+
+							<p><strong>Parameters</strong></p>
+							
+							<ul>
+								<li><em>access_token (required)</em> - The access_token for authorized calls</li>
+								
+							
+							</ul>
+							
+							<p><strong>Example Response</strong></p>
+							<pre class="prettyprint word">
+							{
+    "response": {
+        "count": 5,
+        "items": [
+            {
+                "friendship_hash": "5f1f12cfb504d92718bdb38df062ebc2",
+                "created_at": "Tue, 18 Sep 2012 19:19:49 +0000",
+                "user": {
+                    "uid": 273954,
+                    "user_name": "AlewifeNYC",
+                    "location": "",
+                    "bio": "Kick ass Beer Hall located in Long Island City - good beer - good food - good times",
+                    "first_name": "Alewife",
+                    "last_name": "NYC",
+                    "user_avatar": "http://gravatar.com/avatar/41dc5138a76bc55d270390c14dca685c?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg"
+                }
+            },
+            ...
+        ]
+    }
+
+}
+							</pre>
+							
+						</div>
+
+						<div class="apiarea" id="friend_accept">
+						
+							<h1><strong>Accept Friends</strong></h1>
+
+							<p><strong>Authentication:</strong> Required</p>
+
+							<p><strong>HTTP Method:</strong> POST</p>
+						
+							<p><code>/v4/friend/accept/TARGET_ID</code></p>
+
+							<p>This will allow you to accept a pending friend request</p>
+
+							<p><strong>Parameters</strong></p>
+						
+							<ul>
+								<li><em>access_token (required)</em> - The access_token for authorized calls</li>
+								<li>
+									<em>target_id (required)</em> - The target user id that you wish to accept.
+								</li>
+							
+						
+							</ul>
+						
+							<p><strong>Example Response</strong></p>
+							<pre class="prettyprint word">
+{
+    "response": {
+        "result": "success",
+        "request_type": "accept",
+        "friendship_type": "friend",
+        "target_user": {
+            "uid": 273954,
+            "user_name": "AlewifeNYC",
+            "first_name": "Alewife",
+            "last_name": "NYC",
+            "location": "",
+            "url": "",
+            "bio": "Kick ass Beer Hall located in Long Island City - good beer - good food - good times",
+            "user_avatar": "http://gravatar.com/avatar/41dc5138a76bc55d270390c14dca685c?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+            "account_type": "user",
+            "contact": {
+                "twitter": "AlewifeNYC"
+            }
+        }
+    }
+
+}
+							</pre>
+						
+						</div>
+					
+						<div class="apiarea" id="friend_reject">
+						
+							<h1><strong>Reject Friends</strong></h1>
+
+							<p><strong>Authentication:</strong> Required</p>
+
+							<p><strong>HTTP Method:</strong> POST</p>
+						
+							<p><code>/v4/friend/reject/TARGET_ID</code></p>
+
+							<p>This will allow you to return you to ignore a pending friend request</p>
+
+							<p><strong>Parameters</strong></p>
+						
+							<ul>
+								<li><em>access_token (required)</em> - The access_token for authorized calls</li>
+								<li>
+									<em>target_id (required)</em> - The target user id that you wish to reject/ignore.
+								</li>
+							
+						
+							</ul>
+						
+							<p><strong>Example Response</strong></p>
+							<pre class="prettyprint word">
+{
+    "response": {
+        "result": "success",
+        "request_type": "reject",
+        "friendship_type": "friend",
+        "target_user": {
+            "uid": 273954,
+            "user_name": "AlewifeNYC",
+            "first_name": "Alewife",
+            "last_name": "NYC",
+            "location": "",
+            "url": "",
+            "bio": "Kick ass Beer Hall located in Long Island City - good beer - good food - good times",
+            "user_avatar": "http://gravatar.com/avatar/41dc5138a76bc55d270390c14dca685c?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+            "account_type": "user",
+            "contact": {
+                "twitter": "AlewifeNYC"
+            }
+        }
+    }
+
+}
+							</pre>
+						
+						</div>
+					
+						<div class="apiarea" id="friend_revoke">
+						
+							<h1><strong>Remove Friends</strong></h1>
+
+							<p><strong>Authentication:</strong> Required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+						
+							<p><code>/v3/friend/remove/TARGET_ID</code></p>
+
+							<p>This will allow you to return you to revoke a current friendship</p>
+
+							<p><strong>Parameters</strong></p>
+						
+							<ul>
+								<li><em>access_token (required)</em> - The access_token for authorized calls</li>
+								<li>
+									<em>target_id (required)</em> - The target user id that you wish to remove/revoke.
+								</li>
+							
+						
+							</ul>
+						
+							<p><strong>Example Response</strong></p>
+							<pre class="prettyprint word">
+"response": {
+
+    "result": "success"
+
+}
+</pre>
+						
+						</div>
+					
+						<div class="apiarea" id="friend_request">
+						
+							<h1><strong>Friend Request</strong></h1>
+
+							<p><strong>Authentication:</strong> Required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+						
+							<p><code>/v4/friend/request/TARGET_ID</code></p>
+
+							<p>This will allow you to request to be someone's friend on Untappd</p>
+
+							<p><strong>Parameters</strong></p>
+						
+							<ul>
+								<li><em>access_token (required)</em> - The access_token for authorized calls</li>
+								<li>
+									<em>target_id (required)</em> - The target user id that you wish to request to be their friend.
+								</li>
+							
+						
+							</ul>
+						
+							<p><strong>Example Response</strong></p>
+							<pre class="prettyprint word">
+{
+	....
+    "response": {
+        "result": "success",
+        "request_type": "request",
+        "friendship_type": "friend",
+        "target_user": {
+            "uid": 2,
+            "user_name": "timm3h",
+            "first_name": "Tim",
+            "last_name": "Mather",
+            "location": "Los Angeles, CA",
+            "url": "http://itst.im",
+            "bio": "Untappd co-founder, designer, web tech nerd, music lover, beer drinker.",
+            "user_avatar": "https://untappd.s3.amazonaws.com/profile/3d90e6e1b648b0c47bc179ac930122d1_thumb.jpg",
+            "account_type": "user",
+            "contact": {
+                "facebook": 138700053,
+                "foursquare": 13034,
+                "twitter": "timm3h"
+            },
+        }
+    }
+
+}
+							</pre>
+							
+						
+						</div>
+					
+						<div class="apiarea" id="add_to_wish">
+						
+							<h1><strong>Add To Wish List</strong></h1>
+
+							<p><strong>Authentication:</strong> Required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+						
+							<p><code>/v4/user/wishlist/add</code></p>
+
+							<p>This method will allow you to add a beer to your wish list</p>
+
+							<p><strong>Parameters</strong></p>
+						
+							<ul>
+								<li><em>access_token (required)</em> - The access_token for authorized calls</li>
+								<li>
+									<em>bid (required)</em> - The numeric beer ID that you wish to add to your wishlist.
+								</li>
+							
+						
+							</ul>
+						
+							<p><strong>Example Response</strong></p>
+							<pre class="prettyprint word">
+{
+	...
+    "response": {
+        "result": "success",
+        "action": "add",
+        "beer": {
+            "beer": {
+                "bid": 3839,
+                "beer_name": "Blue Moon Belgian White",
+                "beer_label": "https://untappd.s3.amazonaws.com/site/beer_logos/beer-blueMoon.jpg",
+                "beer_abv": 5.4,
+                "beer_ibu": 0,
+                "beer_description": "Blue Moon Belgian White, Belgian-style wheat ale, is a refreshing, medium-bodied, unfiltered Belgian-style wheat ale spiced with fresh coriander and orange peel for a uniquely complex taste and an uncommonly smooth finish.",
+                "beer_style_id": 83,
+                "beer_style": "Witbier",
+                "auth_rating": 3
+            },
+            "brewery": {
+                "brewery_id": 399,
+                "brewery_name": "Coors Brewing Company",
+                "brewery_label": "https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-coors.jpg",
+                "country_name": "United States"
+            }
+        }
+    }
+}
+							</pre>
+						
+						</div>
+					
+						<div class="apiarea" id="remove_from_wish">
+						
+							<h1><strong>Remove From Wish List</strong></h1>
+
+							<p><strong>Authentication:</strong> Required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+						
+							<p><code>/v4/user/wishlist/delete</code></p>
+
+							<p>This method will allow you to remove a beer from your wish list</p>
+
+							<p><strong>Parameters</strong></p>
+						
+							<ul>
+								<li><em>access_token (required)</em> - The access_token for authorized calls</li>
+								<li>
+									<em>bid (required)</em> - The numeric beer ID that you wish to remove from your wishlist.
+								</li>
+							
+						
+							</ul>
+						
+							<p><strong>Example Response</strong></p>
+							<pre class="prettyprint word">
+{
+	...
+    "response": {
+        "result": "success",
+        "action": "remove",
+        "beer": {
+            "beer": {
+                "bid": 3839,
+                "beer_name": "Blue Moon Belgian White",
+                "beer_label": "https://untappd.s3.amazonaws.com/site/beer_logos/beer-blueMoon.jpg",
+                "beer_abv": 5.4,
+                "beer_ibu": 0,
+                "beer_description": "Blue Moon Belgian White, Belgian-style wheat ale, is a refreshing, medium-bodied, unfiltered Belgian-style wheat ale spiced with fresh coriander and orange peel for a uniquely complex taste and an uncommonly smooth finish.",
+                "beer_style_id": 83,
+                "beer_style": "Witbier",
+                "auth_rating": 3
+            },
+            "brewery": {
+                "brewery_id": 399,
+                "brewery_name": "Coors Brewing Company",
+                "brewery_label": "https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-coors.jpg",
+                "country_name": "United States"
+            }
+        }
+    }
+}
+							</pre>
+						
+						</div>
+						
+						<div class="apiarea" id="activity_on_you">
+						
+							<h1><strong>Notifications</strong></h1>
+
+							<p><strong>Authentication:</strong> Required</p>
+
+							<p><strong>HTTP Method:</strong> GET</p>
+						
+							<p><code>/v4/notifications</code></p>
+
+							<p>This method will allow you pull in a feed of notifications (toasts and comments) on the authenticated user. It will return the 25 items by default and pagination is not supported. It will also show the last 25 news items in the order of created date.</p>
+
+							<p><strong>Parameters</strong></p>
+						
+							<ul>
+								<li><em>access_token (required)</em> - The access_token for authorized calls</li>
+							
+						
+							</ul>
+						
+							<p><strong>Example Response</strong></p>
+							<pre class="prettyprint word">
+								{
+	...							
+    "response": {
+        "notifications": {
+            "count": 25,
+            "items": [
+                {
+                    "notification_type": "toast",
+                    "message": null,
+                    "created_at": "Wed, 19 Sep 2012 02:10:14 +0000",
+                    "checkin_id": 13025487,
+                    "checkin_comment": "Sweet and dry",
+                    "rating_score": 3,
+                    "checkin_owner": true,
+                    "actor": {
+                        "uid": 97323,
+                        "user_name": "aslezak",
+                        "first_name": "Andy",
+                        "last_name": "Slezak",
+                        "location": "Hoboken, NJ",
+                        "url": "http://aslezak.com",
+                        "bio": "loves beer, wine, coffee, virtualization, google reader, posterous, and a good shave...",
+                        "user_avatar": "https://untappd.s3.amazonaws.com/profile/173ed65920d9ce32c9780b453848b34a_thumb.jpg",
+                        "contact": {
+                            "twitter": "aslezak",
+                            "foursquare": 1398377,
+                            "facebook": 1159093832
+                        }
+                    },
+                    "user": {
+                        "uid": 1,
+                        "user_name": "gregavola",
+                        "first_name": "Greg",
+                        "last_name": "Avola",
+                        "location": "New York, NY",
+                        "url": "http://gregavola.me",
+                        "bio": "Co-Founder and CTO of Untappd, Web Developer, Beer Drinker, Community Guy",
+                        "user_avatar": "http://gravatar.com/avatar/0c6922e238dae5cccce96a32889fc911?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+                        "account_type": "user",
+                        "contact": {
+                            "foursquare": 195741,
+                            "facebook": 18603076,
+                            "twitter": "gregavola"
+                        },
+                        "email_prefs": {
+                            "is_friend_request": 1,
+                            "is_toast": 1,
+                            "is_comment": 1
+                        },
+                        "relationship": "self"
+                    },
+                    "beer": {
+                        "bid": 7156,
+                        "beer_name": "Carolina India Pale Ale (IPA)",
+                        "beer_label": "https://untappd.s3.amazonaws.com/site/beer_logos/beer-CarolinaIndiaPaleAleIPA_7156.jpeg",
+                        "beer_style": "American IPA",
+                        "auth_rating": 3,
+                        "wish_list": false
+                    },
+                    "brewery": {
+                        "brewery_id": 1826,
+                        "brewery_name": "Carolina Brewing Company",
+                        "brewery_label": "https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-CarolinaBrewingCompany_1826.jpeg",
+                        "country_name": "United States",
+                        "contact": {
+                            "twitter": "CarolinaBrewing",
+                            "facebook": "http://www.facebook.com/pages/Carolina-Brewing-Company/106393626067978",
+                            "url": "http://www.carolinabrew.com/"
+                        },
+                        "location": {
+                            "brewery_city": "Holly Springs",
+                            "brewery_state": "NC",
+                            "lat": 35.6557,
+                            "lng": -78.8539
+                        }
+                    },
+                    "venue": {
+                        "venue_id": 1222,
+                        "venue_name": "Untappd HQ - East",
+                        "primary_category": "Residence",
+                        "parent_category_id": "4e67e38e036454776db1fb3a",
+                        "categories": {
+                            "count": 2,
+                            "items": [
+                                {
+                                    "category_name": "Tech Startup",
+                                    "category_id": "4bf58dd8d48988d125941735",
+                                    "is_primary": false
+                                },
+                                {
+                                    "category_name": "Home (private)",
+                                    "category_id": "4bf58dd8d48988d103941735",
+                                    "is_primary": true
+                                }
+                            ]
+                        },
+                        "location": {
+                            "venue_address": "",
+                            "venue_city": "",
+                            "venue_state": "",
+                            "lat": 40.7559,
+                            "lng": -73.9536
+                        },
+                        "contact": {
+                            "twitter": "@untappd",
+                            "venue_url": "http://untappd.com"
+                        },
+                        "foursquare": {
+                            "foursquare_id": "4ccf5fec1ac7a1cd6a5c1392",
+                            "foursquare_url": "http://4sq.com/boEpZE"
+                        },
+                        "venue_icon": {
+                            "sm": "https://foursquare.com/img/categories/building/home_64.png",
+                            "md": "https://foursquare.com/img/categories/building/home_88.png",
+                            "lg": "https://foursquare.com/img/categories/building/home_256.png"
+                        }
+                    },
+                    "comments": {
+                        "count": 0,
+                        "items": [ ]
+                    },
+                    "toasts": {
+                        "count": 7,
+                        "auth_toast": false,
+                        "items": [
+                            {
+                                "user": {
+                                    "uid": 77374,
+                                    "user_name": "beerandracing",
+                                    "first_name": "beer",
+                                    "last_name": "and racing (Jon)",
+                                    "user_avatar": "https://untappd.s3.amazonaws.com/profile/91387fd0f42f3ea74dee66108218454a_thumb.jpg",
+                                    "user_link": "http://untappd.com/user/beerandracing",
+                                    "account_type": "user",
+                                    "brewery_details": [ ]
+                                },
+                                "like_id": 1602654,
+                                "like_owner": false,
+                                "created_at": "Mon, 17 Sep 2012 23:24:51 +0000"
+                            },
+                            {
+                                "user": {
+                                    "uid": 90421,
+                                    "user_name": "mjongbloets",
+                                    "first_name": "Maarten",
+                                    "last_name": "Jongbloets",
+                                    "user_avatar": "https://untappd.s3.amazonaws.com/profile/4fbacf1f2cdc75a1f9cfd16a87f5415e_thumb.JPG",
+                                    "user_link": "http://untappd.com/user/mjongbloets",
+                                    "account_type": "user",
+                                    "brewery_details": [ ]
+                                },
+                                "like_id": 1602655,
+                                "like_owner": false,
+                                "created_at": "Mon, 17 Sep 2012 23:24:54 +0000"
+                            },
+                            {
+                                "user": {
+                                    "uid": 14550,
+                                    "user_name": "boomerdogg",
+                                    "first_name": "Kyle",
+                                    "last_name": "Thomas",
+                                    "user_avatar": "https://untappd.s3.amazonaws.com/profile/5efc1b611e02f97447775259b897f67e_thumb.jpg",
+                                    "user_link": "http://untappd.com/user/boomerdogg",
+                                    "account_type": "user",
+                                    "brewery_details": [ ]
+                                },
+                                "like_id": 1602882,
+                                "like_owner": false,
+                                "created_at": "Mon, 17 Sep 2012 23:40:45 +0000"
+                            },
+                            {
+                                "user": {
+                                    "uid": 2091,
+                                    "user_name": "IdleHandsRev",
+                                    "first_name": "Rev",
+                                    "last_name": "IdleHands",
+                                    "user_avatar": "https://untappd.s3.amazonaws.com/profile/bd0807ddd8b7d3501a181f783de0053e_thumb.JPG",
+                                    "user_link": "http://untappd.com/user/IdleHandsRev",
+                                    "account_type": "user",
+                                    "brewery_details": [ ]
+                                },
+                                "like_id": 1602996,
+                                "like_owner": false,
+                                "created_at": "Mon, 17 Sep 2012 23:55:46 +0000"
+                            },
+                            {
+                                "user": {
+                                    "uid": 76444,
+                                    "user_name": "Byron_Hadley",
+                                    "first_name": "Craig",
+                                    "last_name": "",
+                                    "user_avatar": "http://gravatar.com/avatar/0510da74f4b2c8af035aacc39ce76945?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+                                    "user_link": "http://untappd.com/user/Byron_Hadley",
+                                    "account_type": "user",
+                                    "brewery_details": [ ]
+                                },
+                                "like_id": 1603107,
+                                "like_owner": false,
+                                "created_at": "Tue, 18 Sep 2012 00:08:42 +0000"
+                            },
+                            {
+                                "user": {
+                                    "uid": 489,
+                                    "user_name": "jeremyperry",
+                                    "first_name": "Jeremy",
+                                    "last_name": "Perry",
+                                    "user_avatar": "https://untappd.s3.amazonaws.com/profile/8d0e83967fa2eced73839ab9b0a0313c_thumb.jpg",
+                                    "user_link": "http://untappd.com/user/jeremyperry",
+                                    "account_type": "user",
+                                    "brewery_details": [ ]
+                                },
+                                "like_id": 1604950,
+                                "like_owner": false,
+                                "created_at": "Tue, 18 Sep 2012 03:18:46 +0000"
+                            },
+                            {
+                                "user": {
+                                    "uid": 97323,
+                                    "user_name": "aslezak",
+                                    "first_name": "Andy",
+                                    "last_name": "Slezak",
+                                    "user_avatar": "https://untappd.s3.amazonaws.com/profile/173ed65920d9ce32c9780b453848b34a_thumb.jpg",
+                                    "user_link": "http://untappd.com/user/aslezak",
+                                    "account_type": "user",
+                                    "brewery_details": [ ]
+                                },
+                                "like_id": 1609773,
+                                "like_owner": false,
+                                "created_at": "Wed, 19 Sep 2012 02:10:14 +0000"
+                            }
+                        ]
+                    },
+                    "media": {
+                        "count": 0,
+                        "items": [ ]
+                    },
+                    "source": {
+                        "app_name": "Untappd for Android - (V2)",
+                        "app_website": "http://untpd.it/androidapp"
+                    }
+                },
+                {
+                    "notification_type": "comment",
+                    "message": null,
+                    "created_at": "Sun, 16 Sep 2012 17:36:51 +0000",
+                    "checkin_id": 12969982,
+                    "checkin_comment": "Post half marathon beer! Tastes sooo good.",
+                    "rating_score": 3,
+                    "checkin_owner": false,
+                    "actor": {
+                        "uid": 14834,
+                        "user_name": "scrapdog",
+                        "first_name": "Chris",
+                        "last_name": "Betz",
+                        "location": "Philadelphia, PA",
+                        "url": "http://cbetz.com",
+                        "bio": "Untappd Super User. BeerSpec creator. Lover of beer, technology, and running. ",
+                        "user_avatar": "http://gravatar.com/avatar/ed2e9bc381eccc05c82c906328cb25ec?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+                        "contact": {
+                            "twitter": "thechrisbetz",
+                            "foursquare": 577208,
+                            "facebook": 9505105
+                        }
+                    },
+                    "user": {
+                        "uid": 14834,
+                        "user_name": "scrapdog",
+                        "first_name": "Chris",
+                        "last_name": "Betz",
+                        "location": "Philadelphia, PA",
+                        "url": "http://cbetz.com",
+                        "bio": "Untappd Super User. BeerSpec creator. Lover of beer, technology, and running. ",
+                        "user_avatar": "http://gravatar.com/avatar/ed2e9bc381eccc05c82c906328cb25ec?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+                        "account_type": "user",
+                        "contact": {
+                            "twitter": "thechrisbetz",
+                            "foursquare": 577208,
+                            "facebook": 9505105
+                        },
+                        "email_prefs": {
+                            "is_friend_request": 1,
+                            "is_toast": 1,
+                            "is_comment": 1
+                        },
+                        "relationship": "friends"
+                    },
+                    "beer": {
+                        "bid": 6775,
+                        "beer_name": "Oktoberfest",
+                        "beer_label": "https://untappd.s3.amazonaws.com/site/beer_logos/beer-leftHandOktoberfest.jpg",
+                        "beer_style": "Oktoberfest/Märzen",
+                        "auth_rating": 0,
+                        "wish_list": false
+                    },
+                    "brewery": {
+                        "brewery_id": 779,
+                        "brewery_name": "Left Hand Brewing Company",
+                        "brewery_label": "https://untappd.s3.amazonaws.com/site/brewery_logos/brewery-LeftHandBrewingCompany_779.jpeg",
+                        "country_name": "United States",
+                        "contact": {
+                            "twitter": "LeftHandBrewing",
+                            "facebook": "http://www.facebook.com/LeftHandBrewing",
+                            "url": "http://www.lefthandbrewing.com"
+                        },
+                        "location": {
+                            "brewery_city": "Longmont",
+                            "brewery_state": "CO",
+                            "lat": 40.1586,
+                            "lng": -105.116
+                        }
+                    },
+                    "venue": {
+                        "venue_id": 5931,
+                        "venue_name": "Pub & Kitchen",
+                        "primary_category": "Food",
+                        "parent_category_id": "4d4b7105d754a06374d81259",
+                        "categories": {
+                            "count": 2,
+                            "items": [
+                                {
+                                    "category_name": "Burger Joint",
+                                    "category_id": "4bf58dd8d48988d16c941735",
+                                    "is_primary": false
+                                },
+                                {
+                                    "category_name": "Gastropub",
+                                    "category_id": "4bf58dd8d48988d155941735",
+                                    "is_primary": true
+                                }
+                            ]
+                        },
+                        "location": {
+                            "venue_address": "1946 Lombard St",
+                            "venue_city": "Philadelphia",
+                            "venue_state": "PA",
+                            "lat": 39.9458,
+                            "lng": -75.1748
+                        },
+                        "contact": {
+                            "twitter": "@PubandKitchen",
+                            "venue_url": "http://thepubandkitchen.com/"
+                        },
+                        "foursquare": {
+                            "foursquare_id": "4a302adbf964a5202c991fe3",
+                            "foursquare_url": "http://4sq.com/8hUWRs"
+                        },
+                        "venue_icon": {
+                            "sm": "https://foursquare.com/img/categories/food/default_64.png",
+                            "md": "https://foursquare.com/img/categories/food/default_88.png",
+                            "lg": "https://foursquare.com/img/categories/food/default_256.png"
+                        }
+                    },
+                    "comments": {
+                        "count": 2,
+                        "items": [
+                            {
+                                "user": {
+                                    "uid": 1,
+                                    "user_name": "gregavola",
+                                    "first_name": "Greg",
+                                    "last_name": "Avola",
+                                    "user_avatar": "http://gravatar.com/avatar/0c6922e238dae5cccce96a32889fc911?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+                                    "user_link": "http://untappd.com/user/gregavola",
+                                    "account_type": "user",
+                                    "brewery_details": [ ]
+                                },
+                                "comment_id": "907681",
+                                "comment_owner": true,
+                                "comment": "Congrats!",
+                                "created_at": "Sun, 16 Sep 2012 17:30:51 +0000",
+                                "comment_source": "web"
+                            },
+                            {
+                                "user": {
+                                    "uid": 14834,
+                                    "user_name": "scrapdog",
+                                    "first_name": "Chris",
+                                    "last_name": "Betz",
+                                    "user_avatar": "http://gravatar.com/avatar/ed2e9bc381eccc05c82c906328cb25ec?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefault_avatar.jpg",
+                                    "user_link": "http://untappd.com/user/scrapdog",
+                                    "account_type": "user",
+                                    "brewery_details": [ ]
+                                },
+                                "comment_id": "907712",
+                                "comment_owner": false,
+                                "comment": "Thanks dude!",
+                                "created_at": "Sun, 16 Sep 2012 17:36:51 +0000",
+                                "comment_source": "mobile"
+                            }
+                        ]
+                    },
+                    "toasts": {
+                        "count": 0,
+                        "auth_toast": false,
+                        "items": [ ]
+                    },
+                    "media": {
+                        "count": 0,
+                        "items": [ ]
+                    },
+                    "source": {
+                        "app_name": "Untappd for Android - (V2)",
+                        "app_website": "http://untpd.it/androidapp"
+                    }
+                },
+               	...
+            ]
+        },
+        "news": {
+            "count": 25,
+            "items": [
+                {
+                    "news_id": 68,
+                    "news_title": "Fresh Hops Everywhere!",
+                    "news_link": "http://untpd.it/hopharvest ",
+                    "news_text": "Craving fresh hops? Find a Hop Harvest Pils from our friends BridgePort Brewing and unlock a new badge!",
+                    "created_at": "Fri, 14 Sep 2012 18:32:30 +0000",
+                    "news_type": "New Badge / Promotions"
+                },
+                ...
+            ]
+        }
+    }
+
+}
+							</pre>
+						</div>
+						
+							<div class="apiarea" id="foursquare_lookup">
+
+								<h1><strong>Foursquare Venue Lookup</strong></h1>
+
+								<p><strong>Authentication:</strong> Not Required</p>
+
+								<p><strong>HTTP Method:</strong> GET</p>
+
+								<p><code>/v4/venue/foursquare_lookup/VENUE_ID</code></p>
+
+								<p>This method will allow you to pass in a foursquare v2 ID and return a Untappd Venue ID to be used for /v4/venue/info or /v4/venue/checkins</p>
+
+								<p><strong>Parameters</strong></p>
+
+								<ul>
+									<li><em>access_token or client_id and client_secret (required)</em> - Either pass the access_token for authorized calls OR the client_id and client_secret for unauthorized calls</li>
+									<li>
+										<em>VENUE_ID (required)</em> - The foursquare venue v2 ID that you wish to translate into a Untappd venue ID.
+									</li>
+
+
+								</ul>
+
+								<p><strong>Example Response</strong></p>
+								<pre class="prettyprint word">
+{
+    ...
+    "response": {
+        "venue": {
+            "count": 1,
+            "items": [
+                {
+                    "venue_name": "Untappd HQ - East",
+                    "venue_id": 1222,
+                    "foursquare_id": "4ccf5fec1ac7a1cd6a5c1392",
+                    "last_updated": "Mon, 17 Sep 2012 16:20:10 +0000"
+                }
+            ]
+        }
+    }
+}
+
+								</pre>
+							</div>
+						
+						
+				</div>
+				
+					
+				</div>
+				<!-- /main left side content -->
+				
+				
+		
+				<div class="clear"></div>
+				
+			</div>
+		
+		</div>
+		
+		<div class="bottom"></div>
+
+<script type="text/javascript" language="Javascript">
+	$(document).ready(function(){
+		$("#introduction").show();
+		
+		$(".api p a").click(function(){
+			var hrefing = $(this).attr("href");
+			$(".apiarea").hide();
+			$(hrefing).show();
+			
+			return false;
+		})
+
+		prettyPrint();
+
+		
+	});
+	
+</script>
+	<div id="footer">
+
+		<p class="copyright">&copy; 2014 Untappd LLC<br /><br /></p>
+
+		<ul>
+			<li><a class="track-click" data-track="footer" data-href=":footer" href="https://untappd.com/about">About Us</a></li>
+			<li><a class="track-click" data-track="footer" data-href=":api" href="https://untappd.com/api">API</a></li>
+			<li><a class="track-click" data-track="footer" data-href=":business" href="http://untappd.com/business/breweries">Breweries</a></li>
+			<li><a class="track-click" data-track="footer" data-href=":store" href="http://untpd.it/store" target="_blank">Store</a></li>
+			<li><a class="track-click" data-track="footer" data-href=":help" href="http://help.untappd.com/" target="_blank">Support</a></li>
+			<li><a class="track-click" data-track="footer" data-href=":blog" href="http://blog.untappd.com/" target="_blank">Blog</a></li>
+			<li><a class="track-click" data-track="footer" data-href=":twitter" href="http://twitter.com/untappd" target="_blank">Twitter</a></li>
+			<li><a class="track-click" data-track="footer" data-href=":facebook" href="http://facebook.com/untappd" target="_blank">Facebook</a></li>
+			<li><a class="track-click" data-track="footer" data-href=":meetup" href="http://meetup.com/untappd" target="_blank">Meetups</a></li>
+			<li><a class="track-click" data-track="footer" data-href=":terms" href="https://untappd.com/terms">Terms</a></li>
+			<li><a class="track-click" data-track="footer" data-href=":privacy" href="https://untappd.com/privacy">Privacy</a></li>
+			<li><a class="track-click" data-track="footer" data-href=":contact_email" href="mailto:info@untappd.com">Contact</a></li>
+		</ul>
+
+	</div>
+
+	</div>
+	
+
+		
+	<script type="text/javascript">
+	   // Clear Text Feild
+	function clearText(thefield){
+		if (thefield.defaultValue==thefield.value)
+		thefield.value = ""
+	}
+	
+		
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-11061050-10']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+</body>
+
+
+<!-- Mirrored from untappd.com/api/docs/v4 by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 24 Apr 2014 07:40:36 GMT -->
+</html>

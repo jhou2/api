@@ -1,0 +1,4 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+untappd.com	TRUE	/	FALSE	1999999999	untappd_com_site_v2	a%3A4%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%2248df7845500b2e2abf8cef1b46078bf6%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A13%3A%2210.183.253.50%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A50%3A%22Mozilla%2F4.5+%28compatible%3B+HTTrack+3.0x%3B+Windows+98%29%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221398325206%22%3B%7D3eade8e0528c77cb0c22b93ddccf8b8b
+

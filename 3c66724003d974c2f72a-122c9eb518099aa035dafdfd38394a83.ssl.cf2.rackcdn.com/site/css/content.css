@@ -1,0 +1,875 @@
+/*---------------------------------
+
+	Filename: 	content.css
+	Decription: Internal Content Style Sheet
+	Website: 	http://www.untappd.com
+	
+---------------------------------*/
+
+/* Global ----- */
+div.main{width:520px; margin-bottom: 10px}
+div.feed-header{background:transparent url(../images/feed-header.png) top left no-repeat; height:24px; color:#fff; font-size:18px; text-transform:uppercase; text-shadow:0 -1px 2px #666; padding:6px 0 0 8px}
+div.feed-header p{float: right;color:#fff; font-size:16px; text-transform:uppercase; text-shadow:0 -1px 2px #666; padding: 2px 5px 0 0;}
+div.internal-bar{
+	background: transparent url(../images/internal-bar.png) top center no-repeat;
+	padding-top: 30px;
+}
+
+/* Drank Icon ------ */
+.drank {
+	background: url(../images/drank-star-40x40.png) no-repeat scroll left top transparent;
+    display: block;
+    float: right;
+    height: 40px;
+    margin-top: -1px;
+    text-indent: -9999px;
+    width: 40px;
+}
+
+/* Home ------ */
+#home-slider{width:834px; height: 314px;margin:10px auto 15px auto; text-align:center}
+div.slider-native{background:transparent url(../images/ut_home_header_v3.jpg) top left no-repeat; position:relative}
+div.slider-native ul{position:absolute; top:206px; left:220px}
+div.slider-native ul li{margin-right:20px; float:left}
+div.slider-native ul li a{display:block; width:82px; height:65px; text-indent:-9999px}
+div.slider-native ul li a.apple{background:transparent url(../images/home-ios.png) top left no-repeat}
+div.slider-native ul li a.android{background:transparent url(../images/home-android.png) top left no-repeat}
+div.slider-native ul li a.webos{background:transparent url(../images/home-webos.png) top left no-repeat}
+div.slider-native ul li a.blackberry{background:transparent url(../images/home-bb.png) top left no-repeat}
+div.slider-native ul li a.apple:hover, div.slider-native ul li a.android:hover, div.slider-native ul li a.webos:hover, div.slider-native ul li a.blackberry:hover{background-position:bottom}
+div.slider-native p{color: #FFFFFF; font-size: 14px; font-weight: bold; left: 52px; position: absolute; top: 285px;}
+
+#home-stream{margin-bottom: 10px; min-height: 520px}
+#home-stream ul li{background:#fff url(../images/home-stream-bg.png) bottom left repeat-x; border-left:1px solid #c90; border-right:1px solid #c90; border-bottom:1px solid #c90;}
+#home-stream ul li div{padding:8px 8px 12px 8px; border-left:1px solid #fff; border-right:1px solid #fff; border-bottom:1px solid #fff; min-height: 55px; position: relative;}
+#home-stream ul li div span.icon{float:right; height:50px; width:50px}
+#home-stream ul li div span a.main-char {float: left;}
+#home-stream ul li div span a.supporting-char {position: absolute; left: 35px; top: 35px;}
+#home-stream ul li div span.character-avatar img{border: 2px solid #fff; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);}
+#home-stream ul li div p.details{padding-left:68px; width:376px;}
+#home-stream ul li div p.details span.checkin{font-size:12px; line-height:14px; margin-bottom:4px; display:block}
+#home-stream ul li div p.details span.comment{font-size:11px; color:#666; line-height:12px; display:block}
+
+
+
+/* Mobile Alert ------ */
+#mobile-alert{background-color:#f6f0dc;  padding:12px;  -moz-border-radius:10px;  -webkit-border-radius:10px;  -khtml-border-radius:10px; margin-bottom: 15px; text-align: center; font-size: 17px;}
+
+/* Log In ------ */
+#login-container h1 {margin-bottom: 20px;}
+#login-container h1 a{width:288px; height:124px; display:block; background:transparent url(../images/ut-logo-lrg.png) top left no-repeat; margin:0 auto; text-indent:-9999px}
+#login-container span.rule{width:374px; height:22px; background:transparent url(../images/login-rule.png) top left no-repeat; margin:0 auto; display:block}
+#login-container form ul{width:300px; margin:0 auto}
+#login-container form ul li{margin-bottom:10px; height: 50px}
+#login-container form ul li label{display:block; color:#666; font-size:16px; margin-bottom:3px; font-weight: bold}
+#login-container form ul li span{width:300px; display:block}
+#login-container form ul li p.forgot{float:left; padding-top:8px; font-size:14px}
+#login-container form ul li p.button{float:right}
+#login-container form ul li p.button a{width: 97px;	height: 31px; background: transparent url(../images/login-btn.png) top left no-repeat; text-indent: -9999px; display: block;}
+#login-container form ul li p.button a:hover{background-position: center left}
+#login-container form ul li p.button a:active{background-position: bottom left}
+
+#login-container p.recovery{font-size:14px; width:400px; margin:0 auto 15px auto; line-height:18px; color:#666}
+#login-container form ul li p.button-recover{float:right}
+#login-container form ul li p.button-recover a{width: 157px;	height: 31px; background: transparent url(../images/resetpass-btn.png) top left no-repeat; text-indent: -9999px; display: block;}
+#login-container form ul li p.button-recover a:hover{background-position: center left}
+#login-container form ul li p.button-recover a:active{background-position: bottom left}
+
+/* Registration ------ */
+.signup form .button-create a{margin: 24px auto 8px auto; display:block; width:157px; height:31px; text-indent:-9999px; background:transparent url(../images/create-account-btn.png) top left no-repeat;}
+.signup form .button-create a:hover{background-position:center left}
+.signup form .button-create a:active{background-position: bottom left}
+.signup form li.birthday span{float:left; display:block;}
+.signup form li label small{font-weight: normal; display: inline-block !important; font-size: 12px;}
+.signup form li.birthday span select{font-size:16px}
+.signup form #country, .signup form #user_gender{ width: 100%; font-size: 16px; }
+.signup p.terms{ font-size: 12px; color: #666; width: 340px; margin: 0 auto; font-weight: normal; text-align: center;}
+
+form.birthday{display:block; margin:0 auto; width:360px}
+form.birthday p{text-align:center; color:#666; font-size:16px; margin-bottom:20px; font-weight:bold}
+form.birthday p.birthday-rule{text-align:center; color:#666; font-size:11px; margin-bottom:20px; font-weight:normal; line-height:14px}
+form.birthday div{width:265px; height:40px; margin:0 auto}
+form.birthday div span{float:left; display:block; margin-right:16px}
+form.birthday div span.year{margin-right:0}
+form.birthday div span select{font-size:13px}
+form.birthday p.button-next a{display:block; width:117px; height:31px; margin:0 auto; text-indent:-9999px; background:transparent url(../images/next-step-btn.png) top left no-repeat}
+form.birthday p.button-next a:hover{background-position:center left}
+form.birthday p.button-next a:active{background-position: bottom left}
+
+/* Settings ------ */
+#settings ul.sections{height:20px; margin:10px 0 20px 0}
+#settings ul.sections li{float:left; font-size:14px; text-transform:uppercase; margin-right:20px; padding-bottom:2px}
+#settings ul.sections li.active{border-bottom:2px solid #630}
+#settings div.setting-content ul.right-box{width:200px; float:right}
+#settings div.setting-content ul.right-box li{margin-bottom:50px}
+#settings div.setting-content ul.right-box li label{display:block; color:#666; font-size:14px; margin-bottom:3px; font-weight:bold}
+#settings div.setting-content ul.right-box li.profile-pic img{-moz-border-radius:8px; -webkit-border-radius:8px; -khtml-border-radius:8px; border-radius:8px; float:left}
+#settings div.setting-content ul.right-box li.profile-pic form ul{padding-left:60px; font-size:13px; margin-top:10px}
+#settings div.setting-content ul.right-box li.profile-pic form ul li{margin-bottom:4px}
+#change_picture{padding-top: 60px;}
+#change_picture input{width: 100px;display: block;}
+#change_picture input.file{width: 160px;}
+#settings div.setting-content ul.right-box li.social-connect ul li{text-align:center; background-color:#f6edce; padding:8px; margin-bottom:10px; text-align:center; border-radius:10px; -moz-border-radius:10px; -webkit-border-radius:10px}
+#settings div.setting-content ul.right-box li.social-connect ul li p{font-size:14px; margin-bottom:4px; color:#666}
+#settings div.setting-content ul.right-box li.social-connect ul li span{display:block; margin-bottom:6px; font-size:14px}
+#settings div.setting-content ul.right-box li.social-connect ul li span.remove{font-size:11px; margin-bottom:0}
+#settings div.setting-content form{width:280px}
+#settings div.setting-content form.privacy{width:350px}
+#settings div.setting-content form ul li{margin-bottom:14px; font-size:14px}
+#settings div.setting-content form ul li label{display:block; color:#666; font-size:14px; margin-bottom:3px; font-weight:bold}
+#settings div.setting-content form ul li span{width:280px; display:block}
+#settings div.setting-content form ul li span.counter{float:right; font-size:12px; display:inline; width:60px; text-align:right; padding-top:3px; color:#666}
+#settings div.setting-content form ul li textarea{height:80px}
+#settings div.setting-content form ul li span.counter span{display:inline; color:#666}
+#settings div.setting-content form ul li p.button a.update{display:block; width:147px; height:31px; background:transparent url(../images/update-profile-btn.png) top left no-repeat; text-indent:-9999px}
+#settings div.setting-content form ul li p.button a.update:hover{background-position:center left}
+#settings div.setting-content form ul li p.button a.update:active{background-position:bottom left}
+#settings div.setting-content form ul li p.button a.pass{display:block; width:167px; height:31px; background:transparent url(../images/change-pass-btn.png) top left no-repeat; text-indent:-9999px}
+#settings div.setting-content form ul li p.button a.pass:hover{background-position:center left}
+#settings div.setting-content form ul li p.button a.pass:active{background-position:bottom left}
+#settings div.setting-content form ul li p.button a.settings{display:block; width:157px; height:31px; background:transparent url(../images/update-settings-btn.png) top left no-repeat; text-indent:-9999px}
+#settings div.setting-content form ul li p.button a.settings:hover{background-position:center left}
+#settings div.setting-content form ul li p.button a.settings:active{background-position:bottom left}
+#settings div.setting-content .connections-list{
+	margin-top: 32px;
+}
+#settings div.setting-content .connections-list li{
+	margin-bottom: 24px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding-bottom: 12px;
+	position: relative;
+}
+#settings div.setting-content .connections-list li img{
+	float: left;
+}
+#settings div.setting-content .connections-list li div.details{
+	margin-left: 60px;
+}
+#settings div.setting-content .connections-list li div.details h3{
+	font-size: 20px;
+	margin-bottom: 8px;
+}
+#settings div.setting-content .connections-list li div.details p{
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 8px;
+}
+#settings div.setting-content .connections-list li div.details span{
+	font-size: 12px;
+	color: #999;
+	display: block;
+	margin-bottom: 4px;
+}
+#settings div.setting-content .connections-list li div.details p.remove{
+	float: right;
+	margin: 0 0 12px 24px;
+}
+#settings div.setting-content .connections-list li .loading{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(255,255,255,0.6) url(../../../untappd.s3.amazonaws.com/site/assets/images/spinner.gif) center center no-repeat;
+}
+#settings .subscription div{
+	margin-top: 28px;
+}
+#settings .subscription strong{
+	color: #666;
+	margin-bottom: 3px;
+}
+#settings .subscription div a.update-btn{
+	display: block;
+	width: 190px;
+	height: 31px;
+	text-indent: -9999px;
+	background: transparent url(../images/update-subscription-btn.png) top left no-repeat;
+}
+#settings .subscription div a.update-btn:hover{
+	background-position: center left;
+}
+#settings .subscription div a.update-btn:active{
+	background-position: bottom left;
+}
+#settings .subscription div ul li{
+	margin-bottom: 4px;
+	font-size: 14px;
+}
+#settings .subscription div ul{
+	margin: 12px 0;
+}
+#settings .subscription div p{
+	margin: 8px 0;
+	font-size: 14px;
+	line-height: 18px;
+}
+#settings .subscription div.billing{
+	position: relative;
+	width: 280px;
+}
+#settings .subscription div.billing p{
+	margin: 0;
+}
+#settings .subscription div.billing ul li{
+	margin-bottom: 8px;
+}
+#settings .subscription div.billing ul li input{
+	margin-top: 2px;
+}
+#settings .subscription div.billing ul li strong{
+	color: #000;
+}
+#settings .subscription div.billing .loading{
+	position: absolute;
+	width: 230px;
+	height: 88px;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: rgba(255,255,255,0.6) url(../../../untappd.s3.amazonaws.com/site/assets/images/spinner.gif) center center no-repeat;
+}
+
+/* Main Stream ------ */
+#main-stream li {padding: 10px 0; border-bottom: 1px solid #ccc; margin-bottom: 8px;}
+#main-stream li.indv {padding-top: 8px; border-bottom: none; margin-bottom: 14px;}
+#main-stream li span.icon{float:right; height:50px; width:50px}
+/*#main-stream li span.avatar img{border: 2px solid #fff; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);}*/
+#main-stream li span.avatar.supporter:after{
+	content: "";
+	display: block;
+	position: absolute;
+	background: transparent url(../v2/images/activity_supporter_flag.png) top center no-repeat;
+	width: 50px;
+	height: 13px;
+  -webkit-background-size: 35px 13px;
+  background-size: 35px 13px;
+}
+#main-stream li span.avatar img{
+	display: block;
+	position: relative;
+	border: 2px solid #fff;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+}
+#main-stream li div.checkin-info{
+	padding-left:65px;
+	width: 100%;
+	min-height: 60px;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#main-stream li div.checkin-info p.checkin{font-size: 1.125em; line-height: 1.2em; margin-bottom:16px;}
+#main-stream li div.checkin-info p.comment{font-size: 1.125em; line-height: 1.2em; color:#666; margin-bottom: 16px;}
+#main-stream li div.checkin-info #map{margin-top: 30px;}
+#main-stream li div.checkin-info ul {display: inline-block; width: 100%; height: 26px;}
+#main-stream li div.checkin-info ul li{float: left; margin-right: 18px; font-size: 0.875em; border-bottom: none;}
+#main-stream li div.checkin-info ul li{color: #999;}
+#main-stream li div.checkin-info div.photo a{width: 100%;display: block;border: 2px solid #fff; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);}
+#main-stream li div.checkin-info div.photo-stream a{width: 96%;height: 90px;margin: 20px 0 10px 0;overflow: hidden;display: block;border: 2px solid #fff; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);}
+#main-stream li div.checkin-info div.photo-stream a img{ width: 100%; }
+.avatar{float:left}
+.show-more-btn a{display:block; width:187px; height:31px; background:transparent url(../images/show-more-activity-btn.png) top left no-repeat; text-index:-9999px; margin: 8px auto 12px auto}
+.show-more-btn a:hover{background-position:center left}
+.show-more-btn a:active{background-position:bottom left}
+#private-stream{width:400px; margin:30px auto; background-color:#f6f0dc; padding:10px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px}
+#private-stream img{float:left}
+#private-stream p{padding-left:50px; font-size:1.125em; line-height:20px; color:#666; font-weight:bold}
+
+/* Main Stream - Toast Box ------ */
+#main-stream li div.toast-list{
+	padding-left:60px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#main-stream li div.toast-list p{background:#f6f0dc url(../images/toast-btn.png) 5px 5px no-repeat; padding:6px 0 6px 30px; font-size:1em; line-height:18px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; margin-bottom:10px}
+
+/* Main Stream - Comment Form ------ */
+#main-stream li div.comment-form{padding-left:60px; width:390px; margin-bottom:10px}
+#main-stream li div.comment-form div{background-color:#f6f0dc; padding:6px; font-size:0.875em; line-height:16px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px}
+#main-stream li div.comment-form div form{padding-left:50px}
+#main-stream li div.comment-form div form textarea{width:320px; height:40px; border:1px solid #ccc; font-size:1em; margin-bottom:4px}
+#main-stream li div.comment-form div form ul{height:26px}
+#main-stream li div.comment-form div form ul li{border:none; margin:0 10px 0 0; padding:0; float:left}
+#main-stream li div.comment-form div form ul li.comment span a{width:109px; height:26px; display:block; background:transparent url(../images/comment-btn.png) top left no-repeat; text-indent:-9999px}
+#main-stream li div.comment-form div form ul li.comment span a:hover{background-position:center left}
+#main-stream li div.comment-form div form ul li.comment span a:active{background-position:bottom left}
+#main-stream li div.comment-form div form ul li.cancel{display:block; padding-top:6px; font-size:1em;}
+#main-stream li div.comment-form div form ul li.myCounter{float: right; margin-right: 5px; font-weight: bold; margin-top: 5px; color: #999999; font-size:1.125em}
+
+/* Main Stream - Comment ------ */
+#main-stream li div.comment{padding-left:60px; width:390px; margin-bottom:10px}
+#main-stream li div.comment div{background-color:#f6f0dc; padding:6px; font-size:0.875em; line-height:16px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px}
+#main-stream li div.comment div p{padding-left:50px; font-size:1em; line-height: 16px;}
+#main-stream li div.comment div p span.name{display:block; color:#333; margin-bottom:2px}
+#main-stream li div.comment div ul{height:24px; padding-left:50px}
+#main-stream li div.comment div ul li{float:left; margin-right:20px; font-size:0.875em; border-bottom:none}
+#main-stream li div.comment div ul li.time{color:#999}
+a.delete-btn{display: block;width: 14px;height: 14px;float: right;background: transparent url(../images/comment-delete.png) top left no-repeat;text-indent: -9999px;}
+
+/* Individual Check In ------ */
+#main-stream li div.details div.map{margin:20px 0 6px 0; height:155px; width:460px; -moz-border-radius:8px; -webkit-border-radius:8px; -khtml-border-radius:8px; border-radius:8px}
+#main-stream li div.details ul li.share{margin-right:6px}
+
+/* Individual Check In - Toast List ------ */
+#checkin-comments div.toast-list-large{margin-bottom:34px}
+#checkin-comments div.toast-list-large h3{color:#999; background:transparent url(../images/toast-list-header.jpg) top left no-repeat; padding-left:20px; margin-bottom:6px; text-transform:uppercase}
+#checkin-comments div.toast-list-large ul{background-color:#f6f0dc; width:460px; padding:6px 6px 0 6px; font-size:11px; line-height:16px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; margin-bottom:10px; display:table}
+#checkin-comments div.toast-list-large ul li{float:left; margin-right:10px; margin-bottom:4px}
+#checkin-comments .myCounter{float: right; margin-right: 5px; font-weight: bold; margin-top: 5px; color: #999999; font-size:14px}
+
+/* Individual Check In - Comments ------ */
+#checkin-comments{padding-left:60px}
+#checkin-comments div.comment-list-indv h3{color:#999; background:transparent url(../images/comment-list-header.jpg) 0 2px no-repeat; padding-left:24px; margin-bottom:6px; text-transform:uppercase}
+#checkin-comments div.comment-list-indv div.comment{margin-bottom:10px}
+#checkin-comments div.comment-list-indv div.comment div{background-color:#f6f0dc; padding:6px; font-size:11px; line-height:16px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px}
+#checkin-comments div.comment-list-indv div.comment div p{padding-left:50px; font-size:12px}
+#checkin-comments div.comment-list-indv div.comment div p span.name{display:block; color:#333; margin-bottom:2px}
+#checkin-comments div.comment-list-indv div.comment div ul{height:16px; padding-left:50px; margin-top: 4px}
+#checkin-comments div.comment-list-indv div.comment div ul li{float:left; margin-right:20px; font-size:11px; border-bottom:none}
+#checkin-comments div.comment-list-indv div.comment div ul li.time{color:#999}
+#checkin-comments div.comment-list-indv div.comment-list-indv div.comment-form{padding-left:60px; width:390px; margin-bottom:10px}
+#checkin-comments div.comment-list-indv div.comment-form div{background-color:#f6f0dc; padding:6px; font-size:11px; line-height:16px; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px}
+#checkin-comments div.comment-list-indv div.comment-form form{padding-left:50px}
+#checkin-comments div.comment-list-indv div.comment-form form textarea{width:394px; height:40px; border:1px solid #ccc; font-size:13px; margin-bottom:4px}
+#checkin-comments div.comment-list-indv div.comment-form form ul{height:26px}
+#checkin-comments div.comment-list-indv div.comment-form form ul li{border:none; margin:0 10px 0 0; padding:0; float:left}
+#checkin-comments div.comment-list-indv div.comment-form form ul li.comment span a{width:110px; height:26px; display:block; background:transparent url(../images/comment-btn.png) top left no-repeat; text-indent:-9999px}
+#checkin-comments div.comment-list-indv div.comment-form form ul li.comment span a:hover{background-position:center left}
+#checkin-comments div.comment-list-indv div.comment-form form ul li.comment span a:active{background-position:bottom left}
+#checkin-comments div.comment-list-indv div.comment-form form ul li.cancel{display:block; padding-top:6px; font-size:12px}
+
+/* Friend List ------ */
+#friend-list{margin:10px 0}
+#friend-list li div {min-height: 60px; margin-bottom: 8px;}
+#friend-list li div ul{
+	display: inline-table;}
+#friend-list li div ul li{width:150px; overflow: visible; float:left; margin:0 30px 14px 0;}
+#friend-list li div ul li.last{margin-right:0}
+#friend-list li div ul li p{padding-left:55px}
+#friend-list li div ul li p span{display:block; font-size:13px; margin-bottom:2px}
+#friend-list li div ul li p span.location{color:#666; font-size:11px; margin-bottom:5px}
+#friend-list li div ul li p span.remove a{font-size:10px; font-weight:normal}
+#friend-list li div ul li .avatar{float:left;  border: 2px solid #fff;  -moz-border-radius: 3px;  -webkit-border-radius: 3px;  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3)}
+#friend-list-search{height: 30px; background-color:#f6f0dc;  padding:8px;  -moz-border-radius:4px;  -webkit-border-radius:4px;  -khtml-border-radius:4px;  margin: 10px auto 20px auto}
+#friend-list-search li.search{height: 30px; margin-bottom: 10px}
+#friend-list-search li.search form{width: 470px; margin: 0 auto}
+#friend-list-search li.search form span{padding: 2px 3px 3px 3px; float: left}
+#friend-list-search li.search form span input{font-size: 15px; color: #666; width: 330px}
+#friend-list-search li.search form p{float: right}
+#friend-list-search li.search form p a{width: 117px; height: 31px; display: block; background: transparent url(../images/friend-search-btn.png) top left no-repeat; text-indent: -9999px}
+#friend-list-search li.search form p a:hover{background-position: center left}
+#friend-list-search li.search form p a:active{background-position: bottom left}
+#friend-list-search li.social{width: 400px; margin: 0 auto; text-align: center}
+#friend-list-search li.social p{color: #666; font-size: 14px; margin-bottom: 8px}
+#friend-list-search li.social ul{width: 340px; margin: 0 auto 10px auto; display: table}
+#friend-list-search li.social ul li{float: left; text-align: center; width: 170px}
+#friend-list-search li.social ul li a.scan-tw{width: 117px; height: 31px; display: block; background: transparent url(../images/friend-search-tw.png) top left no-repeat; text-indent: -9999px; margin: 0 auto}
+#friend-list-search li.social ul li a.scan-tw:hover{background-position: center left}
+#friend-list-search li.social ul li a.scan-tw:active{background-position: bottom left}
+#friend-list-search li.social ul li a.scan-fb{width: 117px; height: 31px; display: block; background: transparent url(../images/friend-search-fb.png) top left no-repeat; text-indent: -9999px; margin: 0 auto}
+#friend-list-search li.social ul li a.scan-fb:hover{background-position: center left}
+#friend-list-search li.social ul li a.scan-fb:active{background-position: bottom left}
+
+p.show-more-friends-btn a{display:block; width:187px; height:31px; background:transparent url(../images/show-more-friends-btn.png) top left no-repeat; text-index:-9999px; margin: 8px auto 12px auto}
+p.show-more-friends-btn a:hover{background-position:center left}
+p.show-more-friends-btn a:active{background-position:bottom left}
+
+div.friend-requests ul li img{border: 2px solid #fff;  -moz-border-radius: 3px;  -webkit-border-radius: 3px;  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); float: left;}
+div.friend-requests ul li p{padding-left: 56px}
+div.friend-requests ul li div{border: none; width: 60px; float: right}
+div.friend-requests ul li div a.yes{height: 22px; width: 20px; text-indent: -9999px; display: block; background: transparent url(../images/button_yes.png) top left no-repeat; float: left; margin-right: 10px}
+div.friend-requests ul li div a.no{height: 22px; width: 20px; text-indent: -9999px; display: block; background: transparent url(../images/button_no.png) top left no-repeat; float: left}
+
+
+/* Badge Details ------ */
+#badge-details{min-height:100px; padding:10px 0; margin-bottom:20px}
+#badge-details img{float:left}
+#badge-details div{padding-left:130px}
+#badge-details div p.name{font-size:15px; color:#000; margin-bottom:4px}
+#badge-details div p.desc{color:#666; font-size:13px; line-height:16px; margin-bottom:8px}
+#badge-details div p.status{font-size:13px; color:#666}
+#badge-checkin h3{color:#666; margin-bottom:6px; text-transform:uppercase}
+
+/* Badge List ------ */
+#badge-list ul.sections{height:20px; margin:10px 0 20px 0}
+#badge-list ul.sections li{float:left; font-size:14px; text-transform:uppercase; margin-right:20px; padding-bottom:2px}
+#badge-list ul.sections li.active{border-bottom:2px solid #630}
+#badge-list ul.badges{margin-top:10px}
+#badge-list ul.badges li a{display:block; font-size:11px; text-align:center; width:120px; height:90px;position: relative;}
+#badge-list ul.badges li{float:left; margin-right:10px; margin-bottom:16px}
+#badge-list ul.badges li.last{margin-right:0}
+#badge-list ul.badges li a p{margin:10px 0}
+#badge-list ul.badges li a div.bdg-level{position:absolute; left:65px}
+#badge-list ul.badges li a div.bdg-level span.level{position:absolute; left:5px; top:4px; text-align: center; width: 24px; font-size:14px; color: #732418;}
+#badge-list ul.badges li a div.bdg-level span.holder{height:19px; width:31px; display:block; background-color:#eed47c; border:2px solid #732418; -moz-border-radius:20px; -webkit-border-radius:20px; -khtml-border-radius:20px; filter:alpha(opacity=90); -moz-opacity:0.9;  -khtml-opacity:0.9; opacity:0.9;  float:right}
+#badge-list ul.badges li a div.badge-inactive{-webkit-border-radius: 5px 5px 5px 5px; -moz-border-radius:5px 5px 5px 5px; background:none repeat scroll 0 0 #CC6600; color:#FFFFFF; font-size:12px; height:10px; margin:0 auto; padding:5px; width:78px;}
+
+/* Beer History List ------ */
+#beer-history-list{margin-top:10px; min-height: 750px;}
+#beer-history-list li {display:block; font-size:11px; text-align:center; width:120px; height:160px;}
+#beer-history-list li{float:left; margin-right:10px; margin-bottom:16px}
+#beer-history-list li.last{margin-right:0}
+#beer-history-list li p{margin: 6px 0 0 0; font-size: 11px;}
+#beer-history-list li p.beer{font-size: 12px;}
+#beer-history-list li p.time a{color: #999;}
+
+/* Business ------ */
+#biz{padding: 10px 0;}
+#biz p{margin-bottom: 10px;font-size: 13px;line-height: 16px}
+
+/* Terms / Privacy ---- */
+#terms {margin-top: 15px; margin-left: 15px;}
+#terms p{ line-height: 16px; padding: 0 0 18px; font-size: 13px;}
+
+/* Beer List - Table */
+#beer-list table{margin-bottom: 20px;}
+#beer-list table tr td{font-size:13px; padding:6px 0 6px 4px}
+#beer-list table tr.header td{background-color:#f6f0dc; border-right:1px solid #fff; color:#333}
+#beer-list table tr td span.beer-icon{float:left}
+#beer-list table tr td p.beer-name{padding-left:32px}
+#beer-list table tr td p{padding:5px 8px 0 0}
+#beer-list table tr:hover{background-color: #f6f0dc;border-top: 1px solid #fff}
+#beer-list table tr.header:hover{border: none;}
+
+/* Search Switch Tabs */
+#search-switch{border-top:2px solid #fff; border-bottom:2px solid #fff; display:table}
+#search-switch li{width:172px; float:left; background:#ecdca8; border-right:2px solid #fff}
+#search-switch li.active{background-color:#eed47c}
+#search-switch li.last{border-right:none}
+#search-switch li a{display:block; padding:4px 0 6px 8px}
+#no-results{width: 420px; margin: 30px auto 0;}
+#no-results div.term{min-height: 70px;background-color:#f6f0da; -webkit-border-top-left-radius: 12px;-webkit-border-top-right-radius: 12px;-moz-border-radius-topleft: 12px;-moz-border-radius-topright: 12px;border-top-left-radius: 12px;border-top-right-radius: 12px;padding: 12px 12px 8px;border-bottom: 1px solid rgba(100,100,100,0.1);}
+#no-results div.term img{float: left;}
+#no-results div.term p{padding:12px 0 0 85px;font-size: 14px;}
+#no-results div.term p strong{display: block;font-size: 20px;margin-top: 6px;}
+#no-results div.add{background-color:#ecdca8;text-align: center;padding: 10px; border-top: 1px solid #fff;-webkit-border-bottom-right-radius: 12px;
+-webkit-border-bottom-left-radius: 12px;
+-moz-border-radius-bottomright: 12px;
+-moz-border-radius-bottomleft: 12px;
+border-bottom-right-radius: 12px;
+border-bottom-left-radius: 12px;}
+#search-add{width: 420px; margin: 40px auto 0; height: 48px;background-color:#f6f0da; -webkit-border-radius: 12px;-webkit-border-radius: 12px;-moz-border-radius: 12px;-moz-border-radius: 12px;border-radius: 12px;border-radius: 12px;padding: 12px 12px 8px;}
+#search-add img{float: left;}
+#search-add p{padding:5px 0 0 55px;font-size: 14px;}
+
+.api-search p {float: right}
+.api-search p a{width: 117px; height: 31px; display: block; background: transparent url(../images/friend-search-btn.png) top left no-repeat; text-indent: -9999px}
+.api-search p a:hover{background-position: center left}
+.api-search p a:active{background-position: bottom left}
+
+/* Stream Info + Check-In Box */
+#stream-info{margin-bottom:20px; min-height: 100px;}
+#stream-info div.info-box{ margin-bottom: 5px;}
+#stream-info div.info-box ul.social-links{float: right; margin: 0 0 5px 5px;}
+#stream-info div.info-box ul.social-links li{float: left;margin-left: 8px;}
+#stream-info div.info-box ul.buttons{height: 31px; display: inline-block;}
+#stream-info div.info-box ul.buttons li{margin:0 10px 0 0; height:31px; float: left;}
+#stream-info div.info-box ul.buttons li span.btn-wishlist a{display:block; background:transparent url(../images/btn-wishlist.png) top left no-repeat; width:117px; height:31px; text-indent:-9999px}
+#stream-info div.info-box ul.buttons li span.btn-wishlist a:hover{background-position:center left}
+#stream-info div.info-box ul.buttons li span.btn-wishlist a:active{background-position:bottom left}
+#stream-info div.info-box ul.buttons li span.btn-wishlist-off a{display:block; background:transparent url(../images/btn-wishlist-off.png) top left no-repeat; width:117px; height:31px; text-indent:-9999px}
+#stream-info div.info-box ul.buttons li span.btn-wishlist-off a:hover{background-position:center left}
+#stream-info div.info-box ul.buttons li span.btn-wishlist-off a:active{background-position:bottom left}
+#stream-info div.info-box ul.buttons li span.btn-checkin a{display:block; background:transparent url(../images/btn-checkin.png) top left no-repeat; width:117px; height:31px; text-indent:-9999px}
+#stream-info div.info-box ul.buttons li span.btn-checkin a:hover{background-position:center left}
+#stream-info div.info-box ul.buttons li span.btn-checkin a:active{background-position:bottom left}
+#stream-info div.info-box ul.buttons li.active{filter:alpha(opacity=50); -moz-opacity:0.5; -khtml-opacity:0.5; opacity:0.5}
+#stream-info div.info-box img{float:left}
+#stream-info div.info-box div{margin-bottom: 2px; padding-left: 120px;font-size: 14px;}
+#stream-info div.info-box div p{margin: 10px 0 14px 0;}
+#stream-info div.info-box div .brewery-url{margin-top: 5px;width: 270px;overflow: hidden;height: 15px;display: block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+#stream-info div.info-box div h2{font-size:18px; margin-bottom:2px;}
+#stream-info div.info-box span.beer-stamp-lg{display:block; padding:2px; float:left; -moz-border-radius:3px; -webkit-border-radius:3px; -moz-box-shadow:0 0 4px rgba(0,0,0,0.3); -webkit-box-shadow:0 0 4px rgba(0,0,0,0.3); text-align:center}
+#stream-info div.info-box ul.beer-details{font-size:18px; line-height: 22px; width:390px; padding-left: 120px;}
+#stream-info div.info-box ul.style{font-size:16px; line-height: 20px; color:#666; margin-top: 12px;}
+#stream-info div.info-box ul.style li{margin-bottom: 2px;}
+#stream-info div.info-box ul li h2{font-size:28px; font-weight: 600; line-height: 30px; margin-bottom:4px}
+#stream-info div.info-box span.beer-stamp-lg{display:block; padding:2px; float:left; -moz-border-radius:3px; -webkit-border-radius:3px; -moz-box-shadow:0 0 4px rgba(0,0,0,0.3); -webkit-box-shadow:0 0 4px rgba(0,0,0,0.3); text-align:center}
+#stream-info div.info-box div p div {padding-left: 0px;}
+
+/* Check-in Comment */
+#check-in-box{background:transparent url(../images/checkin-box-arrow.jpg) top left no-repeat; padding-top:20px}
+#check-in-box div.check-in{background-color:#f6f0dc; -moz-border-radius:6px; -webkit-border-radius:6px; -khtml-border-radius:6px; border-radius:6px; padding:10px;}
+#check-in-box div.check-in{min-height: 145px;}
+#check-in-box div.check-in span.input-box{display:block; margin:8px 0}
+#check-in-box div.check-in span.input-box textarea{height:40px}
+#check-in-box div.check-in p.counter{float:right; font-size:13px; color:#666; padding-top:6px}
+#check-in-box div.check-in ul.confirm{width:117px; float: right;}
+#check-in-box div.check-in ul.confirm li span.cancel{padding: 9px 0 0 6px; display:block; font-size: 13px; text-align: center;}
+#check-in-box div.check-in ul.confirm span.btn-confirm a{display:block; background:transparent url(../images/btn-confirm.png) top left no-repeat; width:117px; height:31px; text-indent:-9999px}
+#check-in-box div.check-in ul.confirm span.btn-confirm a:hover{background-position:center left}
+#check-in-box div.check-in ul.confirm span.btn-confirm a:active{background-position:bottom left}
+
+/* Check-in Rating */
+.star-rating {
+  margin: 0 auto 12px;
+  height: 32px;
+  display:inline-block;
+  padding: 0 !important;
+}
+.rb0:checked ~ .rating,label.rb0l:hover ~ .rating{ width: 0px; } 
+.rb1:checked ~ .rating, label.rb1l:hover ~ .rating{ width: 16px; } 
+.rb2:checked ~ .rating, label.rb2l:hover ~ .rating{ width: 32px; } 
+.rb3:checked ~ .rating, label.rb3l:hover ~ .rating{ width: 48px; }
+.rb4:checked ~ .rating, label.rb4l:hover ~ .rating{ width: 64px; }
+.rb5:checked ~ .rating, label.rb5l:hover ~ .rating{ width: 80px; }
+.rb6:checked ~ .rating, label.rb6l:hover ~ .rating{ width: 96px; }
+.rb7:checked ~ .rating, label.rb7l:hover ~ .rating{ width: 112px; }
+.rb8:checked ~ .rating, label.rb8l:hover ~ .rating{ width: 128px; }
+.rb9:checked ~ .rating, label.rb9l:hover ~ .rating{ width: 144px; }
+.rb10:checked ~ .rating, label.rb10l:hover ~ .rating{ width: 160px; /* 5 stars */ }
+.star-rating label.star{
+  width: 16px;
+  left: -16px;
+  padding: 0;
+  height: 32px; 
+  position: relative;
+  z-index: 3;
+  float: left;
+}
+.star-rating label.star:hover{ cursor: pointer; }
+.star-rating label.star.last{ width: 32px; }
+.star-rating input[type=radio], .star-rating label.rb{ display: none; }
+.star-rating .rating {
+    background: url(../images/cap_full.png) repeat-x top left;
+    position: relative;
+    z-index: 2;
+    top: 0;
+    height: 32px;
+    width:0px;
+    padding: 0 !important;
+    display: block;
+}
+.star-rating .rating-bg {
+    background: url(../images/cap_empty.png) repeat-x top left;
+    position: relative;
+    z-index: 1;
+    padding: 0 !important;
+    top: -32px;
+    height: 32px;
+    width: 160px;
+    display: block;
+}
+
+/* Social */
+#check-in-box div.check-in ul.social{font-size: 14px; width: 140px; display: inline-block; vertical-align: top; height: 32px;}
+#check-in-box div.check-in ul.social li{float:left; margin-right:8px}
+#check-in-box div.check-in ul.social li span{padding-top:4px; display:block}
+#check-in-box div.check-in ul.social li.tw a{text-indent:-9999px; background:transparent url(../images/check-social-tw.png) top left no-repeat; height:22px; width:22px; display:block}
+#check-in-box div.check-in ul.social li.tw-on a{text-indent:-9999px; background:transparent url(../images/check-social-tw.png) bottom left no-repeat; height:22px; width:22px; display:block}
+#check-in-box div.check-in ul.social li.fb a{text-indent:-9999px; background:transparent url(../images/check-social-fb.png) top left no-repeat; height:22px; width:22px; display:block}
+#check-in-box div.check-in ul.social li.fb-on a{text-indent:-9999px; background:transparent url(../images/check-social-fb.png) bottom left no-repeat; height:22px; width:22px; display:block}
+#check-in-box div.check-in ul.social li.sq a{text-indent:-9999px; background:transparent url(../images/check-social-4sq.png) top left no-repeat; height:22px; width:22px; display:block}
+#check-in-box div.check-in ul.social li.sq-on a{text-indent:-9999px; background:transparent url(../images/check-social-4sq.png) bottom left no-repeat; height:22px; width:22px; display:block}
+#check-in-box div.check-in ul.social li a:hover{-moz-box-shadow:0px 0px 3px #999; -webkit-box-shadow:0px 0px 3px #999; box-shadow:0px 0px 3px #999}
+
+
+/* Social-Old */
+/*#check-in-box div.check-in ul.social{font-size: 13px; width: 200px; height: 32px;}
+#check-in-box div.check-in ul.social li{float:left; margin-right:8px}
+#check-in-box div.check-in ul.social li span{padding-top:4px; display:block}
+#check-in-box div.check-in ul.social li.tw a{text-indent:-9999px; background:transparent url(../images/check-social-tw.png) top left no-repeat; height:22px; width:22px; display:block}
+#check-in-box div.check-in ul.social li.tw-on a{text-indent:-9999px; background:transparent url(../images/check-social-tw.png) bottom left no-repeat; height:22px; width:22px; display:block}
+#check-in-box div.check-in ul.social li.fb a{text-indent:-9999px; background:transparent url(../images/check-social-fb.png) top left no-repeat; height:22px; width:22px; display:block}
+#check-in-box div.check-in ul.social li.fb-on a{text-indent:-9999px; background:transparent url(../images/check-social-fb.png) bottom left no-repeat; height:22px; width:22px; display:block}
+#check-in-box div.check-in ul.social li.sq a{text-indent:-9999px; background:transparent url(../images/check-social-4sq.png) top left no-repeat; height:22px; width:22px; display:block}
+#check-in-box div.check-in ul.social li.sq-on a{text-indent:-9999px; background:transparent url(../images/check-social-4sq.png) bottom left no-repeat; height:22px; width:22px; display:block}
+#check-in-box div.check-in ul.social li a:hover{-moz-box-shadow:0px 0px 3px #999; -webkit-box-shadow:0px 0px 3px #999; box-shadow:0px 0px 3px #999}*/
+
+/* Rating */
+ul.rating{width:200px; height: 32px;}
+ul.rating li{float:left; margin:0 6px 0 0; padding:0}
+ul.rating li span{display: block;font-size: 13px;padding: 4px 8px 0 0}
+ul.rating li a{display:block; width:22px; height:22px; text-indent:-9999px}
+ul.rating li a.cap-on{background:transparent url(../images/rating-cap.png) top left no-repeat;}
+ul.rating li a.cap-off{background:transparent url(../images/rating-cap.png) bottom left no-repeat;}
+
+/* Confirm */
+#check-in-box div.cheers{padding:14px 0 10px 0;}
+#check-in-box div.cheers h3{text-align:center; font-size:20px; margin-bottom:8px}
+#check-in-box div.cheers p{text-align:center; font-size:14px; color:#666; margin-bottom: 10px;}
+#check-in-box div.cheers div.badge{background-color:#f9f7ef; -moz-border-radius:6px; -webkit-border-radius:6px; -khtml-border-radius:6px; border-radius:6px; padding:14px 14px 0 14px; width:470px; margin:15px auto 10px auto}
+#check-in-box div.cheers div.badge img{float:left; margin-top: 5px;}
+#check-in-box div.cheers div.badge h3{text-align:left; font-size:13px; height:20px}
+#check-in-box div.cheers div.badge div{background-color:#f9f7ef; min-height:100px; margin: 5px 0; padding: 8px 0; border-top:1px solid #ddd;}
+#check-in-box div.cheers div.badge div.badge-details{padding:0 0 0 115px; border-top: 0;}
+#check-in-box div.cheers div.badge div.badge-details p{text-align:left; font-size:16px; color:#000; margin-bottom:4px}
+#check-in-box div.cheers div.badge div.badge-details span{font-size:12px; line-height:15px; color:#666}
+
+#check-in-box div.check-in div.error{background-color:#f9f7ef; -moz-border-radius:6px; -webkit-border-radius:6px; -khtml-border-radius:6px; border-radius:6px; padding:10px; width:470px;margin: 0 auto 10px auto;}
+#check-in-box div.check-in div.error p{font-size: 13px;}
+
+/* Promtoions Light Box */
+div.promotion{width:375px; margin:0 auto; text-align:center; padding:10px 0}
+div.promotion p.title{margin:0 0 10px 0; font-size:20px}
+div.promotion p.desc{font-size:14px; line-height:18px; margin:8px auto 14px auto; width:300px}
+div.promotion p.rules{font-size:11px; line-height:14px; width:300px; margin:0 auto; color:#666}
+
+/* Rating List for Display */
+
+div.info-box ul.rating-display {height: 16px !important; margin: 8px 0 10px 0 !important; padding: 0!}
+ul.rating-display li{margin-right: 4px; float: left; display: block; color: #666; margin: 0 6px 0 0 !important; padding: 0 !important;}
+ul.rating-display li span{display: block;padding-top: 1px;font-size: 13px;}
+ul.rating-display li.cap-on{background:transparent url(../images/rating-cap-display.png) top left no-repeat; width: 16px; height: 16px; text-indent: -9999px; float: left;}
+ul.rating-display li.cap-off{background:transparent url(../images/rating-cap-display.png) bottom left no-repeat; width: 16px; height: 16px; text-indent: -9999px; float: left;}
+
+/* Rating Score for Page */
+#beer-history-list .beer-list ul.rating-display {height: 16px !important; margin: 8px 0 10px 0 !important; padding: 0!}
+#beer-history-list .beer-list ul.rating-display li{margin-right: 4px; float: left; display: block; color: #666; margin: 0 6px 0 0 !important; padding: 0 !important;}
+#beer-history-list .beer-list ul.rating-display li span{display: block;padding-top: 1px;font-size: 13px;}
+#beer-history-list .beer-list ul.rating-display li.cap-on{background:transparent url(../images/rating-cap-display.png) top left no-repeat; width: 16px; height: 16px; text-indent: -9999px; float: left;}
+#beer-history-list .beer-list ul.rating-display li.cap-off{background:transparent url(../images/rating-cap-display.png) bottom left no-repeat; width: 16px; height: 16px; text-indent: -9999px; float: left;}
+
+/* maintenance */
+#maintenance{width:400px; margin:300px auto 0; background-color:#fff; padding:20px; text-align:center; -moz-border-radius:10px; -webkit-border-radius:10px; -moz-box-shadow:0 0 10px rgba(0,0,0,0.3); -webkit-box-shadow:0 0 10px rgba(0,0,0,0.3)}
+#maintenance h1{font-size:28px; margin-bottom:20px}
+#maintenance p{color:#666; font-size:14px; width:400px; margin:0 auto}
+
+/* Rating Score for Page */
+div.horiz-beer-rating{width: 100px; float: right}
+div.horiz-beer-rating p{font-size: 11px;height: 16px;width: 110px;}
+div.horiz-rating-display {height: 16px;}
+div.horiz-rating-display span.cap-on{display: block; background:transparent url(../images/rating-cap-display.png) top left no-repeat; width: 16px; height: 16px; text-indent: -9999px; float: left; margin-right: 4px;}
+div.horiz-rating-display span.cap-off{display: block; background:transparent url(../images/rating-cap-display.png) bottom left no-repeat; width: 16px; height: 16px; text-indent: -9999px; float: left; margin-right: 4px}
+
+/* Beer Management */
+#beer-list-alt {margin-top:20px}
+#beer-list-alt div.beer-header{border-bottom:1px solid #ccc; margin-bottom:24px; padding-bottom:8px}
+#beer-list-alt  div.beer-header div.sort{float:right; font-size:13px}
+#beer-list-alt div.beer-item{margin-bottom:15px; border-bottom:1px solid #ccc}
+#beer-list-alt div.beer-item ul.beer-tools{float:right; width:144px; height:24px; margin:0 0 15px 15px}
+#beer-list-alt div.beer-item ul.beer-tools li{float:left}
+#beer-list-alt div.beer-item ul.beer-tools li.edit{margin:0 6px 0 0}
+#beer-list-alt div.beer-item ul.beer-tools li.edit a{display:block; width:60px; height:24px; background:transparent url(../images/btn-beer-edit.png) top left no-repeat; text-indent:-9999px}
+#beer-list-alt div.beer-item ul.beer-tools li.edit a:hover{background-position:center left}
+#beer-list-alt div.beer-item ul.beer-tools li.edit a:active{background-position:bottom left}
+#beer-list-alt div.beer-item ul.beer-tools li.merge a{display:block; width:76px; height:24px; background:transparent url(../images/btn-beer-merge.png) top left no-repeat; text-indent:-9999px}
+#beer-list-alt div.beer-item ul.beer-tools li.merge a:hover{background-position:center left}
+#beer-list-alt div.beer-item ul.beer-tools li.merge a:active{background-position:bottom left}
+#beer-list-alt div.beer-item div{margin-bottom:12px}
+#beer-list-alt div.beer-item div img{float:left}
+#beer-list-alt div.beer-item div ul{padding-left:50px}
+#beer-list-alt div.beer-item div ul li{font-size:12px; margin-bottom:3px}
+#beer-list-alt div.beer-item div ul li.beer-name{font-size:15px; margin-bottom:6px}
+#beer-list-alt div.beer-item div ul li.details{line-height:14px}
+#beer-list-alt div.beer-item div ul li span.abv{display:inline-block; width:80px}
+#beer-list-alt div.beer-item div.stats ul{background-color:#f6f0dc; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; padding:0; margin:0; width:520px; height:56px}
+div.beer-item div.stats ul li{float:left; height:40px; width:112px; padding:8px; border-right:1px solid #fff; border-left:1px solid #ddd}
+#beer-list-alt div.beer-item div.stats ul li.last{border-right:none}
+#beer-list-alt div.beer-item div.stats ul li.first{border-left:none}
+#beer-list-alt div.beer-item div.stats ul li p{font-size:12px}
+#beer-list-alt div.beer-item div.stats ul li span{font-size:30px; color:#666}
+
+/* About Page */
+.aboutDesc{margin: 10px 0 40px 0;font-size: 15px;line-height: 20px;}
+.aboutDesc p{margin-bottom: 18px;}
+.aboutTeam{margin-top:10px}
+.aboutTeam h2{font-size:20px; font-weight:bold; margin-bottom:25px; border-bottom:1px solid #c1c1c1}
+.aboutTeam ul li{margin-bottom:40px}
+.aboutTeam ul li img{float:left; border:1px solid #ccc; padding:2px}
+.aboutTeam ul li div p.name{font-size:15px; margin-bottom:3px;font-weight: bold;}
+.aboutTeam ul li div p.title{font-size:12px; color:#666; margin-bottom:8px}
+.aboutTeam ul li div p{margin-bottom:10px; font-size:13px; padding-left: 100px; line-height: 16px;}
+
+
+/* New Post */
+.new-posts {
+    border-radius: 4px 4px 4px 4px;
+    font-size: 15px;
+    line-height: 16px;
+    margin-bottom: 10px;
+    padding: 6px 0 6px 0px;
+	text-align: center;
+	background: #F6F0DC;
+	margin-top: 10px;
+}
+
+/* Alert Notice */
+div.check-in-box div.cheers div.alert-notice {
+    background: none repeat scroll 0 0 #CC0000;
+    color: #FFFFFF;
+    padding: 6px;
+    text-align: center;
+	-moz-box-shadow: 0 2px 4px #888888;
+	-webkit-box-shadow: 0 2px 4px #888888;
+	box-shadow: 0 2px 4px #888888;
+}
+
+div.check-in-box div.cheers div.alert-notice span {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 15px;
+}
+
+/* Claim Lightbox */
+#claim-process{background-color:#fff; margin:0 auto; padding:10px; width:520px; text-align:center; font-size:13px}
+#claim-process h2{font-size:22px; background:#fff url(../images/claim-rule-up.png) bottom left no-repeat; padding-bottom:14px; margin-bottom:20px}
+#claim-process div.process {width:440px; margin:0 auto; padding-bottom:20px}
+#claim-process div.process p{margin-bottom:15px; line-height:16px}
+#claim-process div.process p.thanks strong{font-size:20px}
+#claim-process div.process p strong{font-size:16px}
+#claim-process ul.buttons{width:396px; margin:0 auto; height:50px}
+#claim-process ul.buttons li{float:left; margin:0 30px}
+#claim-process ul.buttons li a{display:block; width:138px; height:36px; text-indent:-9999px}
+#claim-process ul.buttons li a.yes{background:transparent url(../images/yesagree-btn.png) top left no-repeat}
+#claim-process ul.buttons li a.yes:hover{background-position:center}
+#claim-process ul.buttons li a.yes:active{background-position:bottom}
+#claim-process ul.buttons li a.no{background:transparent url(../images/nothanks-btn.png) top left no-repeat}
+#claim-process ul.buttons li a.no:hover{background-position:center}
+#claim-process ul li a.no:active{background-position:bottom}
+#claim-process .bottom-rule{background:transparent url(../images/claim-rule-up.png) top left no-repeat; display:block; height:20px; margin:0 auto 20px auto}
+#claim-process form{width:300px; margin:0 auto; text-align:left}
+#claim-process form ul li{margin-bottom:14px}
+#claim-process form ul li label{display:block; color:#666; font-size:16px; margin-bottom:4px; font-weight:bold}
+#claim-process form ul li span{display:block}
+#claim-process form ul li em{font-size:11px; font-weight:normal}
+#claim-process form ul li span textarea{height:80px}
+#claim-process a.submit{display:block; width:158px; height:36px; background:transparent url(../images/submitreq-btn.png) top left no-repeat; text-indent:-9999px; margin:0 auto 15px auto}
+
+/* Photo Gallery */
+ul.thumbView{ list-style:none;  margin:0px;  border:none;  width:600px; margin-top:15px; display: inline-table;}
+ul.thumbView li{ float:left;  position:relative;  width:150px;  height:150px; ;  border:none;  margin:0px;  padding:0px;  background:transparent;  overflow:visible; margin:0 20px 20px 0; background-color:#FFF;  border:5px solid #FFF;  border-radius:3px 3px 3px 3px;  box-shadow:0 0 4px rgba(0,0,0,0.3); -webkit-box-shadow:0 0 4px rgba(0,0,0,0.3); -moz-box-shadow:0 0 4px rgba(0,0,0,0.3); }
+ul.thumbView li:hover div.description{display:block}
+ul.thumbView li div.description{display:none; background:none repeat scroll 0 0 rgba(0,0,0,0.6);  bottom:0;  color:#FFF;  padding-bottom:10px;  position:absolute;  text-decoration:none;  width:100%; text-align:left}
+ul.thumbView li div.description h3{font-size:14px;  font-weight:600;  letter-spacing:-1px;  margin:10px 10px 1px}
+ul.thumbView li div.description h4{letter-spacing:-1px;  font-family:Helvetica,Arial,sans-serif;  font-size:13px;  font-weight:normal;  margin:10px 10px 1px}
+ul.thumbView li div.description span.cute-time{float:right; font-size:10px; padding-top:8px; padding-right:5px}
+ul.thumbView li a{ height:150px;  margin:0;  padding:0;  width:150px;  text-align:center;  vertical-align:middle;  display:table-cell;  overflow:visible}
+ul.thumbView li a img{ vertical-align:middle;  height:150px;  width:150px}
+ul.thumbView li div.description {text-align: left;}
+.see-more-photos a{display:block; width:137px; height:31px; background:transparent url(../images/show-more-photos.png) top left no-repeat; text-indent:-9999px; margin: 8px auto 12px auto}
+.see-more-photos a:hover{background-position:center left}
+.see-more-photos a:active{background-position:bottom left}
+
+/* Add Beer */
+#beer-add{text-align:center; width:620px; padding:20px 30px; background-color: #fff;}
+#beer-add h2{font-size:24px; background:transparent url(../images/claim-rule-down.png) bottom center no-repeat; padding-bottom:30px; margin-bottom:20px}
+#beer-add .bottom{background:transparent url(../images/claim-rule-up.png) top center no-repeat; padding-top:30px}
+#beer-add .bottom p{margin:0 auto}
+#beer-add .bottom .small{font-size:14px}
+#beer-add a.add-beer-btn{margin: 0 auto 10px auto; text-indent: -9999px;width: 156px; height: 36px; display: block; background: transparent url(../images/create-beer-btn.png) top left no-repeat;}
+#beer-add a.add-beer-btn:hover{background-position: center left;}
+#beer-add a.add-beer-btn:active{background-position: bottom left;}
+#beer-add div.rules{width: 240px; float: right;text-align: left;background-color:#f6f0da; -webkit-border-radius:12px; -moz-border-radius:12px; border-radius:12px;padding: 8px 15px;}
+#beer-add div.rules strong{display: block; margin-bottom: 12px;}
+#beer-add div.rules ul li{list-style: disc;margin-bottom: 15px; font-size: 13px; margin-left: 15px;}
+#beer-add ul.form{width:280px; text-align:left}
+#beer-add ul.form li{margin:15px 0}
+#beer-add ul.form li label{display:block; font-weight:bold; margin-bottom:2px; color:#666}
+#beer-add ul.form li label.error{color:red}
+#beer-add ul.form li label span{font-size:12px}
+#beer-add ul.form li input[type=text], #beer-add ul li textarea{width:100%; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; background-color:#fff; border:1px solid #ccc; box-shadow:inset 0 1px 1px rgba(0,0,0,0.2); -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.2); -moz-box-shadow:inset 0 1px 1px rgba(0,0,0,0.2); font-size:15px; padding:6px}
+#beer-add ul li textarea{height: 100px;}
+#beer-add ul.form li input.abv{width: 50px;}
+#beer-add ul.form li select.style{width: 200px;}
+#beer-add ul.form li.homebrew{height: 35px;}
+#beer-add ul.form li.homebrew span{display: block; float: left;font-weight:bold; font-size: 13px; color:#666;margin: 4px 15px 0 0;}
+#beer-add ul.form li.homebrew span input[type=radio]{margin-top: -2px;}
+#beer-add ul.form li.brewery{position: relative;}
+#beer-add ul.form li.brewery span.auto-loading{position: absolute;top:26px; right: 0;}
+#beer-add ul.form li.brewery ul.brewery-complete{position: absolute; top: 51px; left: 0;background-color:#f6f0da; -webkit-border-bottom-right-radius:12px; -webkit-border-bottom-left-radius:12px; -moz-border-radius-bottomright:12px; -moz-border-radius-bottomleft:12px; border-bottom-right-radius:12px; border-bottom-left-radius:12px; width: 295px;}
+#beer-add ul.form li.brewery ul.brewery-complete li{padding: 10px; margin: 0; font-size: 13px; border-bottom: 1px solid #fff;}
+#beer-add ul.form li.brewery ul.brewery-complete li a{color: #333; font-weight: normal;display; block;}
+#beer-add ul.form li.brewery ul.brewery-complete li strong{display: block;font-size; 14px;}
+#beer-add ul.form li.brewery ul.brewery-complete li.add-brewery{text-align: center; border-bottom:0;}
+#beer-add ul.form li.brewery ul.brewery-complete li.add-brewery a{font-weight: bold; color: #CC6600;}
+#beer-add ul.errors{margin-left: 15px; text-align:left; color:red; list-style:disc; font-size:14px; font-weight:bold}
+#beer-add ul.errors li{margin-bottom:5px}
+#beer-add p.add-loading{display:block; width:140px; margin:0 auto 20px auto; height:30px; background:transparent url(../../../untappd.s3.amazonaws.com/site/assets/images/loader_sm.gif) center center no-repeat}
+#beer-add p.thanks{font-size:24px}
+
+/* For Breweries */
+#biz-head{text-align: center;}
+#biz-head h2{font-size: 52px; color: #4b2513;}
+#biz-head p{width: 730px; font-size: 18px; margin: 10px auto;line-height: 22px;}
+#biz-head div.find-claim{background-color: #f8f3e3;border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; width: 500px; margin: 14px auto 0 auto; padding: 12px 8px;}
+#biz-head div.find-claim strong{display:block; margin-bottom: 8px;font-size: 20px; color: #4b2513;}
+#biz-head div.find-claim form{width: 460px;}
+#biz-head div.find-claim form span{display: block;width: 97px; height: 36px;float: right; background: transparent url(../images/biz-search.png) top left no-repeat;}
+#biz-head div.find-claim form span:hover{background-position: middle left;}
+#biz-head div.find-claim form span:active{background-position: bottom left;}
+#biz-head div.find-claim form span input[type=submit]{cursor: pointer; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0);-moz-opacity:0; -khtml-opacity: 0; opacity: 0; width: 97px; height: 36px; background: transparent; text-indent: -9999;}
+#biz-head div.find-claim form input[type=text]{width: 340px; padding: 6px 4px; font-size: 18px; color: #666; border: 1px solid #ccc; background-color: #fff; border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;}
+#biz-screens{background: transparent url(../images/internal-bar-up.png) top left no-repeat; margin: 20px auto; padding-top: 50px; display: inline-block;}
+#biz-screens li{float: left;width: 250px; margin: 0 12px;}
+#biz-screens li img{border: 1px solid #ccc;}
+#biz-screens li p{margin-top: 8px; color: #333; font-size: 14px; line-height: 18px;}
+#biz-screens li p strong{color: #000; font-size: 16px;}
+#biz-partners{margin: 10px 0; height: 80px; background: transparent url(../images/internal-bar.png) top left no-repeat;padding-top:25px;}
+#biz-partners li{float: left; margin: 0 16px;}
+#biz-more{background-color: #f8f3e3;border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; width: 700px; margin: 30px auto; padding: 8px;}
+#biz-more p{font-size: 18px; text-align: center; line-height: 22px;}
+#biz-more-breweries{text-align: center; display: block; margin-top: 25px;}
+
+/* Brewery Follow List */
+#brewery-list h2{font-size:34px; color:#4b2513; text-align:center}
+#brewery-list p.intro{width:700px; text-align:center; font-size:20px;margin: 30px auto 50px;}
+#brewery-list p.bottom-rule{width:700px; text-align:center; font-size:20px; background:transparent url(../images/internal-bar.png) top center no-repeat; margin:20px auto; padding-top:20px}
+#brewery-list div.beer-header{height: 50px; width: 780px; margin: 0 auto 40px; background:transparent url(../images/internal-bar-up.png) bottom center no-repeat; padding-bottom: 10px;}
+#brewery-list div.beer-header div.search-area{width: 370px;}
+#brewery-list div.beer-header div.search-area form input{position: inline;}
+#brewery-list div.beer-header div.search-area form input[type=text]{width: 250px; height: 30px; -webkit-border-radius:6px; -moz-border-radius:6px; border-radius:6px; border:1px solid #ccc; -webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.4); -moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.4); box-shadow:inset 0px 1px 2px rgba(0,0,0,0.4); font-size:16px; padding:0 8px; float: left;}
+#brewery-list div.beer-header div.search-area form span.submit input[type=submit]{width: 92px; height: 30px;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);-moz-opacity: 0;-khtml-opacity: 0;opacity: 0; text-indent: 0; border: none; cursor: pointer;}
+#brewery-list div.beer-header div.search-area form span.submit{display: block;width: 92px; height: 30px; background: transparent url(../images/brewery-beer-search.png) top left no-repeat; cursor: pointer; float: right; margin-left: 8px;}
+#brewery-list div.beer-header div.search-area form span.submit:hover{background-position: middle left;}
+#brewery-list div.beer-header div.search-area form span.submit:active{background-position: bottom left;}
+#brewery-list div.beer-header div.sorting ul{margin: 10px auto; float: right;}
+#brewery-list div.beer-header div.sorting ul li{float: left; margin: 0 20px; font-size: 14px;}
+#brewery-list div.beer-header div.sorting ul li a{font-size: 16px;}
+#brewery-list div.beer-header div.sorting ul li a.current{text-decoration: underline;}
+#brewery-list p.bottom-rule a.show-more{display: block;width:145px;height: 31px;margin: 20px auto;text-indent: -9999px;background: transparent url(../images/show-more-btn.png) top left no-repeat;}
+#brewery-list p.bottom-rule a.show-more:hover{background-position: center left;}
+#brewery-list p.bottom-rule a.show-more:active{background-position: bottom left;}
+#brewery-list div.no-items{text-align: center; font-size: 18px;padding: 30px 0 60px;;}
+#brewery-follow-list{display: inline-block;}
+#brewery-follow-list li{width:182px; background-color:#f8f3e3; -webkit-border-radius:6px; -moz-border-radius:6px; border-radius:6px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;     box-sizing:border-box; float:left; margin: 0 12px 30px 12px}
+#brewery-follow-list li div{background-color:#fff; -webkit-border-radius:6px; -moz-border-radius:6px; border-radius:6px; text-align:center; width:158px; height:100px; margin:14px auto 0; padding:5px 0}
+#brewery-follow-list li span.brewery{display:block; border-bottom:1px solid #fff; padding:12px; height: 80px; overflow: hidden;}
+#brewery-follow-list li span.brewery a{font-size:16px; display:block; margin-bottom:6px}
+#brewery-follow-list li span.brewery p{font-size:12px}
+#brewery-follow-list li span.brewery p.brewery-description{margin-top: 7px; font-size: 11px;}
+#brewery-follow-list li span.bottom{display:block; height: 32px; border-top:1px solid #f1e7c7; padding:14px; text-align:center; color:#4b2513}
+#brewery-follow-list li span.bottom strong{display: block; padding-top: 6px;}
+#brewery-follow-list li span.bottom a.follow{display:block; margin:0 auto; width:130px; height:30px; text-indent:-9999px; background:transparent url(../images/follow-list-btn.png) top left no-repeat}
+#brewery-follow-list li span.bottom a.follow:hover{background-position:center left}
+#brewery-follow-list li span.bottom a.follow:active{background-position:bottom left}
+#brewery-follow-list li span.bottom a.unfollow{display:block; margin:0 auto; width:130px; height:30px; text-indent:-9999px; background:transparent url(../images/follow-list-unbtn.png) top left no-repeat}
+#brewery-follow-list li span.bottom a.unfollow:hover{background-position:bottom left}
+.export{
+	background-color: #F6F0DC;
+	margin: 8px 0 10px;
+	padding: 8px;
+	text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.export p{
+	line-height: 20px;
+	margin-bottom: 8px;
+}
+.export form{
+	display: inline-block;
+	margin-right: 8px;
+	padding-top: 2px;
+}
+.export form select{
+	font-size: 16px;
+}
+.export a{
+	display: inline-block;
+	vertical-align: top;
+	width: 122px;
+	height: 31px;
+	text-indent: -9999px;
+	background: transparent url(../images/export-data-btn.png) top left no-repeat;
+}
+.export a:hover{ background-position: center left; }
+.export a:active{ background-position: bottom left; }

@@ -1,0 +1,191 @@
+/*---------------------------------
+
+	Filename: 	sidebar.css
+	Decription: Sidebar Specific Style Sheet
+	Website: 	http://www.untappd.com
+	
+---------------------------------*/
+div.right-side .stats a{color:#fff; text-decoration:none; font-weight:600}
+
+div.right-side{width:280px; float:right; color:#fff; font-weight: 600}
+
+div.right-side a{color:#5a4201; text-decoration:none; font-weight:600}
+div.right-side a:hover{color:#8d6701}
+
+/*div.right-side div{
+	background:transparent url(../images/sidebar-bg.png) top left repeat;
+	margin-bottom:20px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	-khtml-border-radius:8px; 
+	border-radius:8px;
+	border:1px solid #c90;
+	padding-bottom:10px
+}*/
+
+div.right-side div{
+	margin-bottom:20px;
+	padding-bottom:10px;
+	background-color: #efb525;
+}
+
+div.right-side div h3{text-align:center; background:transparent url(../images/sidebar-bar.png) bottom left no-repeat; padding:6px 0 18px 0; text-transform:uppercase; color:#fff; text-shadow:0 -1px 2px #666; font-size:18px}
+div.right-side div.beer-profile h3{text-align:center; background:none; padding:6px 0; text-transform:uppercase; color:#fff; text-shadow:0 -1px 2px #666; font-size:18px}
+span.round{border:2px solid #fff; display:block;background-color:#fff; -moz-border-radius:8px; -webkit-border-radius:8px; -khtml-border-radius:8px; border-radius:8px; float:left; -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);}
+span.round img{-moz-border-radius:8px; -webkit-border-radius:8px; -khtml-border-radius:8px; border-radius:8px; float:left}
+
+
+/* Mod Tools ------ */
+ul.tools{display: inline-block;margin: 0 auto 14px auto;}
+ul.tools li{float: left;}
+ul.tools li a{display: block; width: 135px; height: 33px;text-indent: -9999px;}
+ul.tools li a.beer-edit-btn{background: transparent url(../images/edit-beer-btn.png) top left no-repeat;}
+ul.tools li a.beer-edit-btn:hover{background-position: middle left;}
+ul.tools li a.beer-edit-btn:active{background-position: bottom left;}
+ul.tools li a.beer-delete-btn{background: transparent url(../images/delete-beer-btn.png) top left no-repeat; margin-left: 10px;}
+ul.tools li a.beer-delete-btn:hover{background-position: middle left;}
+ul.tools li a.beer-delete-btn:active{background-position: bottom left;}
+ul.tools li a.brewery-edit-btn{background: transparent url(../images/edit-brewery-btn.png) top left no-repeat;}
+ul.tools li a.brewery-edit-btn:hover{background-position: middle left;}
+ul.tools li a.brewery-edit-btn:active{background-position: bottom left;}
+ul.tools li a.brewery-delete-btn{background: transparent url(../images/flag-brewery-btn.png) top left no-repeat; margin-left: 10px;}
+ul.tools li a.brewery-delete-btn:hover{background-position: middle left;}
+ul.tools li a.brewery-delete-btn:active{background-position: bottom left;}
+
+div.intro-video p{
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Supported Devices ------ */
+div.supported ul{width:270px; height:50px; margin:5px auto 0 auto}
+div.supported ul li{float:left; text-align:center}
+div.supported ul li a{
+	display: block; margin:0 12px;}
+
+/* Help and Support ------ */
+div.help ul li{background:transparent url(../images/sidebar-bar.png) bottom left no-repeat; font-size:14px; padding:0 10px 22px 10px}
+div.help ul li.last{background:none; padding-bottom:0}
+div.help ul li p{margin-bottom:2px}
+div.help ul li span{font-size:13px; line-height:15px}
+
+/* Businesses ----- */
+div.business p{padding:0 10px; font-size:14px; line-height:16px}
+
+/* Profile ------ */
+/*div.profile{padding:0}
+div.profile div{padding:10px 10px 0 10px; border:none; min-height: 60px;}
+div.profile div img{float:left; border: 2px solid #fff; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);background-color: #fff;}
+div.profile div ul{padding:0 0 0 84px}
+div.profile div ul li.name{font-size:16px; margin-bottom:2px}
+div.profile div ul li.location{font-size:13px; margin-bottom:12px}
+div.profile div ul li.bio{font-size:12px; line-height:16px;overflow: hidden;text-overflow: ellipsis;}*/
+ul.stats{height:36px; background:transparent url(../images/sidebar-bar.png) top left no-repeat}
+ul.stats li{float:left; border-right:1px solid #c90; text-align:center; width:68px; height:46px}
+ul.stats li.last{border-right:none; width: 70px;}
+ul.stats li:hover{background-color: rgba(255,255,255,.2);}
+ul.stats li a{color: #fff;display: block;}
+ul.stats li a:hover{color:#fff;text-shadow:0 -1px 2px #666; text-decoration: none;}
+ul.stats li p{text-shadow:0 -1px 2px #666; margin:8px 0 4px 0; text-transform:uppercase; font-size:12px}
+/*div.profile div ul li a{font-size: 13px;color:#5a4201; text-decoration:none; font-weight:bold}
+div.profile div ul li a:hover{color:#8d6701}*/
+
+div.profile { padding: 0; }
+div.profile div { -moz-box-sizing: border-box; border: medium none; min-height: 60px; padding: 10px 10px 0; }
+div.profile div .private{
+	display: block;
+	width: 11px;
+	height: 14px;
+	background: transparent url(../images/private_lock.png) top left no-repeat;
+	float: right;
+}
+div.profile div img { background-clip: padding-box; border: 2px solid #FFFFFF; border-radius: 4px 4px 4px 4px; box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3); display: inline-block; margin-right: 4px; }
+div.profile div ul { display: inline-block; vertical-align: top; width: 160px;}
+div.profile div ul .name { font-size: 18px; margin-bottom: 4px; }
+div.profile div ul .location, div.profile div ul .username { font-size: 13px; }
+div.profile div .supporter { background-color: #D17519; border-radius: 4px 4px 4px 4px; margin-top: 12px; padding: 6px 0; text-align: center; width: 100%; }
+div.profile div .supporter a { color: #FFFFFF; text-transform: uppercase; }
+div.profile div .bio { font-size: 13px; line-height: 16px; margin-top: 8px; overflow: hidden; text-overflow: ellipsis; }
+
+/* Beer Profile ----- */
+div.beer-profile ul li a {color: #fff; text-decoration: none;}
+/*div.beer-profile ul li a:hover {text-decoration: underline;}*/
+div.beer-profile ul li.created-by {font-size:10px; margin-top: 20px;}
+
+/* Top 6 Beers ------ */
+div.top6-beers ul{margin:10px 0 0 12px}
+div.top6-beers ul li{margin-bottom:18px; min-height: 46px}
+/*div.top6-beers ul li img{float:left; -moz-border-radius: 5px; -webkit-border-radius: 5px;}*/
+div.top6-beers ul li p{padding-left:55px; font-size:16px; line-height: 20px; width: 200px;}
+div.top6-beers ul li span{display:block; margin-bottom:2px}
+div.top6-beers ul li span.brewery, div.top6-beers ul li span.style{font-size:14px; line-height: 14px; font-weight: 400;}
+div.top6-beers p.end{background:transparent url(../images/sidebar-bar.png) top left no-repeat; padding-top:8px; text-align:center}
+
+/* Top Drinkers --- */
+/*div.top-drinkers ul li img{border: 2px solid #fff; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);}*/
+
+/* Trending Tabs */
+h3.trending-type{margin:-17px 0 0 0}
+h3.trending-type ul{margin:0; padding:0; height:24px}
+h3.trending-type ul li{padding:0; height:30px; min-height:30px; float:left; position:relative; border-left:1px solid #c90}
+h3.trending-type ul li span{display:block; height:30px; min-height:30px; width:138px; position:absolute; z-index:0; background-color:#edbd14; -moz-opacity:0.7; -khtml-opacity:0.7; opacity:0.7}
+h3.trending-type ul li a{display:block; height:24px; min-height:24px; width:138px; position:relative; padding:7px 0 0 0; font-size:15px; text-shadow:0 0 0}
+h3.trending-type ul li.active a{display:block; height:24px; min-height:24px; width:138px; color:#fff; position:relative; text-shadow:0 -1px 2px #666}
+h3.trending-type ul li.active span{background-color:#f6ce20; filter:alpha(opacity=70); -moz-opacity:0.7; -khtml-opacity:0.7; opacity:0.7}
+
+/* Badges ------ */
+div.badges{padding-bottom:0}
+div.badges ul{width:256px; margin:0 auto 8px auto; display:table}
+div.badges ul li{float:left; margin: 0 5px 5px; padding: 2px; text-align:center; background-color: #fff; -moz-border-radius:4px; -webkit-border-radius:4px; -khtml-border-radius:4px; border-radius:4px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; overflow: hidden; }
+div.badges ul li a{ display: block; height: 50px; }
+div.badges p{background:transparent url(../images/sidebar-bar.png) top left no-repeat; padding-top:8px; text-align:center}
+
+/* Friends ------ */
+div.friends{padding-bottom:0}
+div.friends ul{width:256px; margin:0 auto 8px auto; display:table}
+div.friends ul li{float:left; width:50px; margin:5px 0; text-align:center}
+div.friends ul li img{border: 2px solid #fff; -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);}
+div.friends p{background:transparent url(../images/sidebar-bar.png) top left no-repeat; padding-top:8px; text-align:center}
+
+/* Add Friend Button ------ */
+p.add-friend a{width:241px; height:33px; display:block; text-indent:-9999px; background:transparent url(../images/add-friend-btn.png) top left no-repeat; margin:0 auto 20px auto}
+p.add-friend a:hover{background-position:center left}
+p.add-friend a:active{background-position:bottom left}
+
+p.pending-friend a {width:241px; height:33px; display:block; text-indent:-9999px; background:transparent url(../images/pending-friend-btn.png) top left no-repeat; margin:0 auto 20px auto}
+
+p.accept-friend a{width:241px; height:33px; display:block; text-indent:-9999px; background:transparent url(../images/accept-friend-btn.png) top left no-repeat; margin:0 auto 20px auto}
+p.accept-friend a:hover{background-position:center left}
+p.accept-friend a:active{background-position:bottom left}
+
+p.remove-friend a{width:241px; height:33px; display:block; text-indent:-9999px; background:transparent url(../images/remove-friend-btn.png) top left no-repeat; margin:0 auto 20px auto}
+p.remove-friend a:hover{background-position:center left}
+p.remove-friend a:active{background-position:bottom left}
+
+/* Search Box */
+div.right-side div.search-box{background:transparent url(../images/sidebar-search-bg.png) top left no-repeat; margin-bottom:20px; border:none; height:32px; padding:0; -moz-border-radius:0; -webkit-border-radius:0; -khtml-border-radius:0; border-radius:0}
+div.right-side div.search-box input{font-size:14px; color:#666; width:180px; padding:2px 5px 2px 0; margin:7px 0 0 5px; border:none}
+div.right-side div.search-box span.search-btn a{display:block; float:right; width:75px; height:32px; text-indent:-9999px; background:transparent url(../images/sidebar-search-btn.png) top left no-repeat}
+div.right-side div.search-box span.search-btn a:hover{background-position:center left}
+div.right-side div.search-box span.search-btn a:active{background-position:bottom left}
+
+/* Misc */
+
+div.mobile-site{text-align: center;font-size: 15px;padding: 4px 0;line-height: 24px;}
+div.mobile-site a{font-size: 16px;}
+
+/* Wish List */
+p.add-wish a{width:241px; height:33px; display:block; text-indent:-9999px; background:transparent url(../images/wishlist-add-btn.png) top left no-repeat; margin:0 auto 20px auto}
+p.add-wish a:hover{background-position:center left}
+p.add-wish a:active{background-position:bottom left}
+p.remove-wish a{width:241px; height:33px; display:block; text-indent:-9999px; background:transparent url(../images/wishlist-remove-btn.png) top left no-repeat; margin:0 auto 20px auto}
+p.remove-wish a:hover{background-position:center left}
+p.remove-wish a:active{background-position:bottom left}
+
+/* Follow Button */
+span.add-follow a{width:241px; height:33px; display:block; text-indent:-9999px; background:transparent url(../images/add-follow-btn.png) top left no-repeat; margin:0 auto 20px auto}
+span.add-follow a:hover{background-position:center left}
+span.add-follow a:active{background-position:bottom left}
+span.remove-follow a{width:241px; height:33px; display:block; text-indent:-9999px; background:transparent url(../images/remove-follow-btn.png) top left no-repeat; margin:0 auto 20px auto}
+span.remove-follow a:hover{background-position:center left}
+span.remove-follow a:active{background-position:bottom left}
