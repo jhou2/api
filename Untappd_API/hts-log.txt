@@ -1,0 +1,14 @@
+HTTrack3.48-3+htsswf+htsjava launched on Thu, 24 Apr 2014 00:40:27 at https://untappd.com/api/docs/v4 +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2013], %s -->" -%l "en, *" https://untappd.com/api/docs/v4 -O1 "J:\MyWebSites\Untappd_API" +*.png +*.gif +*.jpg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+00:42:46	Warning: 	Retry after error -2 (Receive Time Out) at link https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/images/ratings_small_v2.png (from https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/css/master.css?v=1.8.5)
+00:42:46	Error: 	"Not Found" (404) at link https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v3/images/user_nav_right@2x.png (from https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v3/css/style.css?v=1.8.5)
+00:42:46	Error: 	"Not Found" (404) at link https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v3/images/brewery-intro/claim-rule-down.png (from https://3c66724003d974c2f72a-122c9eb518099aa035dafdfd38394a83.ssl.cf2.rackcdn.com/site/v3/css/style.css?v=1.8.5)
+
+HTTrack Website Copier/3.48-3 mirror complete in 2 minutes 19 seconds : 244 links scanned, 240 files written (2178672 bytes overall) [1733815 bytes received at 12473 bytes/sec], 668902 bytes transferred using HTTP compression in 23 files, ratio 18%, 20.3 requests per connection
+(2 errors, 1 warnings, 0 messages)
